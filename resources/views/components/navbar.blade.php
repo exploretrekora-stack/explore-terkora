@@ -98,20 +98,20 @@
                       <span class="mega-link-name">Hariharfort &amp; Harishchandragadh</span>
                       <svg class="mega-link-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l5 5-5 5"/></svg>
                     </a>
-                    <a href="{{ route('tour-packages.show', 'girnar-pilgrimage-trek') }}" class="mega-link" onclick="handleNavClick()">
-                      <span class="mega-link-name">Girnar</span>
+                    <a href="{{ route('destinations') }}#dest-girnar-pilgrimage-trek" class="mega-link" onclick="handleNavClick()">
+                      <span class="mega-link-name">Girnar · Coming Soon</span>
                       <svg class="mega-link-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l5 5-5 5"/></svg>
                     </a>
-                    <a href="{{ route('destinations.show', 'mount-abu-eco-getaway') }}" class="mega-link" onclick="handleNavClick()">
-                      <span class="mega-link-name">Mount Abu</span>
+                    <a href="{{ route('destinations') }}#dest-mount-abu-eco-getaway" class="mega-link" onclick="handleNavClick()">
+                      <span class="mega-link-name">Mount Abu · Coming Soon</span>
                       <svg class="mega-link-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l5 5-5 5"/></svg>
                     </a>
-                    <a href="{{ route('destinations.show', 'dang-forest-circuit') }}" class="mega-link" onclick="handleNavClick()">
-                      <span class="mega-link-name">Dang</span>
+                    <a href="{{ route('destinations') }}#dest-dang-forest-circuit" class="mega-link" onclick="handleNavClick()">
+                      <span class="mega-link-name">Dang · Coming Soon</span>
                       <svg class="mega-link-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l5 5-5 5"/></svg>
                     </a>
-                    <a href="{{ route('destinations.show', 'dediapada-wilderness-trek') }}" class="mega-link" onclick="handleNavClick()">
-                      <span class="mega-link-name">Dediyapada</span>
+                    <a href="{{ route('destinations') }}#dest-dediapada-wilderness-trek" class="mega-link" onclick="handleNavClick()">
+                      <span class="mega-link-name">Dediyapada · Coming Soon</span>
                       <svg class="mega-link-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l5 5-5 5"/></svg>
                     </a>
                   </div>
@@ -121,10 +121,10 @@
               <!-- Right: 2 Portrait Pill Photo Cards + 1 Dark Featured Card (Exact Image-2 Style) -->
               <div class="mega-visuals-wrapper">
                 <!-- Pill Card 1: Mount Abu -->
-                <a href="{{ route('destinations.show', 'mount-abu-eco-getaway') }}" class="mega-pill-card" onclick="handleNavClick()" aria-label="Explore Mount Abu">
+                <a href="{{ route('destinations') }}#dest-mount-abu-eco-getaway" class="mega-pill-card" onclick="handleNavClick()" aria-label="Mount Abu, coming soon">
                   <img src="{{ asset('images/mega-portrait-1.jpg') }}" alt="Mount Abu" loading="lazy">
                   <div class="mega-pill-overlay">
-                    <span class="mega-pill-badge">Mount Abu</span>
+                    <span class="mega-pill-badge">Mount Abu · Coming Soon</span>
                   </div>
                 </a>
 
@@ -365,17 +365,17 @@
           <a href="{{ route('tour-packages.show', 'harihar-fort-trek') }}" class="drawer-sublink" onclick="handleNavClick()">
             <span class="sublink-title">Hariharfort &amp; Harishchandragadh</span>
           </a>
-          <a href="{{ route('tour-packages.show', 'girnar-pilgrimage-trek') }}" class="drawer-sublink" onclick="handleNavClick()">
-            <span class="sublink-title">Girnar</span>
+          <a href="{{ route('destinations') }}#dest-girnar-pilgrimage-trek" class="drawer-sublink" onclick="handleNavClick()">
+            <span class="sublink-title">Girnar · Coming Soon</span>
           </a>
-          <a href="{{ route('destinations.show', 'mount-abu-eco-getaway') }}" class="drawer-sublink" onclick="handleNavClick()">
-            <span class="sublink-title">Mount Abu</span>
+          <a href="{{ route('destinations') }}#dest-mount-abu-eco-getaway" class="drawer-sublink" onclick="handleNavClick()">
+            <span class="sublink-title">Mount Abu · Coming Soon</span>
           </a>
-          <a href="{{ route('destinations.show', 'dang-forest-circuit') }}" class="drawer-sublink" onclick="handleNavClick()">
-            <span class="sublink-title">Dang</span>
+          <a href="{{ route('destinations') }}#dest-dang-forest-circuit" class="drawer-sublink" onclick="handleNavClick()">
+            <span class="sublink-title">Dang · Coming Soon</span>
           </a>
-          <a href="{{ route('destinations.show', 'dediapada-wilderness-trek') }}" class="drawer-sublink" onclick="handleNavClick()">
-            <span class="sublink-title">Dediyapada</span>
+          <a href="{{ route('destinations') }}#dest-dediapada-wilderness-trek" class="drawer-sublink" onclick="handleNavClick()">
+            <span class="sublink-title">Dediyapada · Coming Soon</span>
           </a>
           <a href="{{ route('destinations') }}" class="drawer-section-cta" onclick="handleNavClick()">
             <span>Explore all destinations</span>

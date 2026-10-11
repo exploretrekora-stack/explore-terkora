@@ -41,7 +41,7 @@
         <li><a href="{{ route('destinations.show', 'adi-kailash-om-parvat') }}"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg>Adi Kailash &amp; Om Parvat</a></li>
         <li><a href="{{ route('destinations.show', 'munsyari-kausani') }}"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg>Munsyari &amp; Kausani</a></li>
         <li><a href="{{ route('destinations.show', 'dalhousie-dharamshala') }}"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg>Dalhousie &amp; Dharamshala</a></li>
-        <li><a href="{{ route('destinations.show', 'mount-abu-eco-getaway') }}"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg>Mount Abu</a></li>
+        <li><a href="{{ route('destinations') }}#dest-mount-abu-eco-getaway"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg>Mount Abu · Coming Soon</a></li>
         <li><a href="{{ route('destinations.show', 'khaliya-top-trek') }}"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg>Khaliya Top Trek</a></li>
       </ul>
     </div>

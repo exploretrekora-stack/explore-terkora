@@ -22,7 +22,7 @@ Route::get('/tour-packages', function () {
 Route::get('/tour-packages/{slug}', [DestinationController::class, 'showPackage'])->name('tour-packages.show');
 
 Route::get('/travel-guides', function () {
-    return redirect('/#guides');
+    return view('travel-guides');
 })->name('travel-guides');
 
 Route::get('/about-us', function () {

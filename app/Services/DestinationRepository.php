@@ -788,48 +788,166 @@ class DestinationRepository
                 'slug' => 'harihar-fort-trek',
                 'title' => 'Harihar Fort & Harishchandragad',
                 'enquiry_key' => 'Harihar Fort Trek',
-                'category' => 'Western Ghats',
+                'category' => 'Trekking & Camping',
                 'category_tag' => 'tag-ghats',
-                'duration' => '2D / 1N',
-                'duration_full' => '2 Days / 1 Night',
-                'location' => 'Sahyadri, Maharashtra',
-                'location_short' => 'Sahyadri, Maharashtra',
-                'altitude' => '3,676 ft',
-                'altitude_full' => '3,676 ft (Harihar Fort Summit)',
-                'difficulty' => 'Moderate with Thrilling Rock Steps',
-                'best_season' => 'June – February (Monsoon & Winter)',
-                'starting_point' => 'Mumbai / Pune / Nashik',
-                'group_size' => '8 – 20 Travellers',
+                'duration' => '2D / 2N',
+                'duration_full' => '2 Days / 2 Nights',
+                'location' => 'Nashik & Ahmednagar District, Maharashtra',
+                'location_short' => 'Nashik & Ahmednagar, Maharashtra',
+                'altitude' => '3,676 ft / 4,665 ft',
+                'altitude_full' => 'Harihar Fort approx. 3,676 ft; Harishchandragad approx. 4,665 ft',
+                'difficulty' => 'Moderate to Difficult',
+                'starting_point' => 'Vadodara',
                 'image' => 'images/trips/harihar-fort-trek/1.jpg',
                 'gallery' => self::tripGallery('harihar-fort-trek', 'Harihar Fort & Harishchandragad'),
                 'price_label' => 'PACKAGE PRICE',
                 'price_value' => 'Get a Quote',
-                'tagline' => 'Conquer the iconic 80° rock-cut vertical steps of Harihar Fort and witness the dramatic cliff overhang of Konkan Kada.',
-                'card_desc' => 'Conquer the iconic 80° rock-cut steps of Harihar Fort and witness the dramatic amphitheater cliff of Konkan Kada.',
+                'show_generic_claims' => false,
+                'hero_actions' => true,
+                'tagline' => 'A trekking and camping expedition from Vadodara to Vadodara, with Harihar Fort and Harishchandragad.',
+                'card_desc' => 'A 2-day / 2-night trek from Vadodara covering Harihar Fort and Harishchandragad, including Konkan Kada.',
                 'perks' => [
-                    '80° Vertical Rock-Cut Staircase Thrill',
-                    'Konkan Kada Amphitheater Cliff Overhang',
-                    'Certified Sahyadri Mountain Leaders',
-                    'Panoramic 360° Western Ghats Vistas',
+                    '80° rock-cut staircase of Harihar Fort',
+                    'Konkan Kada viewpoint',
+                    'Vadodara to Vadodara',
                 ],
                 'overview_paragraphs' => [
-                    'Harihar Fort in the Trimbakeshwar range of Maharashtra is globally famous for its near-vertical 80° rock-cut stairs carved directly into the triangular rock scarp during the Seuna (Yadava) dynasty.',
+                    'Harihar Fort & Harishchandragad Trek is a 2-day / 2-night trekking and camping expedition from Vadodara to Vadodara. Difficulty is moderate to difficult. The forts are in Nashik and Ahmednagar district, Maharashtra. It is suited to adventure enthusiasts, trekkers, and nature lovers.',
+                    'The schedule leaves Vadodara on Friday night at 10:00 PM and arrives back in Vadodara between 5:00 AM and 6:00 AM after the return journey.',
                 ],
+                'highlights_heading' => 'Trip Highlights',
                 'highlights' => [
-                    ['icon' => '🧗', 'title' => 'Iconic Vertical Stairway', 'desc' => 'Handholds and footsteps carved into shear basalt cliff.'],
-                    ['icon' => '🏰', 'title' => 'Historic Maratha Fort Architecture', 'desc' => 'Water cisterns, storage rooms, and panoramic hill fort gates.'],
+                    ['icon' => '🧗', 'title' => 'Harihar Fort staircase', 'desc' => 'Climb the famous 80° rock-cut staircase of Harihar Fort.'],
+                    ['icon' => '🏔️', 'title' => 'Sahyadri ranges', 'desc' => 'Witness views of the Sahyadri ranges.'],
+                    ['icon' => '🏰', 'title' => 'Harishchandragad Fort', 'desc' => 'Explore the historical Harishchandragad Fort.'],
+                    ['icon' => '👀', 'title' => 'Konkan Kada', 'desc' => 'Visit the Konkan Kada viewpoint.'],
+                    ['icon' => '🏕️', 'title' => 'Overnight travel and camping', 'desc' => 'Overnight travel and a camping experience.'],
+                    ['icon' => '🌲', 'title' => 'Forest trails', 'desc' => 'Trek through dense forests and mountain trails.'],
                 ],
+                'itinerary_heading' => 'Harihar Fort & Harishchandragad Itinerary',
                 'itinerary' => [
-                    ['day' => 'Day 1', 'title' => 'Mumbai / Pune to Base Village (Harshewadi) & Harihar Trek', 'desc' => 'Climb the iconic 80° steps, explore the summit plateau, return to camp.'],
-                    ['day' => 'Day 2', 'title' => 'Harishchandragad / Konkan Kada Exploration & Return', 'desc' => 'Visit Kedareshwar cave temple and Konkan Kada cliff before return.'],
+                    [
+                        'day' => 'Day 0',
+                        'title' => 'Departure from Vadodara',
+                        'points' => [
+                            'Friday night, 10:00 PM departure from Vadodara by private vehicle.',
+                            'Overnight journey.',
+                        ],
+                    ],
+                    [
+                        'day' => 'Day 1',
+                        'title' => 'Harihar Fort Trek, then Harishchandragad base',
+                        'desc' => 'Trek duration 2.5–3 hours. Difficulty: moderate. Altitude: approx. 3,676 ft.',
+                        'points' => [
+                            '06:00 AM: Arrive at Nirgudpada base village, freshen up, and have breakfast.',
+                            '07:00 AM: Trek briefing, introduction of trek leaders, and safety instructions.',
+                            '10:00 AM: Reach Harihar Fort top for photography, exploration, and rest.',
+                            '11:30 AM: Start descending.',
+                            '01:30 PM: Reach the base village.',
+                            '02:00 PM: Lunch.',
+                            '03:00 PM: Proceed towards the Harishchandragad base village.',
+                            '07:00 PM: Arrive at the base village campsite or stay and check in. Overnight stay.',
+                            '08:00 PM: Dinner.',
+                            '09:00 PM: Bonfire and group interactions. Bonfire if conditions permit.',
+                        ],
+                    ],
+                    [
+                        'day' => 'Day 2',
+                        'title' => 'Harishchandragad Trek and return journey to Vadodara',
+                        'desc' => 'Trek duration 4–5 hours. Difficulty: moderate to difficult. Altitude: approx. 4,665 ft.',
+                        'points' => [
+                            '05:00 AM: Wake-up call.',
+                            '05:30 AM: Tea and refreshments.',
+                            '06:00 AM: Begin the trek.',
+                            'En route: ancient cave structures, Kedareshwar Cave, Taramati Peak, the temple complex, and scenic forest trails.',
+                            '11:00 AM: Reach Harishchandragad top. Visit Konkan Kada, Taramati Peak, Kedareshwar Cave, and Harishchandreshwar Temple.',
+                            '01:00 PM: Packed lunch.',
+                            '02:00 PM: Start descending.',
+                            '05:00 PM: Reach the base village and freshen up.',
+                            '06:30 PM: Return journey to Vadodara. Overnight journey.',
+                        ],
+                    ],
+                    [
+                        'day' => 'Day 3',
+                        'title' => 'Arrival at Vadodara',
+                        'points' => [
+                            '05:00 AM – 06:00 AM arrival at Vadodara.',
+                        ],
+                    ],
                 ],
-                'inclusions' => ['Certified trek leads and safety equipment', 'Trek meals and tent stay', 'Local transfers from Nashik/Kasara'],
-                'exclusions' => ['Personal insurance', 'Extra refreshments'],
-                'essentials' => ['Grippy trekking shoes', 'Raincoat (monsoon)', 'Hydration pack'],
+                'sections' => [
+                    [
+                        'heading' => 'Cost Includes',
+                        'items' => [
+                            'Vadodara to Vadodara transportation',
+                            '1 breakfast',
+                            '2 lunches',
+                            '1 dinner',
+                            'Trek leader and coordinator',
+                            'Basic first aid support',
+                            'Campsite / homestay accommodation',
+                            'Forest entry charges (if applicable)',
+                        ],
+                    ],
+                    [
+                        'heading' => 'Cost Excludes',
+                        'items' => [
+                            'Any personal expenses',
+                            'Mineral water bottles',
+                            'Travel insurance',
+                            'Emergency evacuation expenses',
+                            'Anything not mentioned in the inclusions',
+                        ],
+                    ],
+                    [
+                        'heading' => 'Things to Carry',
+                        'paragraphs' => [
+                            'Mandatory:',
+                        ],
+                        'items' => [
+                            'Trekking shoes with good grip',
+                            'Backpack (30–40L)',
+                            '2 litres of water',
+                            'Torch or headlamp',
+                            'Rain protection',
+                            'Personal medicines',
+                            'Energy bars or snacks',
+                            'Extra pair of clothes',
+                            'Cap and sunglasses',
+                            'Power bank',
+                        ],
+                    ],
+                    [
+                        'heading' => 'Safety Guidelines',
+                        'items' => [
+                            'Follow trek leader instructions at all times.',
+                            'Avoid littering.',
+                            'Alcohol and smoking are strictly prohibited.',
+                            'Carry personal medications.',
+                            'Respect local culture and environment.',
+                            'Trek as a group and avoid wandering alone.',
+                        ],
+                    ],
+                    [
+                        'heading' => 'Why Choose Us',
+                        'items' => [
+                            'Experienced trek leaders',
+                            'Safety-focused operations',
+                            'Well-planned itinerary',
+                            'Quality service',
+                            'Adventure with responsible tourism',
+                            'Memorable group experience',
+                        ],
+                    ],
+                ],
+                'inclusions' => [],
+                'exclusions' => [],
+                'essentials' => [],
             ],
 
             'girnar-pilgrimage-trek' => [
                 'slug' => 'girnar-pilgrimage-trek',
+                'coming_soon' => true,
                 'title' => 'Girnar Pilgrimage Trek',
                 'enquiry_key' => 'Girnar',
                 'category' => 'Sacred Pilgrimage',
@@ -874,6 +992,7 @@ class DestinationRepository
 
             'mount-abu-eco-getaway' => [
                 'slug' => 'mount-abu-eco-getaway',
+                'coming_soon' => true,
                 'title' => 'Mount Abu Eco Getaway',
                 'enquiry_key' => 'Mount Abu',
                 'category' => 'Hill Station',
@@ -960,6 +1079,7 @@ class DestinationRepository
 
             'dang-forest-circuit' => [
                 'slug' => 'dang-forest-circuit',
+                'coming_soon' => true,
                 'title' => 'Dang Forest Circuit',
                 'enquiry_key' => 'Dang',
                 'category' => 'Forest Trail',
@@ -1005,6 +1125,7 @@ class DestinationRepository
 
             'dediapada-wilderness-trek' => [
                 'slug' => 'dediapada-wilderness-trek',
+                'coming_soon' => true,
                 'title' => 'Dediapada Wilderness Trek',
                 'enquiry_key' => 'Dediapada',
                 'category' => 'Wilderness Trail',
@@ -1217,11 +1338,11 @@ class DestinationRepository
                     ],
                     [
                         'title' => 'Harishchandragad',
-                        'description' => 'Shown from the existing Harihar Fort and Harishchandragad trip, including Konkan Kada. This card opens that same trip page.',
+                        'description' => 'Harishchandragad Fort, Konkan Kada, Taramati Peak, Kedareshwar Cave, and Harishchandreshwar Temple. About 4–5 hours, moderate to difficult, approx. 4,665 ft.',
                         'image' => 'images/trips/harihar-fort-trek/3.jpg',
-                        'alt' => 'Stone temple from the Harihar Fort and Harishchandragad trip',
-                        'location' => 'Sahyadri, Maharashtra',
-                        'duration' => '2D / 1N',
+                        'alt' => 'Harishchandragad from the Harihar Fort and Harishchandragad trip',
+                        'location' => 'Nashik & Ahmednagar, Maharashtra',
+                        'duration' => '2D / 2N',
                         'badge' => 'Western Ghats',
                         'badge_tag' => 'tag-ghats',
                         'slug' => 'harihar-fort-trek',
@@ -1229,11 +1350,11 @@ class DestinationRepository
                     ],
                     [
                         'title' => 'Harihar Fort',
-                        'description' => 'Shown from the existing Harihar Fort and Harishchandragad trip, including the rock-cut steps. This card opens that same trip page.',
+                        'description' => 'The 80° rock-cut staircase of Harihar Fort. About 2.5–3 hours, moderate, approx. 3,676 ft. Base village: Nirgudpada.',
                         'image' => 'images/trips/harihar-fort-trek/5.jpg',
-                        'alt' => 'Misty hills from the Harihar Fort and Harishchandragad trip',
-                        'location' => 'Sahyadri, Maharashtra',
-                        'duration' => '2D / 1N',
+                        'alt' => 'Harihar Fort from the Harihar Fort and Harishchandragad trip',
+                        'location' => 'Nashik & Ahmednagar, Maharashtra',
+                        'duration' => '2D / 2N',
                         'badge' => 'Western Ghats',
                         'badge_tag' => 'tag-ghats',
                         'slug' => 'harihar-fort-trek',
@@ -1347,6 +1468,14 @@ class DestinationRepository
     }
 
     /**
+     * Destinations whose detail pages are not open yet.
+     */
+    public static function isComingSoon(string $slug): bool
+    {
+        return (bool) (self::all()[$slug]['coming_soon'] ?? false);
+    }
+
+    /**
      * Homepage trip finder choices, matched to destination cards.
      *
      * Traveler fit follows the existing trip type: family and easy hill trips for families,
@@ -1390,19 +1519,19 @@ class DestinationRepository
                 'fits' => ['2 adults', '1 solo adventurer', '4 adults group'],
             ],
             'girnar-pilgrimage-trek' => [
-                'label' => 'Girnar',
+                'label' => 'Girnar · Coming Soon',
                 'fits' => ['2 adults', '1 solo adventurer', '4 adults group'],
             ],
             'mount-abu-eco-getaway' => [
-                'label' => 'Mount Abu',
+                'label' => 'Mount Abu · Coming Soon',
                 'fits' => ['2 adults', '4 adults group', 'Family (2 adults + 2 kids)'],
             ],
             'dang-forest-circuit' => [
-                'label' => 'Dang',
+                'label' => 'Dang · Coming Soon',
                 'fits' => ['2 adults', '4 adults group', 'Family (2 adults + 2 kids)'],
             ],
             'dediapada-wilderness-trek' => [
-                'label' => 'Dediyapada',
+                'label' => 'Dediyapada · Coming Soon',
                 'fits' => ['2 adults', '1 solo adventurer', '4 adults group'],
             ],
         ];

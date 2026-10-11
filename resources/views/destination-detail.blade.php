@@ -537,7 +537,11 @@
 
                     <div class="dest-grid">
                         @foreach($related as $rel)
-                            <article class="dest-card" data-category="{{ $rel['category_tag'] }}">
+                            @php($relatedComingSoon = \App\Services\DestinationRepository::isComingSoon($rel['slug']))
+                            <article class="dest-card{{ $relatedComingSoon ? ' is-coming-soon' : '' }}" data-category="{{ $rel['category_tag'] }}">
+                                @if($relatedComingSoon)
+                                    <p class="coming-soon-title">Coming Soon</p>
+                                @endif
                                 <div class="dest-card-media">
                                     <img src="{{ asset($rel['image']) }}" alt="{{ $rel['title'] }}" loading="lazy">
                                     <div class="dest-card-badge-top">
@@ -556,7 +560,11 @@
                                     </ul>
                                     <div class="dest-card-footer">
                                         <div class="dest-card-actions">
-                                            <a href="{{ route((($fromTourPackage ?? false) && in_array($rel['slug'], \App\Services\DestinationRepository::packageSlugs(), true)) ? 'tour-packages.show' : 'destinations.show', $rel['slug']) }}" class="btn btn-outline-teal dest-card-details-btn">View Details</a>
+                                            @if($relatedComingSoon)
+                                                <span class="btn btn-outline-teal dest-card-details-btn is-disabled">Coming Soon</span>
+                                            @else
+                                                <a href="{{ route((($fromTourPackage ?? false) && in_array($rel['slug'], \App\Services\DestinationRepository::packageSlugs(), true)) ? 'tour-packages.show' : 'destinations.show', $rel['slug']) }}" class="btn btn-outline-teal dest-card-details-btn">View Details</a>
+                                            @endif
                                             <x-inquire-now
                                                 class="dest-card-enquire-btn"
                                                 data-dest="{{ $rel['enquiry_key'] }}"
@@ -705,12 +713,12 @@
                                     <option value="Milam Glacier Trek" data-title="Milam Glacier Trek" data-location="Pithoragarh, Uttarakhand · 9–12 Days" {{ $destination['enquiry_key'] === 'Milam Glacier Trek' ? 'selected' : '' }}>Milam Glacier Trek</option>
                                     <option value="Kareri Lake Trek" data-title="Kareri Lake Trek" data-location="Dharamshala, Himachal Pradesh · 2D / 1N" {{ $destination['enquiry_key'] === 'Kareri Lake Trek' ? 'selected' : '' }}>Kareri Lake Trek</option>
                                     <option value="Dalhousie & Dharamshala" data-title="Dalhousie &amp; Dharamshala Tour" data-location="Himachal Pradesh · 8 Days" {{ $destination['enquiry_key'] === 'Dalhousie & Dharamshala' ? 'selected' : '' }}>Dalhousie &amp; Dharamshala Tour</option>
-                                    <option value="Harihar Fort Trek" data-title="Harihar Fort &amp; Harishchandragad" data-location="Sahyadri, Maharashtra · 2D / 1N" {{ $destination['enquiry_key'] === 'Harihar Fort Trek' ? 'selected' : '' }}>Harihar Fort &amp; Harishchandragad</option>
-                                    <option value="Girnar" data-title="Girnar Pilgrimage Trek" data-location="Junagadh, Gujarat · 2D / 1N" {{ $destination['enquiry_key'] === 'Girnar' ? 'selected' : '' }}>Girnar Pilgrimage Trek</option>
-                                    <option value="Mount Abu" data-title="Mount Abu Eco Getaway" data-location="Aravalli Range, Rajasthan · 3D / 2N" {{ $destination['enquiry_key'] === 'Mount Abu' ? 'selected' : '' }}>Mount Abu Eco Getaway</option>
+                                    <option value="Harihar Fort Trek" data-title="Harihar Fort &amp; Harishchandragad" data-location="Nashik &amp; Ahmednagar, Maharashtra · 2D / 2N" {{ $destination['enquiry_key'] === 'Harihar Fort Trek' ? 'selected' : '' }}>Harihar Fort &amp; Harishchandragad</option>
+                                    <option value="Girnar" data-title="Girnar Pilgrimage Trek" data-location="Junagadh, Gujarat · 2D / 1N" {{ $destination['enquiry_key'] === 'Girnar' ? 'selected' : '' }}>Girnar Pilgrimage Trek · Coming Soon</option>
+                                    <option value="Mount Abu" data-title="Mount Abu Eco Getaway" data-location="Aravalli Range, Rajasthan · 3D / 2N" {{ $destination['enquiry_key'] === 'Mount Abu' ? 'selected' : '' }}>Mount Abu Eco Getaway · Coming Soon</option>
                                     <option value="Munsyari & Kausani" data-title="Munsyari &amp; Kausani" data-location="Kathgodam to Mukteshwar · 6 Days" {{ $destination['enquiry_key'] === 'Munsyari & Kausani' ? 'selected' : '' }}>Munsyari &amp; Kausani</option>
-                                    <option value="Dang" data-title="Dang Forest Circuit" data-location="Saputara &amp; Dang, Gujarat · 3D / 2N" {{ $destination['enquiry_key'] === 'Dang' ? 'selected' : '' }}>Dang Forest Circuit</option>
-                                    <option value="Dediapada" data-title="Dediapada Wilderness Trek" data-location="Shoolpaneshwar, Gujarat · 2D / 1N" {{ $destination['enquiry_key'] === 'Dediapada' ? 'selected' : '' }}>Dediapada Wilderness Trek</option>
+                                    <option value="Dang" data-title="Dang Forest Circuit" data-location="Saputara &amp; Dang, Gujarat · 3D / 2N" {{ $destination['enquiry_key'] === 'Dang' ? 'selected' : '' }}>Dang Forest Circuit · Coming Soon</option>
+                                    <option value="Dediapada" data-title="Dediapada Wilderness Trek" data-location="Shoolpaneshwar, Gujarat · 2D / 1N" {{ $destination['enquiry_key'] === 'Dediapada' ? 'selected' : '' }}>Dediapada Wilderness Trek · Coming Soon</option>
                                 </select>
                                 <svg class="dest-select-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                     <polyline points="6 8 10 12 14 8"></polyline>

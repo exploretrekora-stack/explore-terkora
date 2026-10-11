@@ -56,13 +56,6 @@
                 image: "{{ asset('images/story-4.jpg') }}"
             },
             {
-                quote: "The 80-degree rock-cut steps of Harihar were exhilarating! The safety briefing and constant support from the leader gave us total confidence.",
-                author: "Nikhil Joshi",
-                trip: "Harihar & Harishchandragadh",
-                tag: "Harihar Fort Trek",
-                image: "{{ asset('images/story-5.jpg') }}"
-            },
-            {
                 quote: "A serene vacation amidst pine-scented woods, colonial charm, and Tibetan monasteries. Everything was punctual and hassle-free.",
                 author: "Sneha Kulkarni",
                 trip: "Dalhousie & Dharamshala Tour",
@@ -72,29 +65,29 @@
             {
                 quote: "Ascending the sacred 10,000 steps of Mount Girnar at sunrise was unforgettable. Well-planned halts and comfortable stays made it effortless.",
                 author: "Bhavik Dave",
-                trip: "Girnar Pilgrimage Trek",
-                tag: "Girnar Summit",
+                trip: "Girnar Pilgrimage Trek · Coming Soon",
+                tag: "Girnar Summit · Coming Soon",
                 image: "{{ asset('images/story-7.jpg') }}"
             },
             {
                 quote: "Exploring hidden trails through the Aravalli hills away from the tourist crowd was refreshing. Cozy eco-cottages and delicious meals!",
                 author: "Ananya Mehta",
-                trip: "Mount Abu Eco Getaway",
-                tag: "Mount Abu Trails",
+                trip: "Mount Abu Eco Getaway · Coming Soon",
+                tag: "Mount Abu Trails · Coming Soon",
                 image: "{{ asset('images/story-8.jpg') }}"
             },
             {
                 quote: "Dense monsoon teak forests, secret waterfalls, and warm tribal hospitality. Explore Trekora made our Dang family trip deeply memorable.",
                 author: "Hardik Trivedi",
-                trip: "Dang Forest Circuit",
-                tag: "Dang Waterfalls",
+                trip: "Dang Forest Circuit · Coming Soon",
+                tag: "Dang Waterfalls · Coming Soon",
                 image: "{{ asset('images/story-9.jpg') }}"
             },
             {
                 quote: "Pure untouched wilderness in Shoolpaneshwar. River treks, clean homestays, and pristine waterfalls made this our best weekend escape.",
                 author: "Amit Vora",
-                trip: "Dediyapada Wilderness Trek",
-                tag: "Dediyapada Forest Trail",
+                trip: "Dediyapada Wilderness Trek · Coming Soon",
+                tag: "Dediyapada Forest Trail · Coming Soon",
                 image: "{{ asset('images/story-10.jpg') }}"
             }
         ];

@@ -6472,6 +6472,44 @@ a.pkg-card {
   transform: scale(1.06);
 }
 
+.dest-card.is-coming-soon {
+  position: relative;
+}
+
+.dest-card.is-coming-soon .dest-card-media img {
+  filter: brightness(0.62);
+}
+
+.coming-soon-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 4;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: rgba(11, 57, 53, 0.92);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 10px 28px rgba(6, 37, 36, 0.28);
+}
+
+.dest-card-details-btn.is-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.dc.is-coming-soon {
+  position: relative;
+}
+
 .dest-card-badge-top {
   position: absolute;
   top: 14px;
@@ -10062,4 +10100,25 @@ a.pkg-card {
   .legal-body li {
     font-size: 14.5px;
   }
+}
+
+.travel-guides-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 220px);
+  padding: 48px 20px;
+}
+
+.travel-guides-page h1 {
+  margin: 0;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: #0b3935;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  text-transform: uppercase;
 }

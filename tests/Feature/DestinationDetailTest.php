@@ -202,6 +202,69 @@ class DestinationDetailTest extends TestCase
     }
 
     /**
+     * Harihar Fort and Harishchandragad keep the supplied trek sheet and drop the old copy.
+     */
+    public function test_harihar_fort_uses_the_supplied_trek_sheet(): void
+    {
+        $listing = $this->get(route('destinations'));
+
+        $listing->assertOk();
+        $listing->assertSee('2D / 2N');
+        $listing->assertSee('Nashik &amp; Ahmednagar, Maharashtra', false);
+        $listing->assertSee('Vadodara to Vadodara');
+        $listing->assertDontSee('Certified Sahyadri Leaders');
+        $listing->assertDontSee('amphitheater');
+
+        $response = $this->get(route('destinations.show', 'harihar-fort-trek'));
+
+        $response->assertOk();
+        $response->assertSee('2 Days / 2 Nights');
+        $response->assertSee('Vadodara');
+        $response->assertSee('Nirgudpada');
+        $response->assertSee('3,676 ft');
+        $response->assertSee('4,665 ft');
+        $response->assertSee('Konkan Kada');
+        $response->assertSee('Taramati Peak');
+        $response->assertSee('Kedareshwar Cave');
+        $response->assertSee('Harishchandreshwar Temple');
+        $response->assertSee('1 breakfast');
+        $response->assertSee('2 lunches');
+        $response->assertSee('Forest entry charges (if applicable)');
+        $response->assertSee('Mineral water bottles');
+        $response->assertSee('Alcohol and smoking are strictly prohibited.');
+        $response->assertSee('05:00 AM – 06:00 AM arrival at Vadodara.');
+        $response->assertDontSee('Harshewadi');
+        $response->assertDontSee('Mumbai / Pune');
+        $response->assertDontSee('Yadava');
+        $response->assertDontSee('8 – 20 Travellers');
+        $response->assertDontSee('All-inclusive customizable itinerary');
+        $response->assertDontSee('100% Inner Line Permit');
+        $response->assertDontSee('Oxygen Support');
+    }
+
+    /**
+     * Unfinished destination pages stay on the listing card.
+     */
+    public function test_coming_soon_destinations_do_not_open_a_detail_page(): void
+    {
+        $listing = $this->get(route('destinations'));
+
+        $listing->assertOk();
+        $listing->assertSee('class="coming-soon-title"', false);
+        $listing->assertSee('Girnar Pilgrimage Trek');
+        $listing->assertDontSee(route('destinations.show', 'girnar-pilgrimage-trek'), false);
+        $listing->assertDontSee(route('destinations.show', 'mount-abu-eco-getaway'), false);
+        $listing->assertDontSee(route('destinations.show', 'dang-forest-circuit'), false);
+        $listing->assertDontSee(route('destinations.show', 'dediapada-wilderness-trek'), false);
+
+        $this->get(route('destinations.show', 'mount-abu-eco-getaway'))
+            ->assertRedirect(route('destinations').'#dest-mount-abu-eco-getaway');
+
+        $this->get(route('destinations', ['destination' => 'dang-forest-circuit']))
+            ->assertRedirect(route('destinations').'#dest-dang-forest-circuit');
+    }
+
+    /**
      * Test that non-existent destination returns 404.
      */
     public function test_unknown_destination_returns_404(): void

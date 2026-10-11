@@ -90,10 +90,16 @@
                         </h2>
                         <div class="dest-grid">
                             @foreach ($group['cards'] as $card)
-                                <a
-                                    class="dest-card pkg-card"
-                                    href="{{ $card['slug'] ? route('tour-packages.show', $card['slug']) : route('home', ['destination' => $card['enquiry']]).'#contact' }}"
-                                >
+                                @php($comingSoon = is_string($card['slug']) && \App\Services\DestinationRepository::isComingSoon($card['slug']))
+                                @if ($comingSoon)
+                                    <article class="dest-card pkg-card is-coming-soon">
+                                        <p class="coming-soon-title">Coming Soon</p>
+                                @else
+                                    <a
+                                        class="dest-card pkg-card"
+                                        href="{{ $card['slug'] ? route('tour-packages.show', $card['slug']) : route('home', ['destination' => $card['enquiry']]).'#contact' }}"
+                                    >
+                                @endif
                                     <div class="dest-card-media">
                                         @if ($card['image'])
                                             <img src="{{ asset($card['image']) }}" alt="{{ $card['alt'] }}" loading="lazy">
@@ -109,11 +115,15 @@
                                         <span class="dest-card-location">📍 {{ $card['location'] }}</span>
                                     </div>
                                     <div class="dest-card-body">
-                                        <h3>{{ $card['title'] }}</h3>
+                                        <h3>{{ $card['title'] }}{{ $comingSoon ? ' · Coming Soon' : '' }}</h3>
                                         <p class="dest-card-desc">{{ $card['description'] }}</p>
-                                        <span class="pkg-card-more">{{ $card['slug'] ? 'View details' : 'Enquire' }} <span aria-hidden="true">→</span></span>
+                                        <span class="pkg-card-more">{{ $comingSoon ? 'Coming Soon' : ($card['slug'] ? 'View details' : 'Enquire') }} @unless($comingSoon)<span aria-hidden="true">→</span>@endunless</span>
                                     </div>
-                                </a>
+                                @if ($comingSoon)
+                                    </article>
+                                @else
+                                    </a>
+                                @endif
                             @endforeach
                         </div>
                     </div>

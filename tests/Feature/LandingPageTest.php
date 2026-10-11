@@ -28,7 +28,8 @@ class LandingPageTest extends TestCase
         $response->assertSee(route('destinations.show', 'adi-kailash-om-parvat', absolute: false), false);
         $response->assertSee(route('destinations.show', 'munsyari-kausani', absolute: false), false);
         $response->assertSee(route('destinations.show', 'dalhousie-dharamshala', absolute: false), false);
-        $response->assertSee(route('destinations.show', 'mount-abu-eco-getaway', absolute: false), false);
+        $response->assertSee('Mount Abu · Coming Soon', false);
+        $response->assertDontSee(route('destinations.show', 'mount-abu-eco-getaway', absolute: false), false);
         $response->assertSee(route('destinations.show', 'khaliya-top-trek', absolute: false), false);
     }
 
@@ -71,8 +72,12 @@ class LandingPageTest extends TestCase
         $response->assertSee(route('destinations.show', 'adi-kailash-om-parvat'), false);
         $response->assertSee(route('destinations.show', 'char-dham-yatra'), false);
         $response->assertSee(route('destinations.show', 'khaliya-top-trek'), false);
-        $response->assertSee(route('destinations.show', 'mount-abu-eco-getaway'), false);
-        $response->assertSee(route('destinations.show', 'dediapada-wilderness-trek'), false);
+        $response->assertSee('Girnar · Coming Soon', false);
+        $response->assertSee('Dang · Coming Soon', false);
+        $response->assertSee('Dediyapada · Coming Soon', false);
+        $response->assertDontSee(route('destinations.show', 'mount-abu-eco-getaway'), false);
+        $response->assertDontSee(route('destinations.show', 'dediapada-wilderness-trek'), false);
+        $response->assertDontSee(route('tour-packages.show', 'girnar-pilgrimage-trek'), false);
 
         // Tour Packages dropdown items open the package page at that group.
         $response->assertSee('Cultural Tours');
@@ -95,7 +100,7 @@ class LandingPageTest extends TestCase
     {
         $this->get(route('destinations'))->assertOk();
         $this->get(route('tour-packages'))->assertOk();
-        $this->get(route('travel-guides'))->assertRedirect('/#guides');
+        $this->get(route('travel-guides'))->assertOk()->assertSee('Coming Soon');
         $this->get(route('about-us'))->assertOk();
         $this->get(route('terms'))->assertOk();
         $this->get(route('copyright'))->assertOk();
@@ -376,16 +381,15 @@ class LandingPageTest extends TestCase
         $response->assertSee('Photograph to be added');
         $response->assertSee('destination=Haridwar', false);
         $response->assertSee('#contact', false);
-        $response->assertSee(route('tour-packages.show', 'girnar-pilgrimage-trek', absolute: false), false);
+        $response->assertSee('Girnar · Coming Soon', false);
+        $response->assertSee('class="coming-soon-title"', false);
+        $response->assertDontSee(route('tour-packages.show', 'girnar-pilgrimage-trek', absolute: false), false);
         $response->assertSee(route('tour-packages.show', 'harihar-fort-trek', absolute: false), false);
         $response->assertSee('class="nav-drop-btn active"', false);
         $response->assertDontSee(route('destinations.show', 'girnar-pilgrimage-trek', absolute: false), false);
 
         $detail = $this->get(route('tour-packages.show', 'girnar-pilgrimage-trek'));
-        $detail->assertOk();
-        $detail->assertSee('Tour Packages');
-        $detail->assertSee('Girnar Pilgrimage Trek');
-        $detail->assertSee('class="nav-drop-btn active"', false);
+        $detail->assertRedirect(route('destinations').'#dest-girnar-pilgrimage-trek');
     }
 
     /**
@@ -504,8 +508,10 @@ class LandingPageTest extends TestCase
 
         $response->assertOk();
         $response->assertSee(route('about-us'));
-        $response->assertSee(route('tour-packages.show', 'girnar-pilgrimage-trek'));
-        $response->assertSee(route('tour-packages.show', 'mount-abu-eco-getaway'));
+        $response->assertSee(route('destinations').'#dest-girnar-pilgrimage-trek', false);
+        $response->assertSee(route('destinations').'#dest-mount-abu-eco-getaway', false);
+        $response->assertDontSee(route('tour-packages.show', 'girnar-pilgrimage-trek'), false);
+        $response->assertDontSee(route('tour-packages.show', 'mount-abu-eco-getaway'), false);
         $response->assertSee(route('tour-packages.show', 'dalhousie-dharamshala'));
         $response->assertSee(route('tour-packages.show', 'adi-kailash-om-parvat'));
     }

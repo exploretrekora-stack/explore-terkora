@@ -16,6 +16,10 @@ class DestinationController extends Controller
     {
         $slug = $request->string('destination')->toString();
 
+        if (DestinationRepository::isComingSoon($slug)) {
+            return $this->comingSoonRedirect($slug);
+        }
+
         if (isset(DestinationRepository::tripFinder()[$slug])) {
             return redirect()->route('destinations.show', array_filter([
                 'slug' => $slug,
@@ -30,21 +34,37 @@ class DestinationController extends Controller
     /**
      * Display the destination details page.
      */
-    public function show(string $slug): View
+    public function show(string $slug): View|RedirectResponse
     {
+        if (DestinationRepository::isComingSoon($slug)) {
+            return $this->comingSoonRedirect($slug);
+        }
+
         return $this->detail($slug, false);
     }
 
     /**
      * Display the same destination details inside Tour Packages.
      */
-    public function showPackage(string $slug): View
+    public function showPackage(string $slug): View|RedirectResponse
     {
         if (! in_array($slug, DestinationRepository::packageSlugs(), true)) {
             abort(404);
         }
 
+        if (DestinationRepository::isComingSoon($slug)) {
+            return $this->comingSoonRedirect($slug);
+        }
+
         return $this->detail($slug, true);
+    }
+
+    /**
+     * Send visitors back to the listing card instead of an unfinished detail page.
+     */
+    private function comingSoonRedirect(string $slug): RedirectResponse
+    {
+        return redirect()->to(route('destinations').'#dest-'.$slug);
     }
 
     /**
