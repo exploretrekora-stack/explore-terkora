@@ -38,6 +38,11 @@ class InquiryReceived extends Mailable
             text: 'mail.inquiry-received-text',
             with: [
                 'name' => $this->inquiry->name,
+                'destination' => $this->inquiry->destinations,
+                'travelDate' => $this->inquiry->date?->format('d M Y'),
+                'travellers' => $this->inquiry->number_of_travellers,
+                'phoneNumber' => $this->inquiry->phone_number,
+                'inquiryMessage' => $this->inquiry->message,
                 'phone' => '+91 8460922935',
                 'email' => 'exploretrekora@gmail.com',
                 'website' => 'https://www.exploretrekora.com/',

@@ -994,18 +994,10 @@ Curated Travel Experiences Across India
       <form id="contact-enquiry-form" class="cb cf" method="POST" action="{{ route('enquiries.store') }}">
         @csrf
 
-        @if (session('enquiry_status') === 'received')
-          <p class="enquiry-note w" role="status">
-            Your enquiry has been saved. We will contact you using the phone number or email you provided.
-            @if (session('whatsapp_url'))
-              <br><a href="{{ session('whatsapp_url') }}" class="underline font-semibold" target="_blank" rel="noopener noreferrer">Click here to continue to WhatsApp if not redirected</a>
-            @endif
-          </p>
-          @if (session('whatsapp_url'))
-            <script>
-              window.location.href = @json(session('whatsapp_url'));
-            </script>
-          @endif
+        @if (session('whatsapp_url'))
+          <script>
+            window.location.href = @json(session('whatsapp_url'));
+          </script>
         @endif
 
         <div>
@@ -1078,6 +1070,22 @@ Curated Travel Experiences Across India
           }
 
           const successMessage = 'Your enquiry has been saved. We will contact you using the phone number or email you provided.';
+          const travelDateInput = form.querySelector('input[type="date"]');
+          const travelDateWrap = travelDateInput?.closest('.inp');
+
+          travelDateWrap?.addEventListener('click', (event) => {
+            if (!travelDateInput || typeof travelDateInput.showPicker !== 'function') {
+              return;
+            }
+
+            event.preventDefault();
+
+            try {
+              travelDateInput.showPicker();
+            } catch (pickerError) {
+              travelDateInput.focus();
+            }
+          });
 
           function keepScroll(scrollY) {
             const root = document.documentElement;
@@ -1106,25 +1114,14 @@ Curated Travel Experiences Across India
             anchor.insertAdjacentElement('afterend', error);
           }
 
-          function showNote(message, isError, whatsappUrl = null) {
-            form.querySelector('.enquiry-note')?.remove();
-            const note = document.createElement('p');
-            note.className = isError ? 'field-error w' : 'enquiry-note w';
-            note.setAttribute('role', isError ? 'alert' : 'status');
-            note.textContent = message;
-            if (whatsappUrl && !isError) {
-              const waLink = document.createElement('a');
-              waLink.href = whatsappUrl;
-              waLink.target = '_blank';
-              waLink.rel = 'noopener noreferrer';
-              waLink.style.display = 'block';
-              waLink.style.marginTop = '6px';
-              waLink.style.fontWeight = '600';
-              waLink.style.textDecoration = 'underline';
-              waLink.textContent = 'Redirecting to WhatsApp... Click here if not redirected automatically.';
-              note.appendChild(waLink);
-            }
-            form.prepend(note);
+          function showErrorNote(message) {
+            form.querySelector('.field-error.w')?.remove();
+            const errorNote = document.createElement('div');
+            errorNote.className = 'field-error w';
+            errorNote.setAttribute('role', 'alert');
+            errorNote.style.cssText = 'background:#fef2f2;border:1.5px solid #fecaca;color:#dc2626;padding:12px 14px;border-radius:12px;margin-bottom:16px;font-size:13.5px;';
+            errorNote.textContent = message;
+            form.prepend(errorNote);
           }
 
           form.addEventListener('submit', async (event) => {
@@ -1132,6 +1129,8 @@ Curated Travel Experiences Across India
             const scrollY = window.scrollY;
             const button = form.querySelector('[type="submit"]');
             clearFieldErrors();
+            form.querySelector('.field-error.w')?.remove();
+
             if (button) {
               button.disabled = true;
               button.classList.add('is-sending');
@@ -1163,14 +1162,13 @@ Curated Travel Experiences Across India
               }
 
               const data = await response.json();
-              showNote(successMessage, false, data?.whatsapp_url);
               form.reset();
 
               if (data && data.whatsapp_url) {
                 window.location.href = data.whatsapp_url;
               }
             } catch (error) {
-              showNote('Your enquiry could not be saved. Please try again.', true);
+              showErrorNote('Your enquiry could not be saved. Please try again.');
             } finally {
               if (button) {
                 button.classList.remove('is-sending');

@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminAuthController;
+use App\Http\Controllers\Admin\AdminDashboardController;
+use App\Http\Controllers\Admin\AdminInquiryController;
 use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\EnquiryController;
 use Illuminate\Support\Facades\Route;
@@ -36,3 +39,22 @@ Route::get('/terms-and-conditions', function () {
 Route::get('/copyright-policy', function () {
     return view('copyright');
 })->name('copyright');
+
+// ─── Admin Panel ──────────────────────────────────────────────────────────────
+Route::get('/admin', fn () => redirect()->route('admin.login'))->name('admin');
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    // Guest-only routes (redirect if already logged in)
+    Route::get('/login', [AdminAuthController::class, 'showLogin'])->name('login');
+    Route::post('/login', [AdminAuthController::class, 'login'])->name('login.post');
+
+    // Protected admin routes
+    Route::middleware('admin')->group(function () {
+        Route::post('/logout', [AdminAuthController::class, 'logout'])->name('logout');
+        Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
+        Route::get('/inquiries', [AdminInquiryController::class, 'index'])->name('inquiries');
+        Route::get('/inquiries/{inquiry}', [AdminInquiryController::class, 'show'])->name('inquiries.show');
+    });
+});
+
+

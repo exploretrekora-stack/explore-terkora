@@ -4,6 +4,25 @@ We have received your message and we are glad you are thinking of the mountains 
 
 One of our trek experts will contact you within 24 hours with details, pricing and answers to your questions.
 
+@if (filled($destination) || filled($travelDate) || filled($travellers) || filled($phoneNumber) || filled($inquiryMessage))
+Your enquiry
+@if (filled($destination))
+Destination: {{ $destination }}
+@endif
+@if (filled($travelDate))
+Travel date: {{ $travelDate }}
+@endif
+@if (filled($travellers))
+Travellers: {{ $travellers }}
+@endif
+@if (filled($phoneNumber))
+Phone: {{ $phoneNumber }}
+@endif
+@if (filled($inquiryMessage))
+Message: {{ $inquiryMessage }}
+@endif
+
+@endif
 What happens next
 1. Our team reviews your inquiry.
 2. We call or message you with route options that fit your dates.

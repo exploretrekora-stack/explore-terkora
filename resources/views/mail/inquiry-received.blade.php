@@ -36,6 +36,47 @@
                             <h1 style="margin:0 0 18px;font-family:Georgia,'Times New Roman',serif;font-size:30px;line-height:1.25;color:#122033;">Thank you for your inquiry, {{ $name }}</h1>
                             <p style="margin:0 0 16px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#243041;">We have received your message and we are glad you are thinking of the mountains with us. Whether this is your first trek or your tenth, our team will help you choose the right route, season and pace.</p>
                             <p style="margin:0 0 22px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#243041;">One of our trek experts will contact you <strong>within 24 hours</strong> with details, pricing and answers to your questions.</p>
+                            @if (filled($destination) || filled($travelDate) || filled($travellers) || filled($phoneNumber) || filled($inquiryMessage))
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f6f3ee;border-radius:8px;margin:0 0 22px;">
+                                <tr>
+                                    <td style="padding:22px 22px 8px;">
+                                        <p style="margin:0 0 12px;font-family:Georgia,'Times New Roman',serif;font-size:20px;color:#122033;">Your enquiry</p>
+                                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#243041;">
+                                            @if (filled($destination))
+                                            <tr>
+                                                <td style="padding:8px 0;width:140px;vertical-align:top;">Destination</td>
+                                                <td style="padding:8px 0;font-weight:700;">{{ $destination }}</td>
+                                            </tr>
+                                            @endif
+                                            @if (filled($travelDate))
+                                            <tr>
+                                                <td style="padding:8px 0;vertical-align:top;">Travel date</td>
+                                                <td style="padding:8px 0;font-weight:700;">{{ $travelDate }}</td>
+                                            </tr>
+                                            @endif
+                                            @if (filled($travellers))
+                                            <tr>
+                                                <td style="padding:8px 0;vertical-align:top;">Travellers</td>
+                                                <td style="padding:8px 0;font-weight:700;">{{ $travellers }}</td>
+                                            </tr>
+                                            @endif
+                                            @if (filled($phoneNumber))
+                                            <tr>
+                                                <td style="padding:8px 0;vertical-align:top;">Phone</td>
+                                                <td style="padding:8px 0;font-weight:700;">{{ $phoneNumber }}</td>
+                                            </tr>
+                                            @endif
+                                            @if (filled($inquiryMessage))
+                                            <tr>
+                                                <td style="padding:8px 0 14px;vertical-align:top;">Message</td>
+                                                <td style="padding:8px 0 14px;">{{ $inquiryMessage }}</td>
+                                            </tr>
+                                            @endif
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            @endif
                             <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f6f3ee;border-radius:8px;">
                                 <tr>
                                     <td style="padding:22px 22px 18px;">

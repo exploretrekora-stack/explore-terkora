@@ -13,7 +13,7 @@ use Throwable;
 class EnquiryController extends Controller
 {
     /**
-     * Store a validated travel enquiry and email the person who submitted it.
+     * Store a validated travel enquiry, trigger background email, and return WhatsApp URL instantly.
      */
     public function store(StoreEnquiryRequest $request): RedirectResponse|JsonResponse
     {
@@ -30,13 +30,11 @@ class EnquiryController extends Controller
             'message' => $validated['message'] ?? null,
         ]);
 
-        try {
-            Mail::to($inquiry->email)->send(new InquiryReceived($inquiry));
-        } catch (Throwable $exception) {
-            report($exception);
-        }
-
+        $inquiryId = $inquiry->getKey();
         $whatsappUrl = $inquiry->whatsAppUrl();
+
+        // Dispatch email completely in the background so the user is redirected to WhatsApp in milliseconds
+        $this->dispatchEmailInBackground($inquiryId);
 
         if ($request->wantsJson()) {
             return response()->json([
@@ -50,5 +48,47 @@ class EnquiryController extends Controller
             ->to(route('home', absolute: false).'#contact')
             ->with('enquiry_status', 'received')
             ->with('whatsapp_url', $whatsappUrl);
+    }
+
+    /**
+     * Dispatches the email asynchronously so the HTTP response is instantaneous.
+     */
+    protected function dispatchEmailInBackground(int|string $inquiryId): void
+    {
+        try {
+            $artisan = base_path('artisan');
+            $php = PHP_BINARY;
+
+            if (file_exists($artisan) && function_exists('exec')) {
+                @exec("{$php} {$artisan} enquiry:send-email {$inquiryId} > /dev/null 2>&1 &");
+
+                return;
+            }
+        } catch (Throwable) {
+            // Fall back to afterResponse closure if background CLI execution fails
+        }
+
+        dispatch(function () use ($inquiryId): void {
+            $savedInquiry = Inquiry::query()->find($inquiryId);
+
+            if (! $savedInquiry instanceof Inquiry) {
+                return;
+            }
+
+            try {
+                $pendingMail = Mail::to($savedInquiry->email);
+                $businessEmail = config('mail.from.address');
+
+                if (is_string($businessEmail)
+                    && filter_var($businessEmail, FILTER_VALIDATE_EMAIL)
+                    && strcasecmp($businessEmail, $savedInquiry->email) !== 0) {
+                    $pendingMail->bcc($businessEmail);
+                }
+
+                $pendingMail->send(new InquiryReceived($savedInquiry));
+            } catch (Throwable $exception) {
+                report($exception);
+            }
+        })->afterResponse();
     }
 }

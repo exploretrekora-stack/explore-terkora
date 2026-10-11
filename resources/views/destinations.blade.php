@@ -853,6 +853,19 @@
                 modalDateInput.min = today;
                 const nextWeek = new Date(Date.now() + 7 * 86400000).toISOString().split('T')[0];
                 modalDateInput.value = nextWeek;
+                modalDateInput.closest('.dest-input-wrap')?.addEventListener('click', (event) => {
+                    if (typeof modalDateInput.showPicker !== 'function') {
+                        return;
+                    }
+
+                    event.preventDefault();
+
+                    try {
+                        modalDateInput.showPicker();
+                    } catch (pickerError) {
+                        modalDateInput.focus();
+                    }
+                });
             }
 
             function openModal(destKey, title, location, days) {

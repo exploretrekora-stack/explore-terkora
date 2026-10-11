@@ -41,7 +41,7 @@ class EnquirySubmissionTest extends TestCase
         $response->assertSee('+91 8460922935');
         $response->assertSee('exploretrekora@gmail.com');
         $response->assertSee('Contact us for availability.');
-        $response->assertSee('Surat, India');
+        $response->assertSee('Vadodara, India');
         $response->assertSee('action="'.route('enquiries.store').'"', false);
         $response->assertSee('id="contact-enquiry-form"', false);
         $response->assertDontSee('555-0199');
@@ -137,7 +137,7 @@ class EnquirySubmissionTest extends TestCase
         $this->assertStringStartsWith('https://wa.me/918460922935?text=', $url);
 
         $decodedQuery = urldecode((string) parse_url($url, PHP_URL_QUERY));
-        $this->assertStringContainsString('Rahul Sharma', $decodedQuery);
+        $this->assertStringContainsString("Name: Rahul Sharma\nEmail: rahul@example.com", $decodedQuery);
         $this->assertStringContainsString('rahul@example.com', $decodedQuery);
         $this->assertStringContainsString('+919876543210', $decodedQuery);
         $this->assertStringContainsString('Surat, Gujarat', $decodedQuery);
@@ -183,6 +183,11 @@ class EnquirySubmissionTest extends TestCase
         $mail = new InquiryReceived(new Inquiry([
             'name' => 'Asha Patel',
             'email' => 'asha@example.com',
+            'phone_number' => '+918460922935',
+            'number_of_travellers' => 3,
+            'destinations' => 'Girnar',
+            'date' => '2026-11-15',
+            'message' => 'We would like a family trip.',
         ]));
 
         $mail->assertSeeInHtml('Thank you for your inquiry, Asha Patel');
@@ -190,7 +195,12 @@ class EnquirySubmissionTest extends TestCase
         $mail->assertSeeInHtml('Browse our treks');
         $mail->assertSeeInHtml('+91 8460922935');
         $mail->assertSeeInHtml('exploretrekora@gmail.com');
+        $mail->assertSeeInHtml('Girnar');
+        $mail->assertSeeInHtml('15 Nov 2026');
+        $mail->assertSeeInHtml('We would like a family trip.');
         $mail->assertSeeInText('Browse our treks: https://www.exploretrekora.com/');
+        $mail->assertSeeInText('Destination: Girnar');
+        $mail->assertSeeInText('Travel date: 15 Nov 2026');
     }
 
     /**

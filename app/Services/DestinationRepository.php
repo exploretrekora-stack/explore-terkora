@@ -29,7 +29,33 @@ class DestinationRepository
                 'starting_point' => 'Kathgodam / Pantnagar / Dharchula',
                 'group_size' => '4 – 5 Persons per 4x4 Bolero',
                 'image' => 'images/trips/adi-kailash-om-parvat/1.jpg',
-                'gallery' => self::tripGallery('adi-kailash-om-parvat', 'Adi Kailash & Om Parvat Yatra'),
+                'gallery' => [
+                    [
+                        'src' => 'images/trips/adi-kailash-om-parvat/1.jpg',
+                        'title' => 'Adi Kailash & Om Parvat Darshan',
+                        'caption' => 'Reverent prayers offered facing the sacred snow-clad peaks in the tranquil Vyas Valley near the Indo-Tibet border.',
+                    ],
+                    [
+                        'src' => 'images/trips/adi-kailash-om-parvat/2.jpg',
+                        'title' => 'Meditation in High Himalayas',
+                        'caption' => 'Peaceful spiritual dhyan amidst pristine mountain peaks and pure Himalayan energy.',
+                    ],
+                    [
+                        'src' => 'images/trips/adi-kailash-om-parvat/3.jpg',
+                        'title' => 'Vyas Valley Landscape',
+                        'caption' => 'Breathtaking terrain and rugged roads traversed by 4x4 Bolero on the sacred pilgrimage.',
+                    ],
+                    [
+                        'src' => 'images/trips/adi-kailash-om-parvat/4.jpg',
+                        'title' => 'Parvati Sarovar & Sacred Waters',
+                        'caption' => 'Holy lake situated at 14,750 ft reflecting divine Himalayan summits.',
+                    ],
+                    [
+                        'src' => 'images/trips/adi-kailash-om-parvat/5.jpg',
+                        'title' => 'Sacred Bells & Pilgrimage Heritage',
+                        'caption' => 'Traditional temple bells and spiritual devotion echoing through the Kumaon Himalayas.',
+                    ],
+                ],
                 'gallery_heading' => 'Sacred Yatra Gallery (5 Authentic Photographs)',
                 'gallery_intro' => 'Original on-ground photography captured across Pithoragarh, Dharchula, and the Vyas Valley:',
                 'price_label' => 'PACKAGE PRICE',

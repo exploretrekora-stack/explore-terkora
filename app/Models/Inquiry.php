@@ -46,41 +46,44 @@ class Inquiry extends Model
         $cleanPhone = preg_replace('/\D/', '', $phone) ?: '918460922935';
 
         $lines = [
-            'Hello Explore Trekora, I would like to inquire about a tour package:',
+            'Hello Explore Trekora,',
             '',
-            '*Full Name:* '.$this->name,
-            '*Email:* '.$this->email,
+            'I would like to inquire about a tour package.',
+            '',
+            'Name: '.$this->name,
+            'Email: '.$this->email,
         ];
 
         if (! empty($this->phone_number)) {
-            $lines[] = '*Phone:* '.$this->phone_number;
+            $lines[] = 'Phone: '.$this->phone_number;
         }
 
         if (! empty($this->destinations)) {
-            $lines[] = '*Destination:* '.$this->destinations;
+            $lines[] = 'Destination: '.$this->destinations;
         }
 
         if (! empty($this->date)) {
             $dateString = $this->date instanceof \DateTimeInterface
                 ? $this->date->format('d M Y')
                 : (string) $this->date;
-            $lines[] = '*Travel Date:* '.$dateString;
+            $lines[] = 'Travel Date: '.$dateString;
         }
 
         if (! empty($this->number_of_travellers)) {
-            $lines[] = '*Number of Travellers:* '.$this->number_of_travellers;
+            $lines[] = 'Travellers: '.$this->number_of_travellers;
         }
 
         if (! empty($this->address)) {
-            $lines[] = '*Address:* '.$this->address;
+            $lines[] = 'Address: '.$this->address;
         }
 
         if (! empty($this->message)) {
-            $lines[] = '*Message:* '.$this->message;
+            $lines[] = 'Message: '.$this->message;
         }
 
         $lines[] = '';
-        $lines[] = 'Please share package details and availability. Thank you!';
+        $lines[] = 'Please share the package details and availability.';
+        $lines[] = 'Thank you.';
 
         return 'https://wa.me/'.$cleanPhone.'?text='.rawurlencode(implode("\n", $lines));
     }

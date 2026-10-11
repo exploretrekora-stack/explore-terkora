@@ -2,8 +2,8 @@
 <div class="strip">
   <div class="wrap">
     <div class="flex items-center flex-wrap gap-x-6 gap-y-1">
-      <span class="inline-flex items-center gap-1.5 font-medium">📍 Surat, India</span>
-      <span class="inline-flex items-center gap-1.5 font-medium">✉ info@exploretrekora.com</span>
+      <span class="inline-flex items-center gap-1.5 font-medium">📍 Vadodara, India</span>
+      <span class="inline-flex items-center gap-1.5 font-medium">✉ exploretrekora@gmail.com</span>
     </div>
     <span class="font-medium text-t300 hidden sm:inline">✨ Free cancellation on selected trips</span>
   </div>
@@ -441,7 +441,7 @@
     <x-start-exploring block />
     <div class="drawer-contact-info">
       <div class="flex flex-col items-center gap-1 text-xs text-muted">
-        <span>📍 Surat, India</span>
+        <span>📍 Vadodara, India</span>
         <span>✉ info@exploretrekora.com</span>
       </div>
     </div>
