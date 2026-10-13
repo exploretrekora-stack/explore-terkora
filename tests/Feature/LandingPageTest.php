@@ -100,7 +100,7 @@ class LandingPageTest extends TestCase
     {
         $this->get(route('destinations'))->assertOk();
         $this->get(route('tour-packages'))->assertOk();
-        $this->get(route('travel-guides'))->assertOk()->assertSee('Coming Soon');
+        $this->get(route('travel-guides'))->assertOk()->assertSee('About Our Tour Guides')->assertDontSee('Coming Soon');
         $this->get(route('about-us'))->assertOk();
         $this->get(route('terms'))->assertOk();
         $this->get(route('copyright'))->assertOk();
@@ -374,28 +374,27 @@ class LandingPageTest extends TestCase
         $response->assertSee('id="pkg-family"', false);
         $response->assertSee('id="pkg-weekend"', false);
         $response->assertSee('class="pkg-title"', false);
-        $response->assertSee('Haridwar &amp; Rishikesh', false);
+        $response->assertDontSee('Haridwar &amp; Rishikesh', false);
         $response->assertSee('Maharashtra Hill station');
         $response->assertSee('Harishchandragad');
         $response->assertSee('Harihar Fort');
-        $response->assertSee('Photograph to be added');
-        $response->assertSee('destination=Haridwar', false);
+        $response->assertDontSee('destination=Haridwar', false);
         $response->assertSee('#contact', false);
-        $response->assertSee('Girnar · Coming Soon', false);
-        $response->assertSee('class="coming-soon-title"', false);
-        $response->assertDontSee(route('tour-packages.show', 'girnar-pilgrimage-trek', absolute: false), false);
+        $response->assertSee('Girnar Hill Trek &amp; Junagadh Exploration', false);
+        $response->assertSee(route('tour-packages.show', 'girnar-pilgrimage-trek', absolute: false), false);
+        $response->assertSee(route('tour-packages.show', 'gateway-to-malvan', absolute: false), false);
         $response->assertSee(route('tour-packages.show', 'harihar-fort-trek', absolute: false), false);
         $response->assertSee('class="nav-drop-btn active"', false);
-        $response->assertDontSee(route('destinations.show', 'girnar-pilgrimage-trek', absolute: false), false);
+        $response->assertSee(route('destinations.show', 'girnar-pilgrimage-trek', absolute: false), false);
 
         $detail = $this->get(route('tour-packages.show', 'girnar-pilgrimage-trek'));
-        $detail->assertRedirect(route('destinations').'#dest-girnar-pilgrimage-trek');
+        $detail->assertOk();
     }
 
     /**
      * Test that the scroll route lists every destination the plane reveals.
      */
-    public function test_route_flight_lists_twelve_destinations(): void
+    public function test_route_flight_lists_thirteen_destinations(): void
     {
         $response = $this->get('/');
 
@@ -416,6 +415,7 @@ class LandingPageTest extends TestCase
         $response->assertSee('Mount Abu');
         $response->assertSee('Dang');
         $response->assertSee('Dediyapada');
+        $response->assertSee('Gateway to Malvan');
     }
 
     /**

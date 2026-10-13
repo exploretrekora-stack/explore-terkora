@@ -329,30 +329,30 @@
                         </div>
                     </article>
 
-                    <!-- 8. Girnar Pilgrimage Trek -->
-                    <article id="dest-girnar-pilgrimage-trek" class="dest-card is-coming-soon{{ \App\Services\DestinationRepository::cardSearchState($tripSearch ?? null, 'girnar-pilgrimage-trek') }}" data-slug="girnar-pilgrimage-trek" data-category="pilgrimage" data-title="Girnar Pilgrimage Trek" data-location="Gujarat">
-                        <p class="coming-soon-title">Coming Soon</p>
+                    <!-- 8. Girnar Hill Trek & Junagadh Exploration -->
+                    <article id="dest-girnar-pilgrimage-trek" class="dest-card{{ \App\Services\DestinationRepository::cardSearchState($tripSearch ?? null, 'girnar-pilgrimage-trek') }}" data-slug="girnar-pilgrimage-trek" data-category="pilgrimage" data-title="Girnar Hill Trek & Junagadh Exploration" data-location="Gujarat">
                         <div class="dest-card-media">
-                            <img src="{{ asset('images/trips/girnar-pilgrimage-trek/1.jpg') }}" alt="Girnar Mountain Junagadh" loading="lazy">
+                            <img src="{{ asset('images/trips/girnar-pilgrimage-trek/1.jpg') }}" alt="Girnar Hill Trek in Junagadh" loading="lazy">
                             <div class="dest-card-badge-top">
                                 <span class="dest-badge tag-sacred">Sacred Pilgrimage</span>
-                                <span class="dest-badge tag-days">2D / 1N</span>
+                                <span class="dest-badge tag-days">3D / 3N</span>
                             </div>
                             <span class="dest-card-location">📍 Junagadh, Gujarat</span>
                         </div>
                         <div class="dest-card-body">
-                            <h3>Girnar Pilgrimage Trek</h3>
-                            <p class="dest-card-desc">Ascend the sacred mountain of Saurashtra with early dawn vistas, spiritual serenity, and well-supported trail stops.</p>
+                            <h3>Girnar Hill Trek &amp; Junagadh Exploration</h3>
+                            <p class="dest-card-desc">Ascend roughly 10,000 stone steps to sacred Guru Dattatreya Peak, explore ancient Uparkot Fort (Navghan Kuvo, Buddhist Caves), Bhavnath Mahadev Temple, and Willingdon Dam.</p>
                             <ul class="dest-card-perks">
-                                <li><span>✓</span> 10,000 Sacred Steps</li>
-                                <li><span>✓</span> Ambaji &amp; Dattatreya Temples</li>
-                                <li><span>✓</span> Sunrise Summit Experience</li>
+                                <li><span>✓</span> Girnar Summit Trek via Old Stairs (10,000 Steps)</li>
+                                <li><span>✓</span> Guru Dattatreya Peak &amp; Maa Amba Darshan</li>
+                                <li><span>✓</span> Uparkot Fort &amp; Ancient Buddhist Caves</li>
+                                <li><span>✓</span> Willingdon Dam Sunset &amp; Bhavnath Temple</li>
                             </ul>
                             <div class="dest-card-footer">
                                 <div class="dest-card-actions">
-                                    <span class="btn btn-outline-teal dest-card-details-btn is-disabled">Coming Soon</span>
-                                    <x-inquire-now class="dest-card-enquire-btn" data-dest="Girnar" data-title="Girnar Pilgrimage Trek" data-location="Junagadh, Gujarat" data-days="2D / 1N" />
-                                    <a href="https://wa.me/918460922935?text={{ urlencode('Hello Explore Trekora, I am interested in Girnar Pilgrimage Trek (2D / 1N). Please share package details and availability.') }}" target="_blank" rel="noopener noreferrer" class="btn-card-wa" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+                                    <a href="{{ route('destinations.show', 'girnar-pilgrimage-trek') }}" class="btn btn-outline-teal dest-card-details-btn">View Details</a>
+                                    <x-inquire-now class="dest-card-enquire-btn" data-dest="Girnar" data-title="Girnar Hill Trek &amp; Junagadh Exploration" data-location="Junagadh, Gujarat" data-days="3D / 3N" />
+                                    <a href="https://wa.me/918460922935?text={{ urlencode('Hello Explore Trekora, I am interested in Girnar Hill Trek & Junagadh Exploration (3D / 3N). Please share package details and availability.') }}" target="_blank" rel="noopener noreferrer" class="btn-card-wa" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
                                         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.188 8.188 0 01-5.82 2.41c-1.45 0-2.88-.38-4.14-1.11l-.3-.17-3.12.82.83-3.04-.19-.31a8.19 8.19 0 01-1.25-4.44c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.21-.18-.46-.3z"/></svg>
                                     </a>
                                 </div>
@@ -360,30 +360,30 @@
                         </div>
                     </article>
 
-                    <!-- 9. Mount Abu Eco Getaway -->
-                    <article id="dest-mount-abu-eco-getaway" class="dest-card is-coming-soon{{ \App\Services\DestinationRepository::cardSearchState($tripSearch ?? null, 'mount-abu-eco-getaway') }}" data-slug="mount-abu-eco-getaway" data-category="nature" data-title="Mount Abu Eco Getaway" data-location="Rajasthan">
-                        <p class="coming-soon-title">Coming Soon</p>
+                    <!-- 9. Mount Abu -->
+                    <article id="dest-mount-abu-eco-getaway" class="dest-card{{ \App\Services\DestinationRepository::cardSearchState($tripSearch ?? null, 'mount-abu-eco-getaway') }}" data-slug="mount-abu-eco-getaway" data-category="nature" data-title="Mount Abu" data-location="Rajasthan">
                         <div class="dest-card-media">
-                            <img src="{{ asset('images/'.rawurlencode('Mount Abu Eco Getaway.png')) }}" alt="Mount Abu Eco Getaway" loading="lazy">
+                            <img src="{{ asset('images/trips/mount-abu-eco-getaway/1.jpg') }}" alt="Mount Abu in Rajasthan" loading="lazy">
                             <div class="dest-card-badge-top">
                                 <span class="dest-badge tag-nature">Hill Station</span>
                                 <span class="dest-badge tag-days">3D / 2N</span>
                             </div>
-                            <span class="dest-card-location">📍 Aravalli Range, Rajasthan</span>
+                            <span class="dest-card-location">📍 Mount Abu, Rajasthan</span>
                         </div>
                         <div class="dest-card-body">
-                            <h3>Mount Abu Eco Getaway</h3>
-                            <p class="dest-card-desc">Rajasthan’s only hill station offering cool mountain breezes, Guru Shikhar nature walks, and peaceful lake retreats.</p>
+                            <h3>Mount Abu</h3>
+                            <p class="dest-card-desc">Curated 3-day eco-retreat in Rajasthan’s only hill station featuring Dilwara Temples, Nakki Lake boating, Guru Shikhar sunrise, Trevor’s Tank, and Mount Abu Wildlife Sanctuary.</p>
                             <ul class="dest-card-perks">
-                                <li><span>✓</span> Guru Shikhar Highest Peak</li>
-                                <li><span>✓</span> Nakki Lake Boat Cruise</li>
-                                <li><span>✓</span> Peaceful Eco-Cottage Stays</li>
+                                <li><span>✓</span> Dilwara Jain Temples &amp; Nakki Lake Boating</li>
+                                <li><span>✓</span> Guru Shikhar Sunrise (Highest Peak in Aravallis)</li>
+                                <li><span>✓</span> Achalgarh Fort &amp; Tranquil Peace Park</li>
+                                <li><span>✓</span> Trevor's Tank &amp; Mount Abu Wildlife Sanctuary</li>
                             </ul>
                             <div class="dest-card-footer">
                                 <div class="dest-card-actions">
-                                    <span class="btn btn-outline-teal dest-card-details-btn is-disabled">Coming Soon</span>
-                                    <x-inquire-now class="dest-card-enquire-btn" data-dest="Mount Abu" data-title="Mount Abu Eco Getaway" data-location="Aravalli Range, Rajasthan" data-days="3D / 2N" />
-                                    <a href="https://wa.me/918460922935?text={{ urlencode('Hello Explore Trekora, I am interested in Mount Abu Eco Getaway (3D / 2N). Please share package details and availability.') }}" target="_blank" rel="noopener noreferrer" class="btn-card-wa" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+                                    <a href="{{ route('destinations.show', 'mount-abu-eco-getaway') }}" class="btn btn-outline-teal dest-card-details-btn">View Details</a>
+                                    <x-inquire-now class="dest-card-enquire-btn" data-dest="Mount Abu" data-title="Mount Abu" data-location="Mount Abu, Rajasthan" data-days="3D / 2N" />
+                                    <a href="https://wa.me/918460922935?text={{ urlencode('Hello Explore Trekora, I am interested in Mount Abu (3D / 2N). Please share package details and availability.') }}" target="_blank" rel="noopener noreferrer" class="btn-card-wa" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
                                         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.188 8.188 0 01-5.82 2.41c-1.45 0-2.88-.38-4.14-1.11l-.3-.17-3.12.82.83-3.04-.19-.31a8.19 8.19 0 01-1.25-4.44c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.21-.18-.46-.3z"/></svg>
                                     </a>
                                 </div>
@@ -422,29 +422,29 @@
                     </article>
 
                     <!-- 11. Dang Forest Circuit -->
-                    <article id="dest-dang-forest-circuit" class="dest-card is-coming-soon{{ \App\Services\DestinationRepository::cardSearchState($tripSearch ?? null, 'dang-forest-circuit') }}" data-slug="dang-forest-circuit" data-category="nature" data-title="Dang Forest Circuit" data-location="Gujarat">
-                        <p class="coming-soon-title">Coming Soon</p>
+                    <article id="dest-dang-forest-circuit" class="dest-card{{ \App\Services\DestinationRepository::cardSearchState($tripSearch ?? null, 'dang-forest-circuit') }}" data-slug="dang-forest-circuit" data-category="nature" data-title="Dang Forest Circuit" data-location="Gujarat">
                         <div class="dest-card-media">
-                            <img src="{{ asset('images/trips/dang-forest-circuit/1.jpg') }}" alt="Dang Forest and Waterfalls" loading="lazy">
+                            <img src="{{ asset('images/trips/dang-forest-circuit/1.jpg') }}" alt="Dang Forest Circuit" loading="lazy">
                             <div class="dest-card-badge-top">
                                 <span class="dest-badge tag-nature">Forest Trail</span>
-                                <span class="dest-badge tag-days">3D / 2N</span>
+                                <span class="dest-badge tag-days">2D / 1N</span>
                             </div>
-                            <span class="dest-card-location">📍 Saputara & Dang, Gujarat</span>
+                            <span class="dest-card-location">📍 Dang, Gujarat</span>
                         </div>
                         <div class="dest-card-body">
                             <h3>Dang Forest Circuit</h3>
-                            <p class="dest-card-desc">A lush rainforest getaway filled with roaring monsoon waterfalls, bamboo groves, tribal cuisine, and riverside camping.</p>
+                            <p class="dest-card-desc">An exciting 2-day weekend plan exploring historic Songadh Fort, hidden waterfalls, deep forest night stay, and evening DJ &amp; bonfire.</p>
                             <ul class="dest-card-perks">
-                                <li><span>✓</span> Gira Waterfalls Trek</li>
-                                <li><span>✓</span> Dense Teak Forest Trail</li>
-                                <li><span>✓</span> Authentic Tribal Homestays</li>
+                                <li><span>✓</span> Historic Songadh Fort Exploration</li>
+                                <li><span>✓</span> Hidden Waterfall in Deep Dang Forest</li>
+                                <li><span>✓</span> Overnight Stay in the Middle of the Forest</li>
+                                <li><span>✓</span> Night DJ Party &amp; Cozy Bonfire Evening</li>
                             </ul>
                             <div class="dest-card-footer">
                                 <div class="dest-card-actions">
-                                    <span class="btn btn-outline-teal dest-card-details-btn is-disabled">Coming Soon</span>
-                                    <x-inquire-now class="dest-card-enquire-btn" data-dest="Dang" data-title="Dang Forest Circuit" data-location="Saputara &amp; Dang, Gujarat" data-days="3D / 2N" />
-                                    <a href="https://wa.me/918460922935?text={{ urlencode('Hello Explore Trekora, I am interested in Dang Forest Circuit (3D / 2N). Please share package details and availability.') }}" target="_blank" rel="noopener noreferrer" class="btn-card-wa" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+                                    <a href="{{ route('destinations.show', 'dang-forest-circuit') }}" class="btn btn-outline-teal dest-card-details-btn">View Details</a>
+                                    <x-inquire-now class="dest-card-enquire-btn" data-dest="Dang" data-title="Dang Forest Circuit" data-location="Dang, Gujarat" data-days="2D / 1N" />
+                                    <a href="https://wa.me/918460922935?text={{ urlencode('Hello Explore Trekora, I am interested in Dang Forest Circuit (2D / 1N). Please share package details and availability.') }}" target="_blank" rel="noopener noreferrer" class="btn-card-wa" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
                                         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.188 8.188 0 01-5.82 2.41c-1.45 0-2.88-.38-4.14-1.11l-.3-.17-3.12.82.83-3.04-.19-.31a8.19 8.19 0 01-1.25-4.44c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.21-.18-.46-.3z"/></svg>
                                     </a>
                                 </div>
@@ -452,30 +452,92 @@
                         </div>
                     </article>
 
-                    <!-- 12. Dediapada Wilderness -->
-                    <article id="dest-dediapada-wilderness-trek" class="dest-card is-coming-soon{{ \App\Services\DestinationRepository::cardSearchState($tripSearch ?? null, 'dediapada-wilderness-trek') }}" data-slug="dediapada-wilderness-trek" data-category="ghats" data-title="Dediapada Wilderness Trek" data-location="Gujarat">
-                        <p class="coming-soon-title">Coming Soon</p>
+                    <!-- 12. Dediyapada Wilderness Trek -->
+                    <article id="dest-dediapada-wilderness-trek" class="dest-card{{ \App\Services\DestinationRepository::cardSearchState($tripSearch ?? null, 'dediapada-wilderness-trek') }}" data-slug="dediapada-wilderness-trek" data-category="ghats" data-title="Dediyapada Wilderness Trek" data-location="Gujarat">
                         <div class="dest-card-media">
-                            <img src="{{ asset('images/trips/dediapada-wilderness-trek/1.jpg') }}" alt="Dediapada Wilderness Trek" loading="lazy">
+                            <img src="{{ asset('images/trips/dediapada-wilderness-trek/1.jpg') }}" alt="Dediyapada Wilderness Trek" loading="lazy">
                             <div class="dest-card-badge-top">
                                 <span class="dest-badge tag-ghats">Wilderness Trail</span>
                                 <span class="dest-badge tag-days">2D / 1N</span>
                             </div>
-                            <span class="dest-card-location">📍 Shoolpaneshwar, Gujarat</span>
+                            <span class="dest-card-location">📍 Dediyapada, Gujarat</span>
                         </div>
                         <div class="dest-card-body">
-                            <h3>Dediapada Wilderness Trek</h3>
-                            <p class="dest-card-desc">Offbeat river trails, natural plunge pools, and hidden waterfalls nestled in the heart of Shoolpaneshwar Wildlife Sanctuary.</p>
+                            <h3>Dediyapada Wilderness Trek</h3>
+                            <p class="dest-card-desc">Scenic weekend plan exploring mountain roads, hidden gems, hiking and trekking with friends and family, and night stay camping.</p>
                             <ul class="dest-card-perks">
-                                <li><span>✓</span> Hidden Canyon Plunge Pools</li>
-                                <li><span>✓</span> Shoolpaneshwar Sanctuary</li>
-                                <li><span>✓</span> River Bed Walking &amp; Trekking</li>
+                                <li><span>✓</span> Scenic Mountain Road Drive &amp; Vistas</li>
+                                <li><span>✓</span> Explore Hidden Gems of Dediyapada</li>
+                                <li><span>✓</span> Hiking &amp; Trekking for Friends &amp; Family</li>
+                                <li><span>✓</span> Immersive Night Stay Camping in Nature</li>
                             </ul>
                             <div class="dest-card-footer">
                                 <div class="dest-card-actions">
-                                    <span class="btn btn-outline-teal dest-card-details-btn is-disabled">Coming Soon</span>
-                                    <x-inquire-now class="dest-card-enquire-btn" data-dest="Dediapada" data-title="Dediapada Wilderness Trek" data-location="Shoolpaneshwar, Gujarat" data-days="2D / 1N" />
-                                    <a href="https://wa.me/918460922935?text={{ urlencode('Hello Explore Trekora, I am interested in Dediapada Wilderness Trek (2D / 1N). Please share package details and availability.') }}" target="_blank" rel="noopener noreferrer" class="btn-card-wa" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+                                    <a href="{{ route('destinations.show', 'dediapada-wilderness-trek') }}" class="btn btn-outline-teal dest-card-details-btn">View Details</a>
+                                    <x-inquire-now class="dest-card-enquire-btn" data-dest="Dediyapada" data-title="Dediyapada Wilderness Trek" data-location="Dediyapada, Gujarat" data-days="2D / 1N" />
+                                    <a href="https://wa.me/918460922935?text={{ urlencode('Hello Explore Trekora, I am interested in Dediyapada Wilderness Trek (2D / 1N). Please share package details and availability.') }}" target="_blank" rel="noopener noreferrer" class="btn-card-wa" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.188 8.188 0 01-5.82 2.41c-1.45 0-2.88-.38-4.14-1.11l-.3-.17-3.12.82.83-3.04-.19-.31a8.19 8.19 0 01-1.25-4.44c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.21-.18-.46-.3z"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 13. Gateway to Malvan -->
+                    <article id="dest-gateway-to-malvan" class="dest-card{{ \App\Services\DestinationRepository::cardSearchState($tripSearch ?? null, 'gateway-to-malvan') }}" data-slug="gateway-to-malvan" data-category="nature" data-title="Gateway to Malvan" data-location="Maharashtra">
+                        <div class="dest-card-media">
+                            <img src="{{ asset('images/trips/gateway-to-malvan/1.jpg') }}" alt="Gateway to Malvan Coastal Exploration" loading="lazy">
+                            <div class="dest-card-badge-top">
+                                <span class="dest-badge tag-nature">Coastal &amp; Sea Fort</span>
+                                <span class="dest-badge tag-days">3D / 2N</span>
+                            </div>
+                            <span class="dest-card-location">📍 Malvan, Maharashtra</span>
+                        </div>
+                        <div class="dest-card-body">
+                            <h3>Gateway to Malvan</h3>
+                            <p class="dest-card-desc">Experience scuba diving, thrilling watersports at Chivla Beach, historic Sindhudurg Fort, Nivati Lighthouse boat trip, kayaking, and authentic Malvani thalis.</p>
+                            <ul class="dest-card-perks">
+                                <li><span>✓</span> Scuba Diving &amp; Coral Life at Marine Sanctuary</li>
+                                <li><span>✓</span> 17th-Century Sindhudurg Sea Fort &amp; Statue</li>
+                                <li><span>✓</span> Watersports at Chivla Beach (Parasailing, Jet Ski)</li>
+                                <li><span>✓</span> Nivati Lighthouse, Kayaking &amp; Malvani Thalis</li>
+                            </ul>
+                            <div class="dest-card-footer">
+                                <div class="dest-card-actions">
+                                    <a href="{{ route('destinations.show', 'gateway-to-malvan') }}" class="btn btn-outline-teal dest-card-details-btn">View Details</a>
+                                    <x-inquire-now class="dest-card-enquire-btn" data-dest="Malvan" data-title="Gateway to Malvan" data-location="Malvan, Maharashtra" data-days="3D / 2N" />
+                                    <a href="https://wa.me/918460922935?text={{ urlencode('Hello Explore Trekora, I am interested in Gateway to Malvan (3D / 2N). Please share package details and availability.') }}" target="_blank" rel="noopener noreferrer" class="btn-card-wa" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.188 8.188 0 01-5.82 2.41c-1.45 0-2.88-.38-4.14-1.11l-.3-.17-3.12.82.83-3.04-.19-.31a8.19 8.19 0 01-1.25-4.44c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.21-.18-.46-.3z"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 14. Sembalpani -->
+                    <article id="dest-sembalpani" class="dest-card{{ \App\Services\DestinationRepository::cardSearchState($tripSearch ?? null, 'sembalpani') }}" data-slug="sembalpani" data-category="nature" data-title="Sembalpani Eco Trek &amp; Hills" data-location="Gujarat">
+                        <div class="dest-card-media">
+                            <img src="{{ asset('images/trips/Sembalpani/1.jpg') }}" alt="Sembalpani Eco Trek &amp; Hills in Banaskantha" loading="lazy">
+                            <div class="dest-card-badge-top">
+                                <span class="dest-badge tag-nature">Nature &amp; Hills</span>
+                                <span class="dest-badge tag-days">2–3 Days</span>
+                            </div>
+                            <span class="dest-card-location">📍 Banaskantha, Gujarat</span>
+                        </div>
+                        <div class="dest-card-body">
+                            <h3>Sembalpani Eco Trek &amp; Hills</h3>
+                            <p class="dest-card-desc">Explore Digmarathi (Lion's rock), Kanjero Dungar, and Chamunda tekari over a refreshing 2 to 3-day nature weekend getaway.</p>
+                            <ul class="dest-card-perks">
+                                <li><span>✓</span> Digmarathi (Lion's rock) Exploration</li>
+                                <li><span>✓</span> Kanjero Dungar Scenic Summit Trek</li>
+                                <li><span>✓</span> Chamunda tekari Viewpoint &amp; Shrine</li>
+                                <li><span>✓</span> 2–3 Days Relaxed Nature &amp; Camp Stay</li>
+                            </ul>
+                            <div class="dest-card-footer">
+                                <div class="dest-card-actions">
+                                    <a href="{{ route('destinations.show', 'sembalpani') }}" class="btn btn-outline-teal dest-card-details-btn">View Details</a>
+                                    <x-inquire-now class="dest-card-enquire-btn" data-dest="Sembalpani" data-title="Sembalpani Eco Trek &amp; Hills" data-location="Banaskantha, Gujarat" data-days="2–3 Days" />
+                                    <a href="https://wa.me/918460922935?text={{ urlencode('Hello Explore Trekora, I am interested in Sembalpani Eco Trek (2–3 Days). Please share package details and availability.') }}" target="_blank" rel="noopener noreferrer" class="btn-card-wa" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
                                         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.188 8.188 0 01-5.82 2.41c-1.45 0-2.88-.38-4.14-1.11l-.3-.17-3.12.82.83-3.04-.19-.31a8.19 8.19 0 01-1.25-4.44c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.21-.18-.46-.3z"/></svg>
                                     </a>
                                 </div>
@@ -634,11 +696,13 @@
                                     <option value="Kareri Lake Trek" data-title="Kareri Lake Trek" data-location="Dharamshala, Himachal Pradesh · 2D / 1N">Kareri Lake Trek</option>
                                     <option value="Dalhousie & Dharamshala" data-title="Dalhousie &amp; Dharamshala Tour" data-location="Himachal Pradesh · 8 Days">Dalhousie &amp; Dharamshala Tour</option>
                                     <option value="Harihar Fort Trek" data-title="Harihar Fort &amp; Harishchandragad" data-location="Nashik &amp; Ahmednagar, Maharashtra · 2D / 2N">Harihar Fort &amp; Harishchandragad</option>
-                                    <option value="Girnar" data-title="Girnar Pilgrimage Trek" data-location="Junagadh, Gujarat · 2D / 1N">Girnar Pilgrimage Trek · Coming Soon</option>
-                                    <option value="Mount Abu" data-title="Mount Abu Eco Getaway" data-location="Aravalli Range, Rajasthan · 3D / 2N">Mount Abu Eco Getaway · Coming Soon</option>
+                                    <option value="Girnar" data-title="Girnar Hill Trek &amp; Junagadh Exploration" data-location="Junagadh, Gujarat · 3D / 3N">Girnar Hill Trek &amp; Junagadh Exploration</option>
+                                    <option value="Mount Abu" data-title="Mount Abu" data-location="Aravalli Range, Rajasthan · 2D / 1N">Mount Abu</option>
                                     <option value="Munsyari & Kausani" data-title="Munsyari &amp; Kausani" data-location="Kathgodam to Mukteshwar · 6 Days">Munsyari &amp; Kausani</option>
-                                    <option value="Dang" data-title="Dang Forest Circuit" data-location="Saputara &amp; Dang, Gujarat · 3D / 2N">Dang Forest Circuit · Coming Soon</option>
-                                    <option value="Dediapada" data-title="Dediapada Wilderness Trek" data-location="Shoolpaneshwar, Gujarat · 2D / 1N">Dediapada Wilderness Trek · Coming Soon</option>
+                                    <option value="Dang" data-title="Dang Forest Circuit" data-location="Dang &amp; Songadh, Gujarat · 2D / 1N">Dang Forest Circuit</option>
+                                    <option value="Dediapada" data-title="Dediyapada Wilderness Trek" data-location="Dediyapada, Gujarat · 2D / 1N">Dediyapada Wilderness Trek</option>
+                                    <option value="Malvan" data-title="Gateway to Malvan" data-location="Malvan Sindhudurg, Maharashtra · 3D / 2N">Gateway to Malvan</option>
+                                    <option value="Sembalpani" data-title="Sembalpani Eco Trek &amp; Hills" data-location="Banaskantha, Gujarat · 2–3 Days">Sembalpani Eco Trek &amp; Hills</option>
                                     <option value="Haridwar & Rishikesh" data-title="Haridwar &amp; Rishikesh" data-location="Uttarakhand · 4D / 3N">Haridwar &amp; Rishikesh</option>
                                     <option value="Not Sure Yet" data-title="Custom Himalayan &amp; Eco Expedition" data-location="Tailored by Explore Trekora · Flexible">Not Sure Yet</option>
                                 </select>

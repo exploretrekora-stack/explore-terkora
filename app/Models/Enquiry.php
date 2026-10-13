@@ -46,6 +46,7 @@ class Enquiry extends Model
             'Mount Abu',
             'Dang',
             'Dediapada',
+            'Malvan',
             'Not Sure Yet',
         ];
     }

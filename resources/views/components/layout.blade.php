@@ -65,30 +65,37 @@
             {
                 quote: "Ascending the sacred 10,000 steps of Mount Girnar at sunrise was unforgettable. Well-planned halts and comfortable stays made it effortless.",
                 author: "Bhavik Dave",
-                trip: "Girnar Pilgrimage Trek · Coming Soon",
-                tag: "Girnar Summit · Coming Soon",
+                trip: "Girnar Hill Trek & Junagadh Exploration",
+                tag: "Girnar Summit",
                 image: "{{ asset('images/story-7.jpg') }}"
             },
             {
                 quote: "Exploring hidden trails through the Aravalli hills away from the tourist crowd was refreshing. Cozy eco-cottages and delicious meals!",
                 author: "Ananya Mehta",
-                trip: "Mount Abu Eco Getaway · Coming Soon",
-                tag: "Mount Abu Trails · Coming Soon",
+                trip: "Mount Abu",
+                tag: "Mount Abu Trails",
                 image: "{{ asset('images/story-8.jpg') }}"
             },
             {
                 quote: "Dense monsoon teak forests, secret waterfalls, and warm tribal hospitality. Explore Trekora made our Dang family trip deeply memorable.",
                 author: "Hardik Trivedi",
-                trip: "Dang Forest Circuit · Coming Soon",
-                tag: "Dang Waterfalls · Coming Soon",
+                trip: "Dang Forest Circuit",
+                tag: "Dang Waterfalls",
                 image: "{{ asset('images/story-9.jpg') }}"
             },
             {
                 quote: "Pure untouched wilderness in Shoolpaneshwar. River treks, clean homestays, and pristine waterfalls made this our best weekend escape.",
                 author: "Amit Vora",
-                trip: "Dediyapada Wilderness Trek · Coming Soon",
-                tag: "Dediyapada Forest Trail · Coming Soon",
+                trip: "Dediyapada Wilderness Trek",
+                tag: "Dediyapada Forest Trail",
                 image: "{{ asset('images/story-10.jpg') }}"
+            },
+            {
+                quote: "Scuba diving around Sindhudurg and sunset kayaking at Khavane beach was magical. Fresh Malvani food and coastal hospitality made it a perfect trip.",
+                author: "Tanvi Sawant",
+                trip: "Gateway to Malvan",
+                tag: "Sindhudurg & Watersports",
+                image: "{{ asset('images/trips/gateway-to-malvan/1.jpg') }}"
             }
         ];
 
@@ -501,5 +508,7 @@
             }
         });
     </script>
+
+    <x-whatsapp-float />
 </body>
 </html>

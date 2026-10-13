@@ -47,10 +47,10 @@ Curated Travel Experiences Across India
         <div class="faces" aria-hidden="true">
           <img src="{{ asset('images/avatar-1.jpg') }}" alt="Traveler" class="w-11 h-11 rounded-full object-cover border-2 border-t900 shadow-sm">
           <img src="{{ asset('images/avatar-2.jpg') }}" alt="Traveler" class="w-11 h-11 rounded-full object-cover border-2 border-t900 -ml-3 shadow-sm">
-          <i class="w-11 h-11 rounded-full bg-t500 text-white font-bold text-xs flex items-center justify-center border-2 border-t900 -ml-3 shadow-sm">+10k</i>
+          <i class="w-11 h-11 rounded-full bg-t500 text-white font-bold text-xs flex items-center justify-center border-2 border-t900 -ml-3 shadow-sm">290+</i>
         </div>
         <div>
-          <b>2.5k+</b>
+          <b>200+</b>
           <small>Happy travelers</small>
         </div>
         <div class="divider"></div>
@@ -149,10 +149,11 @@ Curated Travel Experiences Across India
     <li>Dalhousie &amp; Dharamshala</li>
     <li>Kareri Lake Trek</li>
     <li>Hariharfort &amp; Harishchandragadh</li>
-    <li>Girnar · Coming Soon</li>
-    <li>Mount Abu · Coming Soon</li>
-    <li>Dang · Coming Soon</li>
-    <li>Dediyapada · Coming Soon</li>
+    <li>Girnar</li>
+    <li>Mount Abu</li>
+    <li>Dang</li>
+    <li>Dediyapada</li>
+    <li>Gateway to Malvan</li>
   </ol>
 
   <!-- Trip Search Bar (Luxury Concierge Style) -->
@@ -177,15 +178,17 @@ Curated Travel Experiences Across India
           <option value="dalhousie-dharamshala">Dalhousie &amp; Dharamshala</option>
           <option value="kareri-lake-trek">Kareri Lake Trek</option>
           <option value="harihar-fort-trek">Hariharfort &amp; Harishchandragadh</option>
-          <option value="girnar-pilgrimage-trek">Girnar · Coming Soon</option>
-          <option value="mount-abu-eco-getaway">Mount Abu · Coming Soon</option>
-          <option value="dang-forest-circuit">Dang · Coming Soon</option>
-          <option value="dediapada-wilderness-trek">Dediyapada · Coming Soon</option>
+          <option value="girnar-pilgrimage-trek">Girnar Hill Trek &amp; Junagadh Exploration</option>
+          <option value="mount-abu-eco-getaway">Mount Abu</option>
+          <option value="dang-forest-circuit">Dang Forest Circuit</option>
+          <option value="dediapada-wilderness-trek">Dediyapada Wilderness Trek</option>
+          <option value="gateway-to-malvan">Gateway to Malvan</option>
+          <option value="sembalpani">Sembalpani Eco Trek</option>
         </select>
         <div class="custom-dropdown-panel dest-dropdown-panel-wide" role="listbox" id="dest-panel">
           <div class="panel-header">
             <span class="panel-header-title">Our Destinations</span>
-            <span class="panel-header-badge">12 Handpicked</span>
+            <span class="panel-header-badge">14 Handpicked</span>
           </div>
           <div class="dest-dropdown-grid">
             <!-- Column 1 (Destinations 1-6) -->
@@ -240,7 +243,7 @@ Curated Travel Experiences Across India
               </button>
             </div>
 
-            <!-- Column 2 (Destinations 7-12) -->
+            <!-- Column 2 (Destinations 7-13) -->
             <div class="dest-dropdown-col">
               <button type="button" class="dropdown-item-btn" data-slug="kareri-lake-trek" onclick="selectDestination('Kareri Lake Trek', this)">
                 <span class="item-body">
@@ -258,33 +261,49 @@ Curated Travel Experiences Across India
                   <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-6"/></svg>
                 </span>
               </button>
-              <button type="button" class="dropdown-item-btn" data-slug="girnar-pilgrimage-trek" onclick="selectDestination('Girnar · Coming Soon', this)">
+              <button type="button" class="dropdown-item-btn" data-slug="girnar-pilgrimage-trek" onclick="selectDestination('Girnar Hill Trek &amp; Junagadh Exploration', this)">
                 <span class="item-body">
-                  <span class="item-title">Girnar · Coming Soon</span>
+                  <span class="item-title">Girnar Hill Trek &amp; Junagadh Exploration</span>
                 </span>
                 <span class="item-check">
                   <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-6"/></svg>
                 </span>
               </button>
-              <button type="button" class="dropdown-item-btn" data-slug="mount-abu-eco-getaway" onclick="selectDestination('Mount Abu · Coming Soon', this)">
+              <button type="button" class="dropdown-item-btn" data-slug="mount-abu-eco-getaway" onclick="selectDestination('Mount Abu', this)">
                 <span class="item-body">
-                  <span class="item-title">Mount Abu · Coming Soon</span>
+                  <span class="item-title">Mount Abu</span>
                 </span>
                 <span class="item-check">
                   <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-6"/></svg>
                 </span>
               </button>
-              <button type="button" class="dropdown-item-btn" data-slug="dang-forest-circuit" onclick="selectDestination('Dang · Coming Soon', this)">
+              <button type="button" class="dropdown-item-btn" data-slug="dang-forest-circuit" onclick="selectDestination('Dang Forest Circuit', this)">
                 <span class="item-body">
-                  <span class="item-title">Dang · Coming Soon</span>
+                  <span class="item-title">Dang Forest Circuit</span>
                 </span>
                 <span class="item-check">
                   <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-6"/></svg>
                 </span>
               </button>
-              <button type="button" class="dropdown-item-btn" data-slug="dediapada-wilderness-trek" onclick="selectDestination('Dediyapada · Coming Soon', this)">
+              <button type="button" class="dropdown-item-btn" data-slug="dediapada-wilderness-trek" onclick="selectDestination('Dediyapada Wilderness Trek', this)">
                 <span class="item-body">
-                  <span class="item-title">Dediyapada · Coming Soon</span>
+                  <span class="item-title">Dediyapada Wilderness Trek</span>
+                </span>
+                <span class="item-check">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-6"/></svg>
+                </span>
+              </button>
+              <button type="button" class="dropdown-item-btn" data-slug="gateway-to-malvan" onclick="selectDestination('Gateway to Malvan', this)">
+                <span class="item-body">
+                  <span class="item-title">Gateway to Malvan</span>
+                </span>
+                <span class="item-check">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-6"/></svg>
+                </span>
+              </button>
+              <button type="button" class="dropdown-item-btn" data-slug="sembalpani" onclick="selectDestination('Sembalpani Eco Trek', this)">
+                <span class="item-body">
+                  <span class="item-title">Sembalpani Eco Trek</span>
                 </span>
                 <span class="item-check">
                   <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-6"/></svg>
@@ -613,16 +632,15 @@ Curated Travel Experiences Across India
       </a>
 
       <!-- Card 5: Mount Abu -->
-      <a class="dc group is-coming-soon" href="{{ route('destinations') }}#dest-mount-abu-eco-getaway">
-        <p class="coming-soon-title">Coming Soon</p>
+      <a class="dc group" href="{{ route('destinations.show', 'mount-abu-eco-getaway') }}">
         <div class="im">
           <img src="{{ asset('images/trips/mount-abu-eco-getaway/1.jpg') }}" alt="Mount Abu" loading="lazy">
         </div>
         <div class="tx">
           <span class="dc-cat">WEEKEND GETAWAYS</span>
-          <h3>Mount Abu · Coming Soon</h3>
-          <p>Enjoy a refreshing escape to the Aravalli hills, peaceful Nakki Lake, scenic viewpoints, and relaxing surroundings away from everyday life.</p>
-          <span class="more">Coming Soon</span>
+          <h3>Mount Abu</h3>
+          <p>Guru Shikhar sunrise, Dilwara Jain Temples, Nakki Lake boating, Trevor’s Tank, and Mount Abu Wildlife Sanctuary.</p>
+          <span class="more">Explore Package <i>↗</i></span>
         </div>
       </a>
 
@@ -702,7 +720,7 @@ Curated Travel Experiences Across India
         </div>
       </a>
 
-      <a class="cc" href="{{ route('destinations') }}#dest-girnar-pilgrimage-trek">
+      <a class="cc" href="{{ route('destinations.show', 'girnar-pilgrimage-trek') }}">
         <div class="cc-media">
           <img src="{{ asset('images/state-gujarat.jpg') }}" alt="Girnar mountain temple peak above the clouds in Gujarat" loading="lazy">
           <span class="kind">Culture &amp; Pilgrimage</span>
@@ -722,7 +740,7 @@ Curated Travel Experiences Across India
         </div>
       </a>
 
-      <a class="cc" href="{{ route('destinations') }}#dest-mount-abu-eco-getaway">
+      <a class="cc" href="{{ route('destinations.show', 'mount-abu-eco-getaway') }}">
         <div class="cc-media">
           <img src="{{ asset('images/state-rajasthan.jpg') }}" alt="Nakki Lake and the hills of Mount Abu in Rajasthan" loading="lazy">
           <span class="kind">Weekend Escapes</span>

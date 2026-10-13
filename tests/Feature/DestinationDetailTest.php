@@ -243,25 +243,74 @@ class DestinationDetailTest extends TestCase
     }
 
     /**
-     * Unfinished destination pages stay on the listing card.
+     * Active destinations open detail pages and have View Details buttons.
      */
-    public function test_coming_soon_destinations_do_not_open_a_detail_page(): void
+    public function test_active_destinations_open_detail_pages_and_have_no_coming_soon(): void
     {
         $listing = $this->get(route('destinations'));
 
         $listing->assertOk();
-        $listing->assertSee('class="coming-soon-title"', false);
-        $listing->assertSee('Girnar Pilgrimage Trek');
-        $listing->assertDontSee(route('destinations.show', 'girnar-pilgrimage-trek'), false);
-        $listing->assertDontSee(route('destinations.show', 'mount-abu-eco-getaway'), false);
-        $listing->assertDontSee(route('destinations.show', 'dang-forest-circuit'), false);
-        $listing->assertDontSee(route('destinations.show', 'dediapada-wilderness-trek'), false);
+        $listing->assertDontSee('class="coming-soon-title"', false);
+        $listing->assertSee('Girnar Hill Trek &amp; Junagadh Exploration', false);
+        $listing->assertSee(route('destinations.show', 'girnar-pilgrimage-trek'), false);
+        $listing->assertSee(route('destinations.show', 'mount-abu-eco-getaway'), false);
+        $listing->assertSee(route('destinations.show', 'dang-forest-circuit'), false);
+        $listing->assertSee(route('destinations.show', 'dediapada-wilderness-trek'), false);
+        $listing->assertSee(route('destinations.show', 'gateway-to-malvan'), false);
+
+        $this->get(route('destinations.show', 'girnar-pilgrimage-trek'))
+            ->assertOk();
 
         $this->get(route('destinations.show', 'mount-abu-eco-getaway'))
-            ->assertRedirect(route('destinations').'#dest-mount-abu-eco-getaway');
+            ->assertOk();
 
-        $this->get(route('destinations', ['destination' => 'dang-forest-circuit']))
-            ->assertRedirect(route('destinations').'#dest-dang-forest-circuit');
+        $this->get(route('destinations.show', 'dang-forest-circuit'))
+            ->assertOk();
+
+        $this->get(route('destinations.show', 'dediapada-wilderness-trek'))
+            ->assertOk();
+
+        $this->get(route('destinations.show', 'gateway-to-malvan'))
+            ->assertOk();
+    }
+
+    /**
+     * Test that Mount Abu uses the authentic details from the brochure.
+     */
+    public function test_mount_abu_detail_page_loads_with_authentic_data_and_brochure_details(): void
+    {
+        $listing = $this->get(route('destinations'));
+        $listing->assertOk();
+        $listing->assertSee('3D / 2N');
+        $listing->assertSee('Dilwara Jain Temples &amp; Nakki Lake Boating', false);
+        $listing->assertSee('Guru Shikhar Sunrise (Highest Peak in Aravallis)');
+        $listing->assertDontSee('Gaumukh temple');
+        $listing->assertDontSee('Resort Party with Night DJ &amp; Bonfire', false);
+
+        $response = $this->get(route('destinations.show', 'mount-abu-eco-getaway'));
+        $response->assertOk();
+        $response->assertSee('Gateway to Mount Abu — Eco Getaway &amp; Heritage Retreat', false);
+        $response->assertSee('3D / 2N');
+        $response->assertSee('3 Days / 2 Nights (Gateway to Mount Abu)');
+        $response->assertSee('Guru Shikhar');
+        $response->assertSee('5,650 ft');
+        $response->assertSee('Dilwara Jain Temples');
+        $response->assertSee('Nakki Lake');
+        $response->assertSee('Toad Rock');
+        $response->assertSee('Sunset Point');
+        $response->assertSee('Peace Park');
+        $response->assertSee('Achalgarh Fort');
+        $response->assertSee('Achaleshwar Mahadev Temple');
+        $response->assertSee('Trevor&#039;s Tank', false);
+        $response->assertSee('Mount Abu Wildlife Sanctuary');
+        $response->assertSee("What's Included &amp; Excluded", false);
+        $response->assertSee('2 Nights’ Accommodation in Mount Abu');
+        $response->assertSee('3 Breakfasts');
+        $response->assertSee('2 Dinners');
+        $response->assertSee('Cultural Etiquette &amp; Travel Tips', false);
+        $response->assertSee('Responsible Eco-Tourism Reminders');
+        $response->assertDontSee('Gaumukh temple');
+        $response->assertDontSee('Resort party with Night DJ &amp; bonfire', false);
     }
 
     /**

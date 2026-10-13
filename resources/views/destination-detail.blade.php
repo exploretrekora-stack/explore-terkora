@@ -267,6 +267,41 @@
                             @endforeach
                         @endif
 
+                        @if(!empty($destination['inclusions']) || !empty($destination['exclusions']))
+                            <div class="dest-detail-section" id="inclusions-exclusions">
+                                <span class="ey">PACKAGE DETAILS</span>
+                                <h2>What's Included &amp; Excluded</h2>
+                                <div class="inc-exc-grid">
+                                    @if(!empty($destination['inclusions']))
+                                        <div class="inc-card">
+                                            <div class="inc-header">
+                                                <span class="inc-ic">✓</span>
+                                                <h3>Inclusions</h3>
+                                            </div>
+                                            <ul class="inc-list">
+                                                @foreach($destination['inclusions'] as $inc)
+                                                    <li><span>✓</span> {{ $inc }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endif
+                                    @if(!empty($destination['exclusions']))
+                                        <div class="exc-card">
+                                            <div class="exc-header">
+                                                <span class="exc-ic">✕</span>
+                                                <h3>Exclusions</h3>
+                                            </div>
+                                            <ul class="exc-list">
+                                                @foreach($destination['exclusions'] as $exc)
+                                                    <li><span>✕</span> {{ $exc }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endif
+                                </div>
+                            </div>
+                        @endif
+
                         @if(!empty($destination['enquiry_prompt']))
                             <div class="dest-detail-section" id="package-enquiry">
                                 <h2>{{ $destination['enquiry_prompt']['heading'] }}</h2>
@@ -714,11 +749,12 @@
                                     <option value="Kareri Lake Trek" data-title="Kareri Lake Trek" data-location="Dharamshala, Himachal Pradesh · 2D / 1N" {{ $destination['enquiry_key'] === 'Kareri Lake Trek' ? 'selected' : '' }}>Kareri Lake Trek</option>
                                     <option value="Dalhousie & Dharamshala" data-title="Dalhousie &amp; Dharamshala Tour" data-location="Himachal Pradesh · 8 Days" {{ $destination['enquiry_key'] === 'Dalhousie & Dharamshala' ? 'selected' : '' }}>Dalhousie &amp; Dharamshala Tour</option>
                                     <option value="Harihar Fort Trek" data-title="Harihar Fort &amp; Harishchandragad" data-location="Nashik &amp; Ahmednagar, Maharashtra · 2D / 2N" {{ $destination['enquiry_key'] === 'Harihar Fort Trek' ? 'selected' : '' }}>Harihar Fort &amp; Harishchandragad</option>
-                                    <option value="Girnar" data-title="Girnar Pilgrimage Trek" data-location="Junagadh, Gujarat · 2D / 1N" {{ $destination['enquiry_key'] === 'Girnar' ? 'selected' : '' }}>Girnar Pilgrimage Trek · Coming Soon</option>
-                                    <option value="Mount Abu" data-title="Mount Abu Eco Getaway" data-location="Aravalli Range, Rajasthan · 3D / 2N" {{ $destination['enquiry_key'] === 'Mount Abu' ? 'selected' : '' }}>Mount Abu Eco Getaway · Coming Soon</option>
+                                    <option value="Girnar" data-title="Girnar Hill Trek &amp; Junagadh Exploration" data-location="Junagadh, Gujarat · 3D / 3N" {{ $destination['enquiry_key'] === 'Girnar' ? 'selected' : '' }}>Girnar Hill Trek &amp; Junagadh Exploration</option>
+                                    <option value="Mount Abu" data-title="Mount Abu" data-location="Aravalli Range, Rajasthan · 2D / 1N" {{ $destination['enquiry_key'] === 'Mount Abu' ? 'selected' : '' }}>Mount Abu</option>
                                     <option value="Munsyari & Kausani" data-title="Munsyari &amp; Kausani" data-location="Kathgodam to Mukteshwar · 6 Days" {{ $destination['enquiry_key'] === 'Munsyari & Kausani' ? 'selected' : '' }}>Munsyari &amp; Kausani</option>
-                                    <option value="Dang" data-title="Dang Forest Circuit" data-location="Saputara &amp; Dang, Gujarat · 3D / 2N" {{ $destination['enquiry_key'] === 'Dang' ? 'selected' : '' }}>Dang Forest Circuit · Coming Soon</option>
-                                    <option value="Dediapada" data-title="Dediapada Wilderness Trek" data-location="Shoolpaneshwar, Gujarat · 2D / 1N" {{ $destination['enquiry_key'] === 'Dediapada' ? 'selected' : '' }}>Dediapada Wilderness Trek · Coming Soon</option>
+                                    <option value="Dang" data-title="Dang Forest Circuit" data-location="Dang &amp; Songadh, Gujarat · 2D / 1N" {{ $destination['enquiry_key'] === 'Dang' ? 'selected' : '' }}>Dang Forest Circuit</option>
+                                    <option value="Dediapada" data-title="Dediyapada Wilderness Trek" data-location="Dediyapada, Gujarat · 2D / 1N" {{ $destination['enquiry_key'] === 'Dediapada' ? 'selected' : '' }}>Dediyapada Wilderness Trek</option>
+                                    <option value="Malvan" data-title="Gateway to Malvan" data-location="Malvan Sindhudurg, Maharashtra · 3D / 2N" {{ $destination['enquiry_key'] === 'Malvan' ? 'selected' : '' }}>Gateway to Malvan</option>
                                 </select>
                                 <svg class="dest-select-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                     <polyline points="6 8 10 12 14 8"></polyline>
