@@ -148,7 +148,7 @@
           <h4>Popular Destinations</h4>
           <ul>
             <li><a href="{{ route('destinations.show', 'adi-kailash-om-parvat') }}">Adi Kailash &amp; Om Parvat</a></li>
-            <li><a href="{{ route('destinations.show', 'munsyari-kausani') }}">Munsyari &amp; Kausani</a></li>
+            <li><a href="{{ route('destinations.show', 'munsyari-kausani') }}">Munsiyari &amp; Kausani</a></li>
             <li><a href="{{ route('destinations.show', 'mount-abu-eco-getaway') }}">Mount Abu Eco Getaway</a></li>
             <li><a href="{{ route('destinations.show', 'gateway-to-malvan') }}">Gateway to Malvan</a></li>
             <li><a href="{{ route('destinations.show', 'sembalpani') }}">Sembalpani Eco Tour</a></li>

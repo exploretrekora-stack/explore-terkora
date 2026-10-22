@@ -234,37 +234,37 @@ class DestinationRepository
                     [
                         'day' => 'Day 1',
                         'title' => 'Kathgodam to Pithoragarh (196 KMs / 7 Hrs)',
-                        'desc' => 'Scenic mountain drive from Kathgodam to Pithoragarh. Sightseeing: Bhimtal, Neem Karoli Baba (Kainchi Dham), Jageshwar Temple (more than 250 temples dedicated to Shiva), and Golu Mandir (Temple of Justice). Night stay at Pithoragarh. (Meals: B, L, D)',
+                        'desc' => 'Scenic mountain drive from Kathgodam to Pithoragarh. Sightseeing: Bhimtal, Neem Karoli Baba (Kainchi Dham), Jageshwar Temple (more than 250 temples dedicated to Shiva), and Golu Mandir (Temple of Justice). Night stay at Pithoragarh. (Meals: B, D)',
                     ],
                     [
                         'day' => 'Day 2',
                         'title' => 'Pithoragarh to Dharchula (93 KMs / 3 Hrs)',
-                        'desc' => 'Drive along the roaring Kali River gorge to Dharchula base. Verification of documents for Inner Line Permits (ILP), medical checkup briefing. Night stay at Dharchula. (Meals: B, L, D)',
+                        'desc' => 'Drive along the roaring Kali River gorge to Dharchula base. Verification of documents for Inner Line Permits (ILP), medical checkup briefing. Night stay at Dharchula. (Meals: B, D)',
                     ],
                     [
                         'day' => 'Day 3',
                         'title' => 'Dharchula to Gunji / Napalchu (71 KMs / 2.30 Hrs)',
-                        'desc' => 'Board dedicated 4x4 Bolero campers (only 4–5 persons per Bolero). Drive through the scenic Vyas Valley, crossing Lakhanpur, Malpa, and Chhialekh bugyal to Gunji / Napalchu. Sightseeing: Manokamna Temple (wooden Pagoda style temple dedicated to Shiva in Nabi Village). Night stay at Gunji / Napalchu. (Meals: B, L, D)',
+                        'desc' => 'Board dedicated 4x4 Bolero campers (only 4–5 persons per Bolero). Drive through the scenic Vyas Valley, crossing Lakhanpur, Malpa, and Chhialekh bugyal to Gunji / Napalchu. Sightseeing: Manokamna Temple (wooden Pagoda style temple dedicated to Shiva in Nabi Village). Night stay at Gunji / Napalchu. (Meals: B, D)',
                     ],
                     [
                         'day' => 'Day 4',
                         'title' => 'Gunji/Napalchu – Om Parvat – Gunji/Napalchu (22 KMs / 1 Hr)',
-                        'desc' => 'Early departure for Nabhidhang facing the sacred Om Parvat (snow \'ॐ\' formation). Sightseeing: Om Parvat, Parvati Nabhi Parvat, Kalapani, Sheshnag Parvat, and Ved Vyas Gufa. Night stay at Napalchu / Budhi / Gunji. (Meals: B, L, D)',
+                        'desc' => 'Early departure for Nabhidhang facing the sacred Om Parvat (snow \'ॐ\' formation). Sightseeing: Om Parvat, Parvati Nabhi Parvat, Kalapani, Sheshnag Parvat, and Ved Vyas Gufa. Night stay at Napalchu / Budhi / Gunji. (Meals: B, D)',
                     ],
                     [
                         'day' => 'Day 5',
                         'title' => 'Gunji/Napalchu – Adi Kailash – Gunji/Napalchu (68 KMs / 3 Hrs)',
-                        'desc' => 'Drive to Jolingkong base camp for awe-inspiring close-up darshan of Adi Kailash (Chhota Kailash). Sightseeing: Kunti Parvat, Brahma Parvat, Pandava Parvat, Pandav Fort, Parvati Mukut, Adi Kailash, Shiv Parvati Temple, Parvati Sarovar, Bhim ki Kheti & Gauri Kund (depends on time limit, health of pilgrim & weather condition). Night stay at Gunji / Napalchu. (Meals: B, L, D)',
+                        'desc' => 'Drive to Jolingkong base camp for awe-inspiring close-up darshan of Adi Kailash (Chhota Kailash). Sightseeing: Kunti Parvat, Brahma Parvat, Pandava Parvat, Pandav Fort, Parvati Mukut, Adi Kailash, Shiv Parvati Temple, Parvati Sarovar, Bhim ki Kheti & Gauri Kund (depends on time limit, health of pilgrim & weather condition). Night stay at Gunji / Napalchu. (Meals: B, D)',
                     ],
                     [
                         'day' => 'Day 6',
                         'title' => 'Gunji/Napalchu – Dharchula – Didihat / Chaukori (158 – 211 KMs / 6 Hrs)',
-                        'desc' => 'Descend through the Vyas Valley to Dharchula and proceed across Kumaon hills to Didihat / Chaukori with panoramic Himalayan vistas. Night stay at Didihat / Chaukori. (Meals: B, L, D)',
+                        'desc' => 'Descend through the Vyas Valley to Dharchula and proceed across Kumaon hills to Didihat / Chaukori with panoramic Himalayan vistas. Night stay at Didihat / Chaukori. (Meals: B, D)',
                     ],
                     [
                         'day' => 'Day 7',
                         'title' => 'Didihat – Bhimtal / Kathgodam (189 KMs / 6.30 Hrs)',
-                        'desc' => 'Scenic morning drive with sightseeing at Patal Bhuvaneshwar (Patal Bhuneshwar cave believed to open at Mt Kailash). Continue drive to Bhimtal. Night stay at Bhimtal. (Meals: B, L, D)',
+                        'desc' => 'Scenic mountain drive with sightseeing at Patal Bhuvaneshwar (Patal Bhuneshwar cave believed to open at Mt Kailash). Continue drive to Bhimtal. Night stay at Bhimtal. (Meals: B, D)',
                     ],
                     [
                         'day' => 'Day 8',
@@ -275,18 +275,18 @@ class DestinationRepository
                 'dharchula_itinerary' => [
                     'title' => 'Option 3: Dharchula to Dharchula (4N / 5D)',
                     'days' => [
-                        'Day 1: Dharchula arrival, Night Stay at Dharchula (Meals: L, D)',
-                        'Day 2: Dharchula – Gunji / Napalchu (71 KMs / 2.30 Hrs): Night Stay at Gunji / Napalchu, Sightseeing: Manokamna Temple (Meals: B, L, D)',
-                        'Day 3: Gunji – Om Parvat – Gunji / Napalchu (22 KMs / 1 Hr): Night Stay at Napalchu / Gunji, Sightseeing: Om Parvat, Parvati Nabhi Parvat, Kalapani, Sheshnag Parvat, Ved Vyas Gufa (Meals: B, L, D)',
-                        'Day 4: Gunji / Napalchu – Adi Kailash – Gunji / Napalchu (68 KMs / 3 Hrs): Night Stay at Gunji / Napalchu, Sightseeing: Kunti Parvat, Brahma Parvat, Pandava Parvat, Parvati Mukut, Adi Kailash, Shiv Parvati Temple, Parvati Sarovar, Bhim Ki Kheti & Gauri Kund (Meals: B, L, D)',
-                        'Day 5: Gunji / Napalchu – Dharchula Drop (71 KMs / 2.30 Hrs) (Meals: B, L)',
+                        'Day 1: Dharchula arrival, Night Stay at Dharchula (Meals: D)',
+                        'Day 2: Dharchula – Gunji / Napalchu (71 KMs / 2.30 Hrs): Night Stay at Gunji / Napalchu, Sightseeing: Manokamna Temple (Meals: B, D)',
+                        'Day 3: Gunji – Om Parvat – Gunji / Napalchu (22 KMs / 1 Hr): Night Stay at Napalchu / Gunji, Sightseeing: Om Parvat, Parvati Nabhi Parvat, Kalapani, Sheshnag Parvat, Ved Vyas Gufa (Meals: B, D)',
+                        'Day 4: Gunji / Napalchu – Adi Kailash – Gunji / Napalchu (68 KMs / 3 Hrs): Night Stay at Gunji / Napalchu, Sightseeing: Kunti Parvat, Brahma Parvat, Pandava Parvat, Parvati Mukut, Adi Kailash, Shiv Parvati Temple, Parvati Sarovar, Bhim Ki Kheti & Gauri Kund (Meals: B, D)',
+                        'Day 5: Gunji / Napalchu – Dharchula Drop (71 KMs / 2.30 Hrs) (Meals: B)',
                     ],
                 ],
                 'important_points' => [
                     'Adventure Segment: Adi Kailash Yatra comes in the adventure segment so it is not smooth like regular pleasure tour packages. Roads after Dharchula are rough and covered by dedicated 4x4 Bolero.',
                     'Vehicle Policy: To ensure comfort, strictly 4 to 5 persons sit in 1 Bolero.',
                     'Road & Trekking: Earlier pilgrims had to trek more than 200 KMs; now Government and BRO have developed new roads bringing down optional trekking to just 2 to 7 KMs.',
-                    'Meals & Kitchen: Permanent kitchen set up at each staying place providing pure vegetarian meals.',
+                    'Meals & Kitchen: Permanent kitchen set up at each staying place providing pure vegetarian breakfast & dinner (lunch is not included).',
                     'Safety & Medical Support: Walkie-Talkies, Oxygen Cylinders, Oxy-meters, Back Up & Rescue Plan, 24x7 On Ground Support.',
                     'Hawan Pujan: Provision of Hawan Puja and Puja Samagri during the Yatra.',
                     'Physical Fitness: Happens in high altitude area; one must ensure physical fitness and undergo proper medical checkup before applying.',
@@ -453,8 +453,8 @@ class DestinationRepository
 
             'milam-glacier-trek' => [
                 'slug' => 'milam-glacier-trek',
-                'title' => 'Milam Glacier Trek',
-                'enquiry_key' => 'Milam Glacier Trek',
+                'title' => 'Milam Glacier Diaries',
+                'enquiry_key' => 'Milam Glacier Diaries',
                 'category' => 'Himalayan Trek',
                 'category_tag' => 'tag-trek',
                 'duration' => '9–12 Days',
@@ -466,7 +466,7 @@ class DestinationRepository
                 'best_season' => 'May to June and September to October',
                 'starting_point' => 'Munsiyari',
                 'image' => 'images/trips/milam-glacier-trek/1.jpg',
-                'gallery' => self::tripGallery('milam-glacier-trek', 'Milam Glacier Trek'),
+                'gallery' => self::tripGallery('milam-glacier-trek', 'Milam Glacier Diaries'),
                 'price_label' => 'PACKAGE PRICE',
                 'price_value' => 'Get a Quote',
                 'show_generic_claims' => false,
@@ -478,7 +478,7 @@ class DestinationRepository
                     'Moderate to difficult',
                 ],
                 'overview_paragraphs' => [
-                    'The Milam Glacier Trek is a remote, 9-to-12-day high-altitude trek in Uttarakhand\'s Johar Valley that covers around 100 to 130 kilometers round trip.',
+                    'The Milam Glacier Diaries is a remote, 9-to-12-day high-altitude trek in Uttarakhand\'s Johar Valley that covers around 100 to 130 kilometers round trip.',
                 ],
                 'highlights_heading' => 'Fast Facts',
                 'highlights' => [
@@ -1271,8 +1271,8 @@ class DestinationRepository
 
             'munsyari-kausani' => [
                 'slug' => 'munsyari-kausani',
-                'title' => 'Munsyari & Kausani',
-                'enquiry_key' => 'Munsyari & Kausani',
+                'title' => 'Munsiyari & Kausani',
+                'enquiry_key' => 'Munsiyari & Kausani',
                 'category' => 'Himalayan Trek',
                 'category_tag' => 'tag-trek',
                 'duration' => '6 Days',
@@ -1281,7 +1281,7 @@ class DestinationRepository
                 'location_short' => 'Kathgodam to Mukteshwar',
                 'starting_point' => 'Kathgodam',
                 'image' => 'images/trips/munsyari-kausani/1.jpg',
-                'gallery' => self::tripGallery('munsyari-kausani', 'Munsyari & Kausani'),
+                'gallery' => self::tripGallery('munsyari-kausani', 'Munsiyari & Kausani'),
                 'price_label' => 'PACKAGE PRICE',
                 'price_value' => 'Get a Quote',
                 'show_generic_claims' => false,
@@ -1724,10 +1724,10 @@ class DestinationRepository
                 'title' => 'Adventure',
                 'cards' => [
                     [
-                        'title' => 'Milam Glacier Trek',
+                        'title' => 'Milam Glacier Diaries',
                         'description' => 'A remote 9-to-12-day trek in the Johar Valley, covering around 100 to 130 km round trip.',
                         'image' => 'images/trips/milam-glacier-trek/1.jpg',
-                        'alt' => 'Milam Glacier Trek',
+                        'alt' => 'Milam Glacier Diaries',
                         'location' => 'Pithoragarh, Uttarakhand',
                         'duration' => '9–12 Days',
                         'badge' => 'Himalayan Trek',
@@ -1790,10 +1790,10 @@ class DestinationRepository
                 'title' => 'Family',
                 'cards' => [
                     [
-                        'title' => 'Munsyari & Kausani',
+                        'title' => 'Munsiyari & Kausani',
                         'description' => 'Pickup from Kathgodam, then Ranikhet, a trek to Pandavkholi, Someshwar, Kausani, and Mukteshwar.',
                         'image' => 'images/trips/munsyari-kausani/1.jpg',
-                        'alt' => 'Munsyari and Kausani',
+                        'alt' => 'Munsiyari and Kausani',
                         'location' => 'Kathgodam to Mukteshwar',
                         'duration' => '6 Days',
                         'badge' => 'Family',
@@ -1911,7 +1911,21 @@ class DestinationRepository
      */
     public static function find(string $slug): ?array
     {
-        return self::all()[$slug] ?? null;
+        $all = self::all();
+
+        if (isset($all[$slug])) {
+            return $all[$slug];
+        }
+
+        if ($slug === 'munsiyari-kausani' && isset($all['munsyari-kausani'])) {
+            return $all['munsyari-kausani'];
+        }
+
+        if ($slug === 'milam-glacier-diaries' && isset($all['milam-glacier-trek'])) {
+            return $all['milam-glacier-trek'];
+        }
+
+        return null;
     }
 
     /**
@@ -1919,7 +1933,7 @@ class DestinationRepository
      */
     public static function isComingSoon(string $slug): bool
     {
-        return (bool) (self::all()[$slug]['coming_soon'] ?? false);
+        return (bool) (self::find($slug)['coming_soon'] ?? false);
     }
 
     /**
@@ -1942,11 +1956,19 @@ class DestinationRepository
                 'fits' => ['2 adults', '4 adults group', 'Family (2 adults + 2 kids)'],
             ],
             'munsyari-kausani' => [
-                'label' => 'Munsyari & Kausani',
+                'label' => 'Munsiyari & Kausani',
+                'fits' => ['2 adults', '4 adults group', 'Family (2 adults + 2 kids)'],
+            ],
+            'munsiyari-kausani' => [
+                'label' => 'Munsiyari & Kausani',
                 'fits' => ['2 adults', '4 adults group', 'Family (2 adults + 2 kids)'],
             ],
             'milam-glacier-trek' => [
-                'label' => 'Milam Glacier Trek',
+                'label' => 'Milam Glacier Diaries',
+                'fits' => ['2 adults', '1 solo adventurer', '4 adults group'],
+            ],
+            'milam-glacier-diaries' => [
+                'label' => 'Milam Glacier Diaries',
                 'fits' => ['2 adults', '1 solo adventurer', '4 adults group'],
             ],
             'khaliya-top-trek' => [

@@ -3,6 +3,8 @@
 use App\Http\Controllers\Admin\AdminAuthController;
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\AdminInquiryController;
+use App\Http\Controllers\Admin\AdminReviewController;
+use App\Http\Controllers\Admin\AdminTravelStatsController;
 use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\EnquiryController;
 use Illuminate\Support\Facades\Artisan;
@@ -55,13 +57,35 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
         Route::get('/inquiries', [AdminInquiryController::class, 'index'])->name('inquiries');
         Route::get('/inquiries/{inquiry}', [AdminInquiryController::class, 'show'])->name('inquiries.show');
+        Route::get('/travel-stats', [AdminTravelStatsController::class, 'index'])->name('travel-stats');
+        Route::post('/travel-stats', [AdminTravelStatsController::class, 'update'])->name('travel-stats.update');
+        Route::resource('reviews', AdminReviewController::class)->names('reviews');
         Route::get('/clear-cache', function () {
             Artisan::call('optimize:clear');
 
             return back()->with('success', 'All caches cleared successfully!');
         })->name('clear-cache');
+        Route::get('/run-migrations', function () {
+            Artisan::call('migrate', ['--force' => true]);
+            $output = Artisan::output();
+
+            return back()->with('success', 'Database migrations executed: '.trim($output));
+        })->name('run-migrations');
     });
 });
+
+// Secure web migration route (for shared hosting without SSH/terminal)
+Route::get('/maintenance/migrate/{key}', function (string $key) {
+    if ($key !== 'trekora-clear-2026' && $key !== config('app.key')) {
+        abort(403, 'Unauthorized access.');
+    }
+
+    Artisan::call('migrate', ['--force' => true]);
+    $output = Artisan::output();
+
+    return response("Explore Trekora: Database migrations completed successfully!\n\n".$output, 200)
+        ->header('Content-Type', 'text/plain');
+})->name('maintenance.migrate');
 
 // Secure web cache clear & asset sync (for shared hosting without SSH/terminal)
 Route::get('/maintenance/clear-cache/{key}', function (string $key) {

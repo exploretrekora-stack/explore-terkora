@@ -209,10 +209,10 @@
                         </div>
                     </article>
 
-                    <!-- 4. Milam Glacier Trek -->
-                    <article id="dest-milam-glacier-trek" class="dest-card{{ \App\Services\DestinationRepository::cardSearchState($tripSearch ?? null, 'milam-glacier-trek') }}" data-slug="milam-glacier-trek" data-category="himalayan" data-title="Milam Glacier Trek" data-location="Uttarakhand">
+                    <!-- 4. Milam Glacier Diaries -->
+                    <article id="dest-milam-glacier-trek" class="dest-card{{ \App\Services\DestinationRepository::cardSearchState($tripSearch ?? null, 'milam-glacier-trek') }}" data-slug="milam-glacier-trek" data-category="himalayan" data-title="Milam Glacier Diaries" data-location="Uttarakhand">
                         <div class="dest-card-media">
-                            <img src="{{ asset('images/trips/milam-glacier-trek/1.jpg') }}" alt="Milam Glacier Trek" loading="lazy">
+                            <img src="{{ asset('images/trips/milam-glacier-trek/1.jpg') }}" alt="Milam Glacier Diaries" loading="lazy">
                             <div class="dest-card-badge-top">
                                 <span class="dest-badge tag-trek">Himalayan Trek</span>
                                 <span class="dest-badge tag-days">9–12 Days</span>
@@ -220,7 +220,7 @@
                             <span class="dest-card-location">📍 Pithoragarh, Uttarakhand</span>
                         </div>
                         <div class="dest-card-body">
-                            <h3>Milam Glacier Trek</h3>
+                            <h3>Milam Glacier Diaries</h3>
                             <p class="dest-card-desc">A remote 9-to-12-day trek in the Johar Valley, covering around 100 to 130 km round trip.</p>
                             <ul class="dest-card-perks">
                                 <li><span>✓</span> Base camp at Munsiyari</li>
@@ -230,8 +230,8 @@
                             <div class="dest-card-footer">
                                 <div class="dest-card-actions">
                                     <a href="{{ route('destinations.show', 'milam-glacier-trek') }}" class="btn btn-outline-teal dest-card-details-btn">View Details</a>
-                                    <x-inquire-now class="dest-card-enquire-btn" data-dest="Milam Glacier Trek" data-title="Milam Glacier Trek" data-location="Pithoragarh, Uttarakhand" data-days="9–12 Days" />
-                                    <a href="https://wa.me/918460922935?text={{ urlencode('Hello Explore Trekora, I am interested in Milam Glacier Trek (9–12 Days). Please share package details and availability.') }}" target="_blank" rel="noopener noreferrer" class="btn-card-wa" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+                                    <x-inquire-now class="dest-card-enquire-btn" data-dest="Milam Glacier Diaries" data-title="Milam Glacier Diaries" data-location="Pithoragarh, Uttarakhand" data-days="9–12 Days" />
+                                    <a href="https://wa.me/918460922935?text={{ urlencode('Hello Explore Trekora, I am interested in Milam Glacier Diaries (9–12 Days). Please share package details and availability.') }}" target="_blank" rel="noopener noreferrer" class="btn-card-wa" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
                                         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.188 8.188 0 01-5.82 2.41c-1.45 0-2.88-.38-4.14-1.11l-.3-.17-3.12.82.83-3.04-.19-.31a8.19 8.19 0 01-1.25-4.44c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.21-.18-.46-.3z"/></svg>
                                     </a>
                                 </div>
@@ -391,10 +391,10 @@
                         </div>
                     </article>
 
-                    <!-- 10. Munsyari & Kausani -->
-                    <article id="dest-munsyari-kausani" class="dest-card{{ \App\Services\DestinationRepository::cardSearchState($tripSearch ?? null, 'munsyari-kausani') }}" data-slug="munsyari-kausani" data-category="himalayan" data-title="Munsyari & Kausani" data-location="Uttarakhand">
+                    <!-- 10. Munsiyari & Kausani -->
+                    <article id="dest-munsyari-kausani" class="dest-card{{ \App\Services\DestinationRepository::cardSearchState($tripSearch ?? null, 'munsyari-kausani') }}" data-slug="munsyari-kausani" data-category="himalayan" data-title="Munsiyari & Kausani" data-location="Uttarakhand">
                         <div class="dest-card-media">
-                            <img src="{{ asset('images/trips/munsyari-kausani/1.jpg') }}" alt="Munsyari and Kausani" loading="lazy">
+                            <img src="{{ asset('images/trips/munsyari-kausani/1.jpg') }}" alt="Munsiyari and Kausani" loading="lazy">
                             <div class="dest-card-badge-top">
                                 <span class="dest-badge tag-trek">Himalayan Trek</span>
                                 <span class="dest-badge tag-days">6 Days</span>
@@ -402,7 +402,7 @@
                             <span class="dest-card-location">📍 Kathgodam to Mukteshwar</span>
                         </div>
                         <div class="dest-card-body">
-                            <h3>Munsyari &amp; Kausani</h3>
+                            <h3>Munsiyari &amp; Kausani</h3>
                             <p class="dest-card-desc">Pickup from Kathgodam, then Ranikhet, a trek to Pandavkholi, Someshwar, Kausani, and Mukteshwar.</p>
                             <ul class="dest-card-perks">
                                 <li><span>✓</span> Trek to Pandavkholi</li>
@@ -412,8 +412,8 @@
                             <div class="dest-card-footer">
                                 <div class="dest-card-actions">
                                     <a href="{{ route('destinations.show', 'munsyari-kausani') }}" class="btn btn-outline-teal dest-card-details-btn">View Details</a>
-                                    <x-inquire-now class="dest-card-enquire-btn" data-dest="Munsyari & Kausani" data-title="Munsyari &amp; Kausani" data-location="Kathgodam to Mukteshwar" data-days="6 Days" />
-                                    <a href="https://wa.me/918460922935?text={{ urlencode('Hello Explore Trekora, I am interested in Munsyari & Kausani (6 Days). Please share package details and availability.') }}" target="_blank" rel="noopener noreferrer" class="btn-card-wa" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+                                    <x-inquire-now class="dest-card-enquire-btn" data-dest="Munsiyari & Kausani" data-title="Munsiyari &amp; Kausani" data-location="Kathgodam to Mukteshwar" data-days="6 Days" />
+                                    <a href="https://wa.me/918460922935?text={{ urlencode('Hello Explore Trekora, I am interested in Munsiyari & Kausani (6 Days). Please share package details and availability.') }}" target="_blank" rel="noopener noreferrer" class="btn-card-wa" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
                                         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.188 8.188 0 01-5.82 2.41c-1.45 0-2.88-.38-4.14-1.11l-.3-.17-3.12.82.83-3.04-.19-.31a8.19 8.19 0 01-1.25-4.44c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.21-.18-.46-.3z"/></svg>
                                     </a>
                                 </div>
@@ -692,13 +692,13 @@
                                     <option value="Adi Kailash & Om Parvat" data-title="Adi Kailash &amp; Om Parvat Yatra" data-location="Pithoragarh, Uttarakhand · 8D / 7N">Adi Kailash &amp; Om Parvat Yatra</option>
                                     <option value="Char Dham Yatra" data-title="Char Dham Yatra 2026" data-location="Haridwar to Haridwar · 11D / 10N">Char Dham Yatra</option>
                                     <option value="Khaliya Top Trek" data-title="Khaliya Top Trek" data-location="Munsiyari, Uttarakhand · 1–2 Days">Khaliya Top Trek</option>
-                                    <option value="Milam Glacier Trek" data-title="Milam Glacier Trek" data-location="Pithoragarh, Uttarakhand · 9–12 Days">Milam Glacier Trek</option>
+                                    <option value="Milam Glacier Diaries" data-title="Milam Glacier Diaries" data-location="Pithoragarh, Uttarakhand · 9–12 Days">Milam Glacier Diaries</option>
                                     <option value="Kareri Lake Trek" data-title="Kareri Lake Trek" data-location="Dharamshala, Himachal Pradesh · 2D / 1N">Kareri Lake Trek</option>
                                     <option value="Dalhousie & Dharamshala" data-title="Dalhousie &amp; Dharamshala Tour" data-location="Himachal Pradesh · 8 Days">Dalhousie &amp; Dharamshala Tour</option>
                                     <option value="Harihar Fort Trek" data-title="Harihar Fort &amp; Harishchandragad" data-location="Nashik &amp; Ahmednagar, Maharashtra · 2D / 2N">Harihar Fort &amp; Harishchandragad</option>
                                     <option value="Girnar" data-title="Girnar Hill Trek &amp; Junagadh Exploration" data-location="Junagadh, Gujarat · 3D / 3N">Girnar Hill Trek &amp; Junagadh Exploration</option>
                                     <option value="Mount Abu" data-title="Mount Abu" data-location="Aravalli Range, Rajasthan · 3D / 2N">Mount Abu</option>
-                                    <option value="Munsyari & Kausani" data-title="Munsyari &amp; Kausani" data-location="Kathgodam to Mukteshwar · 6 Days">Munsyari &amp; Kausani</option>
+                                    <option value="Munsiyari & Kausani" data-title="Munsiyari &amp; Kausani" data-location="Kathgodam to Mukteshwar · 6 Days">Munsiyari &amp; Kausani</option>
                                     <option value="Dang" data-title="Dang Forest Circuit" data-location="Dang &amp; Songadh, Gujarat · 2D / 1N">Dang Forest Circuit</option>
                                     <option value="Dediapada" data-title="Dediyapada Wilderness Trek" data-location="Dediyapada, Gujarat · 2D / 1N">Dediyapada Wilderness Trek</option>
                                     <option value="Malvan" data-title="Gateway to Malvan" data-location="Malvan Sindhudurg, Maharashtra · 3D / 2N">Gateway to Malvan</option>

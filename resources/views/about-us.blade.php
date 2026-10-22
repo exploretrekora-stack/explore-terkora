@@ -123,7 +123,7 @@
                             <div class="rating-seal">★</div>
                             <div class="rating-content">
                                 <div class="rating-title-row">
-                                    <span class="rating-val">4.9 rating</span>
+                                    <span class="rating-val">{{ number_format(($travelStats ?? \App\Models\TravelStat::current())->average_rating, 1) }} rating</span>
                                     <span class="rating-reviews">(2.4k reviews)</span>
                                 </div>
                                 <span class="rating-sub">Trusted by Himalayan Explorers</span>

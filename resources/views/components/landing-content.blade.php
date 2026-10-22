@@ -1,3 +1,7 @@
+@props(['travelStats' => null])
+@php
+    $stats = $travelStats ?? \App\Models\TravelStat::current();
+@endphp
 <!-- Hero Section -->
 <section class="hero">
   <!-- Immersive Mountain Trekking Panoramic Background -->
@@ -47,15 +51,15 @@ Curated Travel Experiences Across India
         <div class="faces" aria-hidden="true">
           <img src="{{ asset('images/avatar-1.jpg') }}" alt="Traveler" class="w-11 h-11 rounded-full object-cover border-2 border-t900 shadow-sm">
           <img src="{{ asset('images/avatar-2.jpg') }}" alt="Traveler" class="w-11 h-11 rounded-full object-cover border-2 border-t900 -ml-3 shadow-sm">
-          <i class="w-11 h-11 rounded-full bg-t500 text-white font-bold text-xs flex items-center justify-center border-2 border-t900 -ml-3 shadow-sm">290+</i>
+          <i class="w-11 h-11 rounded-full bg-t500 text-white font-bold text-xs flex items-center justify-center border-2 border-t900 -ml-3 shadow-sm">{{ $stats->happy_travelers }}+</i>
         </div>
         <div>
-          <b>200+</b>
+          <b>{{ $stats->happy_travelers }}+</b>
           <small>Happy travelers</small>
         </div>
         <div class="divider"></div>
         <div>
-          <b>4.9 / 5</b>
+          <b>{{ number_format($stats->average_rating, 1) }} / 5</b>
           <small>Average rating</small>
         </div>
       </div>
@@ -92,7 +96,7 @@ Curated Travel Experiences Across India
         <div class="rating-seal">★</div>
         <div class="rating-content">
           <div class="rating-title-row">
-            <span class="rating-val">4.9 rating</span>
+            <span class="rating-val">{{ number_format($stats->average_rating, 1) }} rating</span>
             <span class="rating-pill">Top Rated</span>
           </div>
           <small class="stars" aria-label="5 out of 5 stars">★★★★★</small>
@@ -143,8 +147,8 @@ Curated Travel Experiences Across India
   <ol id="route-stops" hidden>
     <li>Adi Kailash &amp; Om Parvat Yatra</li>
     <li>Char Dham Yatra</li>
-    <li>Munsyari &amp; Kausani</li>
-    <li>Milam Glacier Trek</li>
+    <li>Munsiyari &amp; Kausani</li>
+    <li>Milam Glacier Diaries</li>
     <li>Khaliya Top Trek</li>
     <li>Dalhousie &amp; Dharamshala</li>
     <li>Kareri Lake Trek</li>
@@ -172,8 +176,8 @@ Curated Travel Experiences Across India
         <select id="d" name="destination" class="sr-only" tabindex="-1" aria-hidden="true">
           <option value="adi-kailash-om-parvat" selected>Adi Kailash &amp; Om Parvat Yatra</option>
           <option value="char-dham-yatra">Char Dham Yatra</option>
-          <option value="munsyari-kausani">Munsyari &amp; Kausani</option>
-          <option value="milam-glacier-trek">Milam Glacier Trek</option>
+          <option value="munsyari-kausani">Munsiyari &amp; Kausani</option>
+          <option value="milam-glacier-trek">Milam Glacier Diaries</option>
           <option value="khaliya-top-trek">Khaliya Top Trek</option>
           <option value="dalhousie-dharamshala">Dalhousie &amp; Dharamshala</option>
           <option value="kareri-lake-trek">Kareri Lake Trek</option>
@@ -209,17 +213,17 @@ Curated Travel Experiences Across India
                   <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-6"/></svg>
                 </span>
               </button>
-              <button type="button" class="dropdown-item-btn" data-slug="munsyari-kausani" onclick="selectDestination('Munsyari &amp; Kausani', this)">
+              <button type="button" class="dropdown-item-btn" data-slug="munsyari-kausani" onclick="selectDestination('Munsiyari &amp; Kausani', this)">
                 <span class="item-body">
-                  <span class="item-title">Munsyari &amp; Kausani</span>
+                  <span class="item-title">Munsiyari &amp; Kausani</span>
                 </span>
                 <span class="item-check">
                   <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-6"/></svg>
                 </span>
               </button>
-              <button type="button" class="dropdown-item-btn" data-slug="milam-glacier-trek" onclick="selectDestination('Milam Glacier Trek', this)">
+              <button type="button" class="dropdown-item-btn" data-slug="milam-glacier-trek" onclick="selectDestination('Milam Glacier Diaries', this)">
                 <span class="item-body">
-                  <span class="item-title">Milam Glacier Trek</span>
+                  <span class="item-title">Milam Glacier Diaries</span>
                 </span>
                 <span class="item-check">
                   <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-6"/></svg>
@@ -441,7 +445,7 @@ Curated Travel Experiences Across India
         <div class="p2 group">
           <img 
             src="{{ asset('images/khaliya-top-trek.jpg') }}" 
-            alt="Khaliya Top Trek spectacular Himalayan ridge in Munsyari Uttarakhand"
+            alt="Khaliya Top Trek spectacular Himalayan ridge in Munsiyari Uttarakhand"
             loading="lazy"
             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-600 ease-out"
           />
@@ -452,13 +456,13 @@ Curated Travel Experiences Across India
           </div>
           <div class="absolute bottom-2.5 left-3 z-10 text-[11px] font-semibold text-t100 flex items-center gap-1">
             <span>📍</span>
-            <span>Munsyari, Uttarakhand</span>
+            <span>Munsiyari, Uttarakhand</span>
           </div>
         </div>
 
-        <!-- 25 Years of Experience Luxury Badge (Clean & Unobstructed) -->
+        <!-- Experience Luxury Badge (Single Source of Truth) -->
         <div class="badge">
-          <b>2+</b>
+          <b>{{ $stats->years_of_experience }}+</b>
           <div>
             <div class="flex items-center gap-1 text-amber-300 text-xs font-bold mb-0.5">
               <span>★★★★★</span>
@@ -592,14 +596,14 @@ Curated Travel Experiences Across India
         </div>
       </a>
 
-      <!-- Card 2: Munsyari & Kausani -->
+      <!-- Card 2: Munsiyari & Kausani -->
       <a class="dc group" href="{{ route('destinations') }}">
         <div class="im">
-          <img src="{{ asset('images/trips/munsyari-kausani/1.jpg') }}" alt="Munsyari and Kausani" loading="lazy">
+          <img src="{{ asset('images/trips/munsyari-kausani/1.jpg') }}" alt="Munsiyari and Kausani" loading="lazy">
         </div>
         <div class="tx">
           <span class="dc-cat">FAMILY GETAWAYS</span>
-          <h3>Munsyari &amp; Kausani</h3>
+          <h3>Munsiyari &amp; Kausani</h3>
           <p>Pickup from Kathgodam, then Ranikhet, a trek to Pandavkholi, Someshwar, Kausani, and Mukteshwar.</p>
           <span class="more">Explore Package <i>↗</i></span>
         </div>
@@ -618,14 +622,14 @@ Curated Travel Experiences Across India
         </div>
       </a>
 
-      <!-- Card 4: Milam Glacier Trek -->
+      <!-- Card 4: Milam Glacier Diaries -->
       <a class="dc group" href="{{ route('destinations') }}">
         <div class="im">
-          <img src="{{ asset('images/trips/milam-glacier-trek/1.jpg') }}" alt="Milam Glacier Trek" loading="lazy">
+          <img src="{{ asset('images/trips/milam-glacier-trek/1.jpg') }}" alt="Milam Glacier Diaries" loading="lazy">
         </div>
         <div class="tx">
           <span class="dc-cat">ADVENTURE TREKS</span>
-          <h3>Milam Glacier Trek</h3>
+          <h3>Milam Glacier Diaries</h3>
           <p>A remote 9-to-12-day trek in the Johar Valley, covering around 100 to 130 km round trip.</p>
           <span class="more">Explore Package <i>↗</i></span>
         </div>
@@ -682,7 +686,7 @@ Curated Travel Experiences Across India
     <div class="cg">
       <a class="cc" href="{{ route('tour-packages.show', 'adi-kailash-om-parvat') }}">
         <div class="cc-media">
-          <img src="{{ asset('images/state-uttarakhand.jpg') }}" alt="Panchachuli mountains above the valleys of Munsyari, Uttarakhand" loading="lazy">
+          <img src="{{ asset('images/state-uttarakhand.jpg') }}" alt="Panchachuli mountains above the valleys of Munsiyari, Uttarakhand" loading="lazy">
           <span class="kind">Himalayan Escapes</span>
         </div>
         <div class="cc-body">
@@ -811,20 +815,20 @@ Curated Travel Experiences Across India
               <path d="M2.5 7.5 C 35 3, 85 3.2, 157 6.8 C 115 9.2, 55 9.8, 18 11.2" stroke="#2dd4bf" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </span>
-          <h3>2+ years of trips travelers trust</h3>
+          <h3>{{ $stats->years_of_experience }}+ years of trips travelers trust</h3>
           <p>From your initial consultation to returning safely home, Explore Trekora is by your side at every step.</p>
         </div>
         <div class="sn" id="success-stats">
           <div class="sc">
-            <b class="sc-number"><span class="stat-counter" data-target="4">4</span></b>
+            <b class="sc-number"><span class="stat-counter" data-target="{{ $stats->team_members }}">{{ $stats->team_members }}</span></b>
             <span class="sc-label">Team members</span>
           </div>
           <div class="sc">
-            <b class="sc-number"><span class="stat-counter" data-target="40" data-suffix="+">40+</span></b>
+            <b class="sc-number"><span class="stat-counter" data-target="{{ $stats->trips_completed }}" data-suffix="+">{{ $stats->trips_completed }}+</span></b>
             <span class="sc-label">Trips completed</span>
           </div>
           <div class="sc">
-            <b class="sc-number"><span class="stat-counter" data-target="100" data-suffix="+">100+</span></b>
+            <b class="sc-number"><span class="stat-counter" data-target="{{ $stats->verified_reviews }}" data-suffix="+">{{ $stats->verified_reviews }}+</span></b>
             <span class="sc-label">Verified reviews</span>
           </div>
         </div>
@@ -959,13 +963,17 @@ Curated Travel Experiences Across India
   </section>
 
   <!-- Reviews / Testimonials / Stories Section -->
+  @php
+    $reviewsList = !empty($activeReviews) ? $activeReviews : \App\Models\Review::allActiveCached();
+    $firstReview = $reviewsList[0] ?? null;
+  @endphp
   <section class="sec" id="stories" aria-label="Customer Stories and Reviews">
     <span id="reviews" class="sr-only">Customer Stories and Reviews</span>
     <div class="tsg">
       <div class="fr tim" id="story-frame">
-        <img src="{{ asset('images/story-1.jpg') }}" alt="Adi Kailash &amp; Om Parvat Yatra" id="story-main-img" class="story-img" loading="lazy">
+        <img src="{{ $firstReview['image'] ?? asset('images/story-1.jpg') }}" alt="{{ $firstReview['trip'] ?? 'Adi Kailash & Om Parvat Yatra' }}" id="story-main-img" class="story-img" loading="lazy">
         <div class="story-photo-badge">
-          <span id="story-tag-text">📍 Adi Kailash &amp; Om Parvat</span>
+          <span id="story-tag-text">📍 {{ $firstReview['tag'] ?? 'Adi Kailash & Om Parvat' }}</span>
         </div>
       </div>
       <div class="tq">
@@ -980,26 +988,19 @@ Curated Travel Experiences Across India
             </button>
           </div>
         </div>
-        <p id="qt">Standing in front of the sacred Om Parvat gave us goosebumps. Trekora handled all the inner line permits and high-altitude logistics seamlessly.</p>
+        <p id="qt">{{ $firstReview['quote'] ?? 'Standing in front of the sacred Om Parvat gave us goosebumps. Trekora handled all the inner line permits and high-altitude logistics seamlessly.' }}</p>
         <div class="au">
           <div class="story-avatar-icon" id="story-avatar-icon" aria-hidden="true">
             <svg class="ic" aria-hidden="true"><use href="#i-user"/></svg>
           </div>
           <div class="au-meta" id="au-meta">
-            <strong id="qn">Rajesh Patel</strong>
-            <small id="qr">Adi Kailash &amp; Om Parvat Yatra</small>
+            <strong id="qn">{{ $firstReview['author'] ?? 'Rajesh Patel' }}</strong>
+            <small id="qr">{{ $firstReview['trip'] ?? 'Adi Kailash & Om Parvat Yatra' }}</small>
           </div>
           <div class="dots" aria-label="Review pagination">
-            <button class="on" aria-label="Story 1" onclick="sq(0)"></button>
-            <button aria-label="Story 2" onclick="sq(1)"></button>
-            <button aria-label="Story 3" onclick="sq(2)"></button>
-            <button aria-label="Story 4" onclick="sq(3)"></button>
-            <button aria-label="Story 5" onclick="sq(4)"></button>
-            <button aria-label="Story 6" onclick="sq(5)"></button>
-            <button aria-label="Story 7" onclick="sq(6)"></button>
-            <button aria-label="Story 8" onclick="sq(7)"></button>
-            <button aria-label="Story 9" onclick="sq(8)"></button>
-            <button aria-label="Story 10" onclick="sq(9)"></button>
+            @foreach ($reviewsList as $idx => $rItem)
+              <button class="{{ $idx === 0 ? 'on' : '' }}" aria-label="Story {{ $idx + 1 }}" onclick="sq({{ $idx }})"></button>
+            @endforeach
           </div>
         </div>
       </div>

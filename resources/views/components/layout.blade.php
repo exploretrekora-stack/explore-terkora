@@ -25,84 +25,14 @@
     </div>
 
     <script>
-        // 10 Interactive Trekker Stories & Photos (Auto-rotating with Manual Navigation)
-        const reviews = [
-            {
-                quote: "Standing in front of the sacred Om Parvat gave us goosebumps. Trekora handled all the inner line permits and high-altitude logistics seamlessly.",
-                author: "Rajesh Patel",
-                trip: "Adi Kailash & Om Parvat Yatra",
-                tag: "Adi Kailash & Om Parvat",
-                image: "{{ asset('images/story-1.jpg') }}"
-            },
-            {
-                quote: "Waking up to the 360-degree panoramic view of Panchachuli peaks from Khaliya Top was the highlight of our trek. Superbly organized camp!",
-                author: "Aarav Sharma",
-                trip: "Khaliya Top, Munsiyari",
-                tag: "Khaliya Top Trek",
-                image: "{{ asset('images/story-2.jpg') }}"
-            },
-            {
-                quote: "The rugged Johar Valley trails were thrilling and awe-inspiring. Our trek lead was exceptionally skilled and safety was never compromised.",
-                author: "Vikram Desai",
-                trip: "Milam Glacier Expedition",
-                tag: "Milam Glacier Trek",
-                image: "{{ asset('images/story-3.jpg') }}"
-            },
-            {
-                quote: "Camping beside the crystal clear glacial waters of Kareri Lake under a sky full of stars was truly a dream come true.",
-                author: "Priya Shah",
-                trip: "Kareri Lake, Himachal",
-                tag: "Kareri Lake Trek",
-                image: "{{ asset('images/story-4.jpg') }}"
-            },
-            {
-                quote: "A serene vacation amidst pine-scented woods, colonial charm, and Tibetan monasteries. Everything was punctual and hassle-free.",
-                author: "Sneha Kulkarni",
-                trip: "Dalhousie & Dharamshala Tour",
-                tag: "Dalhousie & Dharamshala",
-                image: "{{ asset('images/story-6.jpg') }}"
-            },
-            {
-                quote: "Ascending the sacred 10,000 steps of Mount Girnar at sunrise was unforgettable. Well-planned halts and comfortable stays made it effortless.",
-                author: "Bhavik Dave",
-                trip: "Girnar Hill Trek & Junagadh Exploration",
-                tag: "Girnar Summit",
-                image: "{{ asset('images/story-7.jpg') }}"
-            },
-            {
-                quote: "Exploring hidden trails through the Aravalli hills away from the tourist crowd was refreshing. Cozy eco-cottages and delicious meals!",
-                author: "Ananya Mehta",
-                trip: "Mount Abu",
-                tag: "Mount Abu Trails",
-                image: "{{ asset('images/story-8.jpg') }}"
-            },
-            {
-                quote: "Dense monsoon teak forests, secret waterfalls, and warm tribal hospitality. Explore Trekora made our Dang family trip deeply memorable.",
-                author: "Hardik Trivedi",
-                trip: "Dang Forest Circuit",
-                tag: "Dang Waterfalls",
-                image: "{{ asset('images/story-9.jpg') }}"
-            },
-            {
-                quote: "Pure untouched wilderness in Shoolpaneshwar. River treks, clean homestays, and pristine waterfalls made this our best weekend escape.",
-                author: "Amit Vora",
-                trip: "Dediyapada Wilderness Trek",
-                tag: "Dediyapada Forest Trail",
-                image: "{{ asset('images/story-10.jpg') }}"
-            },
-            {
-                quote: "Scuba diving around Sindhudurg and sunset kayaking at Khavane beach was magical. Fresh Malvani food and coastal hospitality made it a perfect trip.",
-                author: "Tanvi Sawant",
-                trip: "Gateway to Malvan",
-                tag: "Sindhudurg & Watersports",
-                image: "{{ asset('images/trips/gateway-to-malvan/1.jpg') }}"
-            }
-        ];
+        // Dynamic Customer Stories & Reviews (synced from database)
+        const reviews = @json(!empty($activeReviews) ? $activeReviews : \App\Models\Review::allActiveCached());
 
         let currentStoryIdx = 0;
         let storyTimer = null;
 
         function sq(index) {
+            if (!Array.isArray(reviews) || reviews.length === 0) return;
             if (index < 0) index = reviews.length - 1;
             if (index >= reviews.length) index = 0;
             currentStoryIdx = index;
@@ -163,6 +93,7 @@
 
         function startStoryAutoplay() {
             stopStoryAutoplay();
+            if (!Array.isArray(reviews) || reviews.length <= 1) return;
             storyTimer = setInterval(() => {
                 nextStory();
             }, 4500);

@@ -66,6 +66,13 @@ class DestinationDetailTest extends TestCase
         $response->assertDontSee('Inclusions &amp; Exclusions', false);
         $response->assertSee('Important Guidelines &amp; Essentials', false);
         $response->assertSee('Enquire for this Journey');
+
+        // Meal plan: lunch has been removed
+        $response->assertSee('(Meals: B, D)');
+        $response->assertSee('lunch is not included');
+        $response->assertDontSee('(Meals: B, L, D)');
+        $response->assertDontSee('(Meals: L, D)');
+        $response->assertDontSee('(Meals: B, L)');
     }
 
     /**
@@ -97,11 +104,16 @@ class DestinationDetailTest extends TestCase
 
         $milam = $this->get(route('destinations.show', 'milam-glacier-trek'));
         $milam->assertOk();
+        $milam->assertSee('Milam Glacier Diaries');
         $milam->assertSee('Munsiyari to Lilam');
         $milam->assertSee('Hardeol, Trishuli, and Rishi Pahar');
         $milam->assertSee('100 to 130 kilometers round trip');
         $milam->assertDontSee('13,800 ft');
         $milam->assertDontSee('Nanda Devi temple');
+
+        $aliasMilam = $this->get(route('destinations.show', 'milam-glacier-diaries'));
+        $aliasMilam->assertOk();
+        $aliasMilam->assertSee('Milam Glacier Diaries');
 
         $kareri = $this->get(route('destinations.show', 'kareri-lake-trek'));
         $kareri->assertOk();
@@ -114,6 +126,8 @@ class DestinationDetailTest extends TestCase
 
         $munsyari = $this->get(route('destinations.show', 'munsyari-kausani'));
         $munsyari->assertOk();
+        $munsyari->assertSee('Munsiyari &amp; Kausani', false);
+        $munsyari->assertDontSee('Munsyari &amp; Kausani', false);
         $munsyari->assertSee('Stay at Dhudholi');
         $munsyari->assertSee('Pandavkholi');
         $munsyari->assertSee('Rudradhari Waterfall');
@@ -122,6 +136,10 @@ class DestinationDetailTest extends TestCase
         $munsyari->assertDontSee('Switzerland of India');
         $munsyari->assertDontSee('Binsar');
         $munsyari->assertDontSee('7,200 ft');
+
+        $aliasMunsiyari = $this->get(route('destinations.show', 'munsiyari-kausani'));
+        $aliasMunsiyari->assertOk();
+        $aliasMunsiyari->assertSee('Munsiyari &amp; Kausani', false);
     }
 
     /**

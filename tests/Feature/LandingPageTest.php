@@ -57,8 +57,8 @@ class LandingPageTest extends TestCase
 
         // Destinations dropdown items
         $response->assertSee('Adi Kailash &amp; Om Parvat Yatra', false);
-        $response->assertSee('Munsyari &amp; Kausani', false);
-        $response->assertSee('Milam Glacier Trek');
+        $response->assertSee('Munsiyari &amp; Kausani', false);
+        $response->assertSee('Milam Glacier Diaries');
         $response->assertSee('Khaliya Top Trek');
         $response->assertSee('Dalhousie &amp; Dharamshala', false);
         $response->assertSee('Kareri Lake Trek');
@@ -257,7 +257,7 @@ class LandingPageTest extends TestCase
         $response->assertSee('Adi Kailash &amp; Om Parvat', false);
         $response->assertSee('Char Dham Yatra');
         $response->assertSee('Khaliya Top Trek');
-        $response->assertSee('Milam Glacier Trek');
+        $response->assertSee('Milam Glacier Diaries');
         $response->assertSee('Kareri Lake Trek');
         $response->assertSee('Harihar Fort');
         $response->assertSee('Girnar');
@@ -315,7 +315,7 @@ class LandingPageTest extends TestCase
 
         // Card 2
         $response->assertSee('FAMILY GETAWAYS');
-        $response->assertSee('Munsyari &amp; Kausani', false);
+        $response->assertSee('Munsiyari &amp; Kausani', false);
         $response->assertSee('images/trips/munsyari-kausani/1.jpg');
 
         // Card 3
@@ -324,7 +324,7 @@ class LandingPageTest extends TestCase
         $response->assertSee('images/trips/khaliya-top-trek/1.jpg');
 
         // Card 4
-        $response->assertSee('Milam Glacier Trek');
+        $response->assertSee('Milam Glacier Diaries');
         $response->assertSee('images/trips/milam-glacier-trek/1.jpg');
 
         // Card 5
@@ -401,8 +401,8 @@ class LandingPageTest extends TestCase
         $response->assertSee('id="route-stops"', false);
         $response->assertSee('Adi Kailash &amp; Om Parvat Yatra', false);
         $response->assertSee('Char Dham Yatra');
-        $response->assertSee('Munsyari &amp; Kausani', false);
-        $response->assertSee('Milam Glacier Trek');
+        $response->assertSee('Munsiyari &amp; Kausani', false);
+        $response->assertSee('Milam Glacier Diaries');
         $response->assertSee('Khaliya Top Trek');
         $response->assertSee('Dalhousie &amp; Dharamshala', false);
         $response->assertSee('Kareri Lake Trek');

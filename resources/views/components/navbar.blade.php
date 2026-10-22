@@ -71,11 +71,11 @@
                       <svg class="mega-link-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l5 5-5 5"/></svg>
                     </a>
                     <a href="{{ route('destinations.show', 'munsyari-kausani') }}" class="mega-link" onclick="handleNavClick()">
-                      <span class="mega-link-name">Munsyari &amp; Kausani</span>
+                      <span class="mega-link-name">Munsiyari &amp; Kausani</span>
                       <svg class="mega-link-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l5 5-5 5"/></svg>
                     </a>
                     <a href="{{ route('destinations.show', 'milam-glacier-trek') }}" class="mega-link" onclick="handleNavClick()">
-                      <span class="mega-link-name">Milam Glacier Trek</span>
+                      <span class="mega-link-name">Milam Glacier Diaries</span>
                       <svg class="mega-link-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l5 5-5 5"/></svg>
                     </a>
                     <a href="{{ route('destinations.show', 'khaliya-top-trek') }}" class="mega-link" onclick="handleNavClick()">
@@ -356,10 +356,10 @@
             <span class="sublink-title">Char Dham Yatra</span>
           </a>
           <a href="{{ route('destinations.show', 'munsyari-kausani') }}" class="drawer-sublink" onclick="handleNavClick()">
-            <span class="sublink-title">Munsyari &amp; Kausani</span>
+            <span class="sublink-title">Munsiyari &amp; Kausani</span>
           </a>
           <a href="{{ route('destinations.show', 'milam-glacier-trek') }}" class="drawer-sublink" onclick="handleNavClick()">
-            <span class="sublink-title">Milam Glacier Trek</span>
+            <span class="sublink-title">Milam Glacier Diaries</span>
           </a>
           <a href="{{ route('destinations.show', 'khaliya-top-trek') }}" class="drawer-sublink" onclick="handleNavClick()">
             <span class="sublink-title">Khaliya Top Trek</span>
