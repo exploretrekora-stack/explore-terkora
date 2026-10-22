@@ -8599,6 +8599,185 @@ a.pkg-card {
   margin: 0;
 }
 
+/* ==========================================================================
+   Destination Gallery 800x600 Preview Modal
+   ========================================================================== */
+.dest-gallery-preview-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.24s ease, visibility 0.24s ease;
+}
+
+.dest-gallery-preview-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.dest-gallery-preview-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 20, 19, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+
+.dest-gallery-preview-dialog {
+  position: relative;
+  z-index: 2;
+  width: 800px;
+  max-width: min(800px, 94vw);
+  height: 600px;
+  max-height: min(600px, 88vh);
+  background: #041c1a;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(20, 184, 166, 0.25);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transform: scale(0.95);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dest-gallery-preview-modal.is-open .dest-gallery-preview-dialog {
+  transform: scale(1);
+}
+
+.dest-gallery-preview-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 10;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.65);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.dest-gallery-preview-close:hover {
+  background: rgba(239, 68, 68, 0.85);
+  transform: scale(1.08);
+}
+
+.dest-gallery-preview-frame {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  position: relative;
+  background: #020f0e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#dest-gallery-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.dest-gallery-preview-footer {
+  padding: 12px 20px;
+  background: rgba(4, 28, 26, 0.96);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.dest-gallery-preview-text {
+  min-width: 0;
+  flex: 1;
+}
+
+.dest-gallery-preview-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #14b8a6;
+  margin-bottom: 2px;
+}
+
+.dest-gallery-preview-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dest-gallery-preview-caption {
+  font-size: 12px;
+  color: #94a3b8;
+  margin: 2px 0 0;
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dest-gallery-preview-hint {
+  font-size: 11px;
+  font-weight: 600;
+  color: #5eead4;
+  background: rgba(20, 184, 166, 0.16);
+  border: 1px solid rgba(20, 184, 166, 0.35);
+  padding: 5px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+@media (max-width: 640px) {
+  .dest-gallery-preview-dialog {
+    height: min(500px, 85vh);
+    border-radius: 14px;
+  }
+  .dest-gallery-preview-footer {
+    padding: 10px 14px;
+  }
+  .dest-gallery-preview-title {
+    font-size: 15px;
+  }
+  .dest-gallery-preview-hint {
+    display: none;
+  }
+}
+
+
 /* Option 3 Dharchula Itinerary Card */
 .itinerary-opt-badge {
   display: inline-block;

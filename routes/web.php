@@ -63,7 +63,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     });
 });
 
-// Secure web cache clear (for shared hosting without SSH/terminal)
+// Secure web cache clear & asset sync (for shared hosting without SSH/terminal)
 Route::get('/maintenance/clear-cache/{key}', function (string $key) {
     if ($key !== 'trekora-clear-2026' && $key !== config('app.key')) {
         abort(403, 'Unauthorized access.');
@@ -71,6 +71,80 @@ Route::get('/maintenance/clear-cache/{key}', function (string $key) {
 
     Artisan::call('optimize:clear');
 
-    return response("Explore Trekora: All caches (config, routes, views, and app cache) cleared successfully!\n", 200)
+    $syncLog = [];
+    $docRoot = isset($_SERVER['DOCUMENT_ROOT']) ? rtrim($_SERVER['DOCUMENT_ROOT'], '/') : null;
+    $publicPath = rtrim(public_path(), '/');
+
+    if ($docRoot && realpath($docRoot) !== realpath($publicPath)) {
+        $sourceBuild = $publicPath.'/build';
+        $destBuild = $docRoot.'/build';
+
+        if (is_dir($sourceBuild)) {
+            $copiedCount = 0;
+            $iterator = new RecursiveIteratorIterator(
+                new RecursiveDirectoryIterator($sourceBuild, RecursiveDirectoryIterator::SKIP_DOTS),
+                RecursiveIteratorIterator::SELF_FIRST
+            );
+
+            foreach ($iterator as $item) {
+                $subPath = $iterator->getSubPathname();
+                $target = $destBuild.'/'.$subPath;
+
+                if ($item->isDir()) {
+                    if (! is_dir($target)) {
+                        mkdir($target, 0755, true);
+                    }
+                } else {
+                    $targetDir = dirname($target);
+                    if (! is_dir($targetDir)) {
+                        mkdir($targetDir, 0755, true);
+                    }
+                    copy($item->getPathname(), $target);
+                    $copiedCount++;
+                }
+            }
+            $syncLog[] = "Synced {$copiedCount} build assets from {$sourceBuild} to {$destBuild}.";
+        }
+    }
+
+    $responseMessage = "Explore Trekora: All caches cleared successfully!\n"
+        .(! empty($syncLog) ? implode("\n", $syncLog)."\n" : "Build assets verified in public path.\n");
+
+    return response($responseMessage, 200)
         ->header('Content-Type', 'text/plain');
 })->name('maintenance.clear-cache');
+
+// Fallback asset route for shared hosting where web document root (/public_html)
+// has not been synced with the Laravel public/build directory
+Route::get('/build/{path}', function (string $path) {
+    if (str_contains($path, '..')) {
+        abort(404);
+    }
+
+    $filePath = public_path('build/'.$path);
+    if (! file_exists($filePath) || ! is_file($filePath)) {
+        abort(404);
+    }
+
+    $extension = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));
+    $mimeTypes = [
+        'css' => 'text/css; charset=utf-8',
+        'js' => 'application/javascript; charset=utf-8',
+        'json' => 'application/json',
+        'woff' => 'font/woff',
+        'woff2' => 'font/woff2',
+        'ttf' => 'font/ttf',
+        'svg' => 'image/svg+xml',
+        'png' => 'image/png',
+        'jpg' => 'image/jpeg',
+        'jpeg' => 'image/jpeg',
+        'webp' => 'image/webp',
+    ];
+
+    $mime = $mimeTypes[$extension] ?? (mime_content_type($filePath) ?: 'application/octet-stream');
+
+    return response()->file($filePath, [
+        'Content-Type' => $mime,
+        'Cache-Control' => 'public, max-age=31536000, immutable',
+    ]);
+})->where('path', '.*')->name('build.asset');

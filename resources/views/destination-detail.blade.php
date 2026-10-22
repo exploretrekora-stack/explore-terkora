@@ -493,11 +493,19 @@
 
                         <div class="dest-gallery-grid-three">
                             @foreach($destination['gallery'] as $idx => $photo)
-                                <div class="dest-gallery-item" data-photo-index="{{ $idx }}" role="button" tabindex="0" title="Click to view {{ $photo['title'] }} in hero darshan">
+                                <div class="dest-gallery-item"
+                                    data-photo-index="{{ $idx }}"
+                                    data-photo-src="{{ asset($photo['src']) }}"
+                                    data-photo-title="{{ $photo['title'] }}"
+                                    data-photo-caption="{{ $photo['caption'] ?? '' }}"
+                                    role="button"
+                                    tabindex="0"
+                                    title="Click to view in {{ $destination['title'] }}"
+                                >
                                     <div class="dest-gallery-img-wrap">
                                         <img src="{{ asset($photo['src']) }}" alt="{{ $photo['title'] }}" loading="lazy">
                                         <div class="dest-gallery-hover-overlay">
-                                            <span class="gallery-zoom-ic">👁️ View in Hero Darshan</span>
+                                            <span class="gallery-zoom-ic">👁️ View in {{ $destination['title'] }}</span>
                                         </div>
                                     </div>
                                     <div class="dest-gallery-info">
@@ -516,6 +524,30 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Gallery Photo Preview Lightbox (800x600 size - Tap/Click anywhere to close) -->
+            <div id="dest-gallery-preview-modal" class="dest-gallery-preview-modal" role="dialog" aria-modal="true" aria-label="Photo Preview" aria-hidden="true">
+                <div class="dest-gallery-preview-backdrop"></div>
+                <div class="dest-gallery-preview-dialog" role="document">
+                    <button type="button" class="dest-gallery-preview-close" id="gallery-preview-close-btn" aria-label="Close preview">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                    <div class="dest-gallery-preview-frame">
+                        <img id="dest-gallery-preview-img" src="" alt="Photo preview" loading="eager">
+                    </div>
+                    <div class="dest-gallery-preview-footer">
+                        <div class="dest-gallery-preview-text">
+                            <span class="dest-gallery-preview-badge">{{ $destination['title'] }}</span>
+                            <h3 id="dest-gallery-preview-title" class="dest-gallery-preview-title"></h3>
+                            <p id="dest-gallery-preview-caption" class="dest-gallery-preview-caption"></p>
+                        </div>
+                        <span class="dest-gallery-preview-hint">Tap anywhere to close ✕</span>
+                    </div>
+                </div>
+            </div>
         @endif
 
         <!-- Important Yatra Information & Essentials (Side by Side - Image-4 Cards) -->
@@ -907,25 +939,61 @@
                 });
             });
 
-            // Connect main body gallery cards to the hero slider
+            // Connect main body gallery cards to the 800x600 preview modal
+            const galleryModal = document.getElementById('dest-gallery-preview-modal');
+            const galleryModalImg = document.getElementById('dest-gallery-preview-img');
+            const galleryModalTitle = document.getElementById('dest-gallery-preview-title');
+            const galleryModalCaption = document.getElementById('dest-gallery-preview-caption');
+
+            function openGalleryPreview(item) {
+                if (!galleryModal || !galleryModalImg) return;
+                const src = item.getAttribute('data-photo-src');
+                const title = item.getAttribute('data-photo-title');
+                const caption = item.getAttribute('data-photo-caption') || '';
+
+                galleryModalImg.src = src;
+                galleryModalImg.alt = title;
+                if (galleryModalTitle) galleryModalTitle.textContent = title;
+                if (galleryModalCaption) galleryModalCaption.textContent = caption;
+
+                galleryModal.classList.add('is-open');
+                galleryModal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeGalleryPreview() {
+                if (!galleryModal) return;
+                galleryModal.classList.remove('is-open');
+                galleryModal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+
             document.querySelectorAll('.dest-gallery-item').forEach(item => {
-                item.addEventListener('click', () => {
-                    const idx = parseInt(item.getAttribute('data-photo-index'), 10);
-                    if (!isNaN(idx)) {
-                        updateSlide(idx);
-                        if (heroCard) {
-                            heroCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        }
-                        startAutoPlay();
-                    }
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    openGalleryPreview(item);
                 });
                 item.addEventListener('keydown', (e) => {
                     if (e.key === 'Enter' || e.key === ' ') {
                         e.preventDefault();
-                        item.click();
+                        openGalleryPreview(item);
                     }
                 });
             });
+
+            if (galleryModal) {
+                // Tap/click anywhere on the modal or image or backdrop to dismiss
+                galleryModal.addEventListener('click', () => {
+                    closeGalleryPreview();
+                });
+
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && galleryModal.classList.contains('is-open')) {
+                        closeGalleryPreview();
+                    }
+                });
+            }
 
             // Pause autoplay on mouse hover over hero
             if (heroCard) {

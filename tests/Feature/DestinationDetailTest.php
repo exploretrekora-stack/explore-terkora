@@ -322,4 +322,33 @@ class DestinationDetailTest extends TestCase
 
         $response->assertNotFound();
     }
+
+    /**
+     * Test that gallery cards show "View in {Destination}" and render the 800x600 preview modal.
+     */
+    public function test_destination_detail_gallery_has_view_in_destination_and_preview_modal(): void
+    {
+        $response = $this->get(route('destinations.show', 'adi-kailash-om-parvat'));
+
+        $response->assertOk();
+        $response->assertSee('dest-gallery-preview-modal');
+        $response->assertSee('dest-gallery-preview-dialog');
+        $response->assertSee('View in Adi Kailash &amp; Om Parvat Yatra', false);
+        $response->assertDontSee('View in Hero Darshan');
+        $response->assertDontSee('Hero Darshan');
+    }
+
+    /**
+     * Test that the maintenance cache-clear route and build asset fallback route work.
+     */
+    public function test_maintenance_clear_cache_and_build_asset_route(): void
+    {
+        $response = $this->get(route('maintenance.clear-cache', 'trekora-clear-2026'));
+        $response->assertOk();
+        $response->assertSee('Explore Trekora: All caches cleared successfully!');
+
+        $manifestResponse = $this->get('/build/manifest.json');
+        $manifestResponse->assertOk();
+        $manifestResponse->assertHeader('Content-Type', 'application/json');
+    }
 }
