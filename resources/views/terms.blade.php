@@ -68,18 +68,18 @@
             <p>These Terms and Conditions ("T&amp;C") set forth the legally binding framework between you ("User," "You," or "Your") and Explore Trekora — referring collectively to Explore Trekora Travel Solutions Pvt Ltd, Explore Trekora INC, Explore Trekora FZCO, and 53 Take Off Private Limited — for:</p>
             <ul>
                 <li>Accessing or using Explore Trekora's website(s), mobile applications, or other sales channels (collectively, the "Platform")</li>
-                <li>Booking any experiences, activities, accommodations, flights, visa assistance, or operated tour packages through Explore Trekora</li>
+                <li>Booking any experiences, activities, accommodations, flights, or operated tour packages through Explore Trekora</li>
             </ul>
 
             <h2>1. DEFINITIONS</h2>
             <p><strong>"User," "You," "Your"</strong><br>Any person or entity visiting, accessing, registering on, or making a Booking through the Platform.</p>
-            <p><strong>"Booking"</strong><br>Any confirmed purchase or reservation for a single experience/activity or a complete operated tour package comprising multiple services such as hotels, flights, visas, transfers, and experiences.</p>
+            <p><strong>"Booking"</strong><br>Any confirmed purchase or reservation for a single experience/activity or a complete operated tour package comprising multiple services such as hotels, flights, transfers, and experiences.</p>
             <p><strong>"Supplier" or "Third-Party Supplier"</strong><br>Any third-party entity engaged by Explore Trekora to deliver specific components of the Services.</p>
             <ul>
                 <li>For Complete Tour Packages (Part B), such Suppliers act under Explore Trekora's contractual coordination and operational control.</li>
                 <li>For Direct Experience / Activity Bookings (Part A), the Supplier provides the service independently.</li>
             </ul>
-            <p><strong>"Services"</strong><br>All offerings booked through Explore Trekora, including operated tour packages, hotels, flights, experiences, activities, visas, transfers, and associated logistics.</p>
+            <p><strong>"Services"</strong><br>All offerings booked through Explore Trekora, including operated tour packages, hotels, flights, experiences, activities, transfers, and associated logistics.</p>
             <p><strong>"Quotation"</strong><br>A formal offer issued by Explore Trekora detailing the Explore Trekora-designed itinerary, inclusions, exclusions, schedules, pricing, cancellation terms, and payment deadlines.</p>
             <p>Once full or partial payment is made, the Quotation along with these T&amp;C constitutes the final binding contract and supersedes any prior verbal, written, email, WhatsApp, website, or marketing communication.</p>
             <p><strong>"Platform"</strong><br>Explore Trekora's websites, mobile apps, partner pages, social media accounts, and any affiliated channels used for promotion, booking, or customer support.</p>
@@ -88,7 +88,7 @@
             <h2>2. APPLICATION &amp; SCOPE</h2>
             <p>These T&amp;C are divided into two parts:</p>
             <p><strong>Part A – Direct Experience / Activity Bookings</strong><br>Single standalone activities or experiences booked individually (e.g., attraction tickets, day tours).</p>
-            <p><strong>Part B – Operated Tour Packages</strong><br>Multi-service itineraries operated by Explore Trekora, including flights, hotels, transfers, activities, visa facilitation, group tours, private tours, and customized itineraries.</p>
+            <p><strong>Part B – Operated Tour Packages</strong><br>Multi-service itineraries operated by Explore Trekora, including flights, hotels, transfers, activities, group tours, private tours, and customized itineraries.</p>
             <p>General provisions apply to both parts unless explicitly stated otherwise.</p>
 
             <h2>3. LEGAL AGREEMENT &amp; BOOKING CONTRACT</h2>
@@ -132,7 +132,7 @@
 
             <h3>B2. USER OBLIGATIONS</h3>
             <ul>
-                <li>Users must provide accurate passenger details, documents, and information. Errors leading to denial of service, visa rejection, or travel disruption are the User's responsibility.</li>
+                <li>Users must provide accurate passenger details, documents, and information. Errors leading to denial of service or travel disruption are the User's responsibility.</li>
                 <li>Failure to meet payment deadlines may result in cancellation with applicable charges.</li>
             </ul>
 
@@ -150,29 +150,7 @@
                 <li>Local taxes, mandatory charges, and security deposits are payable directly by the User.</li>
             </ul>
 
-            <h3>B5. VISA POLICY</h3>
-            <ul>
-                <li>Explore Trekora facilitates visa applications; issuance remains at embassy discretion.</li>
-                <li>Visa fees are non-refundable unless stated otherwise. Visa denial does not override tour cancellation terms.</li>
-            </ul>
-            <p><strong>Travel Impact Due to Visa Rejection:</strong></p>
-            <ul>
-                <li>If your visa is denied or delayed, standard cancellation terms (in the Quotation) still apply for the overall package.</li>
-                <li>Explore Trekora is not liable for any extra costs from the denial (e.g., new flight tickets, accommodation changes, partial refunds for missed departure).</li>
-            </ul>
-            <p><strong>Delays in Visa Issuance:</strong></p>
-            <ul>
-                <li>If visa delays result in missed travel plans, cancellations, or additional expenses, Explore Trekora will not be held responsible.</li>
-                <li>Explore Trekora will make reasonable efforts to assist with a modified itinerary, provided the customer covers any additional expenses.</li>
-                <li>Customers are strongly advised to purchase travel insurance to cover such contingencies.</li>
-            </ul>
-            <p><strong>Transit Visas &amp; Boarding Denial:</strong></p>
-            <ul>
-                <li>You are solely responsible for obtaining transit visas if your itinerary includes layovers requiring a separate visa. Explore Trekora cannot intervene if You are denied boarding due to missing transit permission.</li>
-                <li>Explore Trekora shall not be liable if You miss your flight due to incomplete documents, late arrival at check-in, or legal/travel bans.</li>
-            </ul>
-
-            <h3>B6. TRANSFERS &amp; TRANSPORT</h3>
+            <h3>B5. TRANSFERS &amp; TRANSPORT</h3>
             <ul>
                 <li>Explore Trekora coordinates and oversees transfers through contracted transport partners.</li>
                 <li>In the event of breakdowns or delays, Explore Trekora will make reasonable operational efforts to minimize disruption, subject to local conditions and availability.</li>
@@ -184,7 +162,7 @@
                 <li>Drivers may refuse unscheduled stops if they violate local regulations or affect subsequent pickups. Explore Trekora is not liable for direct arrangements made with drivers.</li>
             </ul>
 
-            <h3>B7. CANCELLATIONS, MODIFICATIONS &amp; NO-SHOWS</h3>
+            <h3>B6. CANCELLATIONS, MODIFICATIONS &amp; NO-SHOWS</h3>
             <ul>
                 <li>Cancellation fees follow the Quotation schedule.</li>
                 <li>Refunds are processed only after receipt from our ground team. Convenience fees, TCS, and non-refundable components may be deducted.</li>
@@ -195,7 +173,7 @@
             <p><strong>Complaints &amp; Refund Requests Deadline:</strong></p>
             <p>Any refund request (e.g., service denial, incomplete services) must be submitted with valid evidence (emails, logs, vendor confirmations) within 5 days of trip completion. Beyond this timeframe, no requests will be entertained.</p>
 
-            <h3>B8. LIMITATION OF LIABILITY</h3>
+            <h3>B7. LIMITATION OF LIABILITY</h3>
             <p>Notwithstanding anything contained herein:</p>
             <ul>
                 <li>(a) Individual Services are delivered by independent Destination Partners, whose operational decisions may be outside Explore Trekora's direct control.</li>
@@ -212,7 +190,7 @@
             </ul>
             <p><strong>Quotation and Contractual Terms:</strong></p>
             <ul>
-                <li>You receive a Quotation listing daily itinerary, hotels, flights, visa assistance terms, inclusions/exclusions, and total cost.</li>
+                <li>You receive a Quotation listing daily itinerary, hotels, flights, inclusions/exclusions, and total cost.</li>
                 <li>Once You pay in full (or partially as per the specified payment schedule) and Explore Trekora confirms your booking, the Quotation's terms are locked in as the final agreement.</li>
                 <li>Any verbal commitments or references to previous website content made during the discussion phase are not binding. Only the services explicitly listed in the final Quotation (QB) on which payment has been made by you will be considered as part of the final confirmed agreement.</li>
             </ul>
@@ -228,7 +206,7 @@
 
             <h3>1.2. Data Collection and Security</h3>
             <p>By using Explore Trekora's services, the User agrees to receive marketing communications, including promotional offers, discounts, and updates about our services, via email, SMS, or other communication channels. The User may opt-out of such communications at any time by following the unsubscribe instructions provided in each communication. Explore Trekora will use the User's data for these marketing purposes in accordance with applicable laws and privacy regulations.</p>
-            <p>Explore Trekora may share User data with third-party vendors, including but not limited to visa partners, hotels, activity providers, and other service partners, strictly for operational purposes such as obtaining quotes, processing bookings, and facilitating travel-related services. The User acknowledges that multiple agencies may be involved in this process, and each agency's data policy will apply. Explore Trekora is not accountable for the data handling practices of these third-party agencies.</p>
+            <p>Explore Trekora may share User data with third-party vendors, including but not limited to transport partners, hotels, activity providers, and other service partners, strictly for operational purposes such as obtaining quotes, processing bookings, and facilitating travel-related services. The User acknowledges that multiple agencies may be involved in this process, and each agency's data policy will apply. Explore Trekora is not accountable for the data handling practices of these third-party agencies.</p>
             <p>User data may be disclosed to law enforcement agencies or regulatory bodies for lawful investigations or legal obligations without requiring prior consent from the User.</p>
             <p>Explore Trekora will not sell, rent, or disclose User data for commercial gains beyond the scope of providing its services. All data sharing will be conducted solely to support, improve, or facilitate the services offered to the User.</p>
             <p>Explore Trekora may share anonymized and/or aggregated User data with third parties for tasks such as payment processing, data hosting, data processing, and creditworthiness assessment.</p>
@@ -289,7 +267,7 @@
             </ul>
 
             <h2>ACKNOWLEDGMENT</h2>
-            <p>By (1) creating an account on Explore Trekora, (2) making any Booking (Part A or Part B), or (3) using the Platform, you acknowledge you have read, understood, and agree to these Terms and Conditions in full, including all disclaimers, liabilities, cancellations, modifications, visa/flight/hotel policies, and no-cash deposit rules.</p>
+            <p>By (1) creating an account on Explore Trekora, (2) making any Booking (Part A or Part B), or (3) using the Platform, you acknowledge you have read, understood, and agree to these Terms and Conditions in full, including all disclaimers, liabilities, cancellations, modifications, flight/hotel policies, and no-cash deposit rules.</p>
         </article>
     </main>
 

@@ -141,14 +141,14 @@ Curated Travel Experiences Across India
     </div>
   </div>
   <ol id="route-stops" hidden>
-    <li>Adikailash &amp; Om Parvat Yatra</li>
-    <li>Chardham Yatra</li>
+    <li>Adi Kailash &amp; Om Parvat Yatra</li>
+    <li>Char Dham Yatra</li>
     <li>Munsyari &amp; Kausani</li>
     <li>Milam Glacier Trek</li>
     <li>Khaliya Top Trek</li>
     <li>Dalhousie &amp; Dharamshala</li>
     <li>Kareri Lake Trek</li>
-    <li>Hariharfort &amp; Harishchandragadh</li>
+    <li>Harihar Fort &amp; Harishchandragad</li>
     <li>Girnar</li>
     <li>Mount Abu</li>
     <li>Dang</li>
@@ -166,18 +166,18 @@ Curated Travel Experiences Across India
           <span>Destination</span>
         </label>
         <button type="button" class="custom-dropdown-trigger" id="btn-dest-trigger" onclick="toggleDropdown('dropdown-dest-wrapper')" aria-expanded="false" aria-haspopup="listbox">
-          <span class="val-text" id="dest-display-val">Adikailash &amp; Om Parvat Yatra</span>
+          <span class="val-text" id="dest-display-val">Adi Kailash &amp; Om Parvat Yatra</span>
           <svg class="arr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <select id="d" name="destination" class="sr-only" tabindex="-1" aria-hidden="true">
-          <option value="adi-kailash-om-parvat" selected>Adikailash &amp; Om Parvat Yatra</option>
-          <option value="char-dham-yatra">Chardham Yatra</option>
+          <option value="adi-kailash-om-parvat" selected>Adi Kailash &amp; Om Parvat Yatra</option>
+          <option value="char-dham-yatra">Char Dham Yatra</option>
           <option value="munsyari-kausani">Munsyari &amp; Kausani</option>
           <option value="milam-glacier-trek">Milam Glacier Trek</option>
           <option value="khaliya-top-trek">Khaliya Top Trek</option>
           <option value="dalhousie-dharamshala">Dalhousie &amp; Dharamshala</option>
           <option value="kareri-lake-trek">Kareri Lake Trek</option>
-          <option value="harihar-fort-trek">Hariharfort &amp; Harishchandragadh</option>
+          <option value="harihar-fort-trek">Harihar Fort &amp; Harishchandragad</option>
           <option value="girnar-pilgrimage-trek">Girnar Hill Trek &amp; Junagadh Exploration</option>
           <option value="mount-abu-eco-getaway">Mount Abu</option>
           <option value="dang-forest-circuit">Dang Forest Circuit</option>
@@ -193,17 +193,17 @@ Curated Travel Experiences Across India
           <div class="dest-dropdown-grid">
             <!-- Column 1 (Destinations 1-6) -->
             <div class="dest-dropdown-col">
-              <button type="button" class="dropdown-item-btn selected" data-slug="adi-kailash-om-parvat" onclick="selectDestination('Adikailash &amp; Om Parvat Yatra', this)">
+              <button type="button" class="dropdown-item-btn selected" data-slug="adi-kailash-om-parvat" onclick="selectDestination('Adi Kailash &amp; Om Parvat Yatra', this)">
                 <span class="item-body">
-                  <span class="item-title">Adikailash &amp; Om Parvat Yatra</span>
+                  <span class="item-title">Adi Kailash &amp; Om Parvat Yatra</span>
                 </span>
                 <span class="item-check">
                   <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-6"/></svg>
                 </span>
               </button>
-              <button type="button" class="dropdown-item-btn" data-slug="char-dham-yatra" onclick="selectDestination('Chardham Yatra', this)">
+              <button type="button" class="dropdown-item-btn" data-slug="char-dham-yatra" onclick="selectDestination('Char Dham Yatra', this)">
                 <span class="item-body">
-                  <span class="item-title">Chardham Yatra</span>
+                  <span class="item-title">Char Dham Yatra</span>
                 </span>
                 <span class="item-check">
                   <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-6"/></svg>
@@ -253,9 +253,9 @@ Curated Travel Experiences Across India
                   <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-6"/></svg>
                 </span>
               </button>
-              <button type="button" class="dropdown-item-btn" data-slug="harihar-fort-trek" onclick="selectDestination('Hariharfort &amp; Harishchandragadh', this)">
+              <button type="button" class="dropdown-item-btn" data-slug="harihar-fort-trek" onclick="selectDestination('Harihar Fort &amp; Harishchandragad', this)">
                 <span class="item-body">
-                  <span class="item-title">Hariharfort &amp; Harishchandragadh</span>
+                  <span class="item-title">Harihar Fort &amp; Harishchandragad</span>
                 </span>
                 <span class="item-check">
                   <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-6"/></svg>
@@ -950,7 +950,7 @@ Curated Travel Experiences Across India
         <div class="absolute bottom-3.5 left-3.5 right-3.5 sm:bottom-5 sm:left-5 sm:right-5 bg-t950/90 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl border border-white/20 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 text-white shadow-xl">
           <div class="min-w-0">
             <strong class="block text-sm sm:text-base font-bold text-white tracking-tight">Winter Alpine Expedition</strong>
-            <p class="text-t300 text-xs mt-0.5 font-medium leading-tight">Swiss &amp; Himalayan snow trails &bull; Passes included</p>
+            <p class="text-t300 text-xs mt-0.5 font-medium leading-tight">Himalayan snow trails &bull; Mountain passes included</p>
           </div>
           <span class="inline-flex items-center shrink-0 text-xs font-semibold bg-t500 hover:bg-t400 text-white px-3 py-1.5 rounded-full shadow-sm tracking-wide">Instant pass</span>
         </div>
@@ -963,9 +963,9 @@ Curated Travel Experiences Across India
     <span id="reviews" class="sr-only">Customer Stories and Reviews</span>
     <div class="tsg">
       <div class="fr tim" id="story-frame">
-        <img src="{{ asset('images/story-1.jpg') }}" alt="Adikailash &amp; Om Parvat Yatra" id="story-main-img" class="story-img" loading="lazy">
+        <img src="{{ asset('images/story-1.jpg') }}" alt="Adi Kailash &amp; Om Parvat Yatra" id="story-main-img" class="story-img" loading="lazy">
         <div class="story-photo-badge">
-          <span id="story-tag-text">📍 Adikailash &amp; Om Parvat</span>
+          <span id="story-tag-text">📍 Adi Kailash &amp; Om Parvat</span>
         </div>
       </div>
       <div class="tq">
@@ -987,7 +987,7 @@ Curated Travel Experiences Across India
           </div>
           <div class="au-meta" id="au-meta">
             <strong id="qn">Rajesh Patel</strong>
-            <small id="qr">Adikailash &amp; Om Parvat Yatra</small>
+            <small id="qr">Adi Kailash &amp; Om Parvat Yatra</small>
           </div>
           <div class="dots" aria-label="Review pagination">
             <button class="on" aria-label="Story 1" onclick="sq(0)"></button>
@@ -1236,7 +1236,7 @@ Curated Travel Experiences Across India
             <i><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg></i>
             <div>
               <small>Our Location</small>
-              <strong>Surat, India</strong>
+              <strong>Vadodara, Gujarat, India</strong>
             </div>
           </li>
         </ul>

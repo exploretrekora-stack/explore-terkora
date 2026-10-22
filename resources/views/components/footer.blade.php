@@ -151,7 +151,7 @@
             <li><a href="{{ route('destinations.show', 'munsyari-kausani') }}">Munsyari &amp; Kausani</a></li>
             <li><a href="{{ route('destinations.show', 'mount-abu-eco-getaway') }}">Mount Abu Eco Getaway</a></li>
             <li><a href="{{ route('destinations.show', 'gateway-to-malvan') }}">Gateway to Malvan</a></li>
-            <li><a href="{{ route('destinations.show', 'sembalpani-eco-retreat') }}">Sembalpani Eco Tour</a></li>
+            <li><a href="{{ route('destinations.show', 'sembalpani') }}">Sembalpani Eco Tour</a></li>
             <li><a href="{{ route('destinations.show', 'khaliya-top-trek') }}">Khaliya Top Trek</a></li>
           </ul>
         </div>

@@ -118,7 +118,7 @@
                 @endif
                 <div class="dest-grid" id="dest-grid">
                     
-                    <!-- 1. Adikailash & Om Parvat -->
+                    <!-- 1. Adi Kailash & Om Parvat -->
                     <article id="dest-adi-kailash-om-parvat" class="dest-card{{ \App\Services\DestinationRepository::cardSearchState($tripSearch ?? null, 'adi-kailash-om-parvat') }}" data-slug="adi-kailash-om-parvat" data-category="pilgrimage" data-title="Adi Kailash & Om Parvat Yatra" data-location="Uttarakhand">
                         <div class="dest-card-media">
                             <img src="{{ asset('images/trips/adi-kailash-om-parvat/1.jpg') }}" alt="Adi Kailash & Om Parvat Yatra in Uttarakhand" loading="lazy">
@@ -149,7 +149,7 @@
                         </div>
                     </article>
 
-                    <!-- 2. Chardham Yatra -->
+                    <!-- 2. Char Dham Yatra -->
                     <article id="dest-char-dham-yatra" class="dest-card{{ \App\Services\DestinationRepository::cardSearchState($tripSearch ?? null, 'char-dham-yatra') }}" data-slug="char-dham-yatra" data-category="pilgrimage" data-title="Char Dham Yatra" data-location="Uttarakhand">
                         <div class="dest-card-media">
                             <img src="{{ asset('images/dest-himalayas.jpg') }}" alt="Char Dham Yatra Himalayas" loading="lazy">
@@ -689,7 +689,7 @@
                                     <circle cx="12" cy="10" r="3"></circle>
                                 </svg>
                                 <select name="destination" id="modal-destination" class="dest-input dest-select" required>
-                                    <option value="Adi Kailash & Om Parvat" data-title="Adi Kailash &amp; Om Parvat Yatra" data-location="Pithoragarh, Uttarakhand · 7D / 6N">Adi Kailash &amp; Om Parvat Yatra</option>
+                                    <option value="Adi Kailash & Om Parvat" data-title="Adi Kailash &amp; Om Parvat Yatra" data-location="Pithoragarh, Uttarakhand · 8D / 7N">Adi Kailash &amp; Om Parvat Yatra</option>
                                     <option value="Char Dham Yatra" data-title="Char Dham Yatra 2026" data-location="Haridwar to Haridwar · 11D / 10N">Char Dham Yatra</option>
                                     <option value="Khaliya Top Trek" data-title="Khaliya Top Trek" data-location="Munsiyari, Uttarakhand · 1–2 Days">Khaliya Top Trek</option>
                                     <option value="Milam Glacier Trek" data-title="Milam Glacier Trek" data-location="Pithoragarh, Uttarakhand · 9–12 Days">Milam Glacier Trek</option>
@@ -697,7 +697,7 @@
                                     <option value="Dalhousie & Dharamshala" data-title="Dalhousie &amp; Dharamshala Tour" data-location="Himachal Pradesh · 8 Days">Dalhousie &amp; Dharamshala Tour</option>
                                     <option value="Harihar Fort Trek" data-title="Harihar Fort &amp; Harishchandragad" data-location="Nashik &amp; Ahmednagar, Maharashtra · 2D / 2N">Harihar Fort &amp; Harishchandragad</option>
                                     <option value="Girnar" data-title="Girnar Hill Trek &amp; Junagadh Exploration" data-location="Junagadh, Gujarat · 3D / 3N">Girnar Hill Trek &amp; Junagadh Exploration</option>
-                                    <option value="Mount Abu" data-title="Mount Abu" data-location="Aravalli Range, Rajasthan · 2D / 1N">Mount Abu</option>
+                                    <option value="Mount Abu" data-title="Mount Abu" data-location="Aravalli Range, Rajasthan · 3D / 2N">Mount Abu</option>
                                     <option value="Munsyari & Kausani" data-title="Munsyari &amp; Kausani" data-location="Kathgodam to Mukteshwar · 6 Days">Munsyari &amp; Kausani</option>
                                     <option value="Dang" data-title="Dang Forest Circuit" data-location="Dang &amp; Songadh, Gujarat · 2D / 1N">Dang Forest Circuit</option>
                                     <option value="Dediapada" data-title="Dediyapada Wilderness Trek" data-location="Dediyapada, Gujarat · 2D / 1N">Dediyapada Wilderness Trek</option>

@@ -63,11 +63,11 @@
                   <!-- Column 1 (Items 1-6) -->
                   <div class="mega-links-col">
                     <a href="{{ route('destinations.show', 'adi-kailash-om-parvat') }}" class="mega-link" onclick="handleNavClick()">
-                      <span class="mega-link-name">Adikailash &amp; Om Parvat Yatra</span>
+                      <span class="mega-link-name">Adi Kailash &amp; Om Parvat Yatra</span>
                       <svg class="mega-link-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l5 5-5 5"/></svg>
                     </a>
                     <a href="{{ route('destinations.show', 'char-dham-yatra') }}" class="mega-link" onclick="handleNavClick()">
-                      <span class="mega-link-name">Chardham Yatra</span>
+                      <span class="mega-link-name">Char Dham Yatra</span>
                       <svg class="mega-link-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l5 5-5 5"/></svg>
                     </a>
                     <a href="{{ route('destinations.show', 'munsyari-kausani') }}" class="mega-link" onclick="handleNavClick()">
@@ -95,7 +95,7 @@
                       <svg class="mega-link-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l5 5-5 5"/></svg>
                     </a>
                     <a href="{{ route('tour-packages.show', 'harihar-fort-trek') }}" class="mega-link" onclick="handleNavClick()">
-                      <span class="mega-link-name">Hariharfort &amp; Harishchandragadh</span>
+                      <span class="mega-link-name">Harihar Fort &amp; Harishchandragad</span>
                       <svg class="mega-link-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l5 5-5 5"/></svg>
                     </a>
                     <a href="{{ route('destinations.show', 'girnar-pilgrimage-trek') }}" class="mega-link" onclick="handleNavClick()">
@@ -350,10 +350,10 @@
         </button>
         <div class="drawer-accordion-content">
           <a href="{{ route('destinations.show', 'adi-kailash-om-parvat') }}" class="drawer-sublink" onclick="handleNavClick()">
-            <span class="sublink-title">Adikailash &amp; Om Parvat Yatra</span>
+            <span class="sublink-title">Adi Kailash &amp; Om Parvat Yatra</span>
           </a>
           <a href="{{ route('destinations.show', 'char-dham-yatra') }}" class="drawer-sublink" onclick="handleNavClick()">
-            <span class="sublink-title">Chardham Yatra</span>
+            <span class="sublink-title">Char Dham Yatra</span>
           </a>
           <a href="{{ route('destinations.show', 'munsyari-kausani') }}" class="drawer-sublink" onclick="handleNavClick()">
             <span class="sublink-title">Munsyari &amp; Kausani</span>
@@ -371,7 +371,7 @@
             <span class="sublink-title">Kareri Lake Trek</span>
           </a>
           <a href="{{ route('tour-packages.show', 'harihar-fort-trek') }}" class="drawer-sublink" onclick="handleNavClick()">
-            <span class="sublink-title">Hariharfort &amp; Harishchandragadh</span>
+            <span class="sublink-title">Harihar Fort &amp; Harishchandragad</span>
           </a>
           <a href="{{ route('destinations.show', 'girnar-pilgrimage-trek') }}" class="drawer-sublink" onclick="handleNavClick()">
             <span class="sublink-title">Girnar</span>

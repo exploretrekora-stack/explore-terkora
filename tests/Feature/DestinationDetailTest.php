@@ -117,8 +117,8 @@ class DestinationDetailTest extends TestCase
         $munsyari->assertSee('Stay at Dhudholi');
         $munsyari->assertSee('Pandavkholi');
         $munsyari->assertSee('Rudradhari Waterfall');
-        $munsyari->assertSee('Choli ki Jaali');
-        $munsyari->assertSee('Mukteshwar zero point');
+        $munsyari->assertSee('Chauli Ki Jali');
+        $munsyari->assertSee('Mukteshwar Zero Point');
         $munsyari->assertDontSee('Switzerland of India');
         $munsyari->assertDontSee('Binsar');
         $munsyari->assertDontSee('7,200 ft');
@@ -139,10 +139,10 @@ class DestinationDetailTest extends TestCase
         $response->assertSee('Enquire Now');
         $response->assertSee('View Itinerary');
         $response->assertSee('Kangra Fort');
-        $response->assertSee('St. Johan Church');
+        $response->assertSee('St. John in the Wilderness Church');
         $response->assertSee('12 km one way');
-        $response->assertSee('War Memorial Sanctuary');
-        $response->assertSee('Panchachuli Waterfall');
+        $response->assertSee('Dharamshala War Memorial');
+        $response->assertSee('Panchpula Waterfall');
         $response->assertSee('St. Patrick&#039;s Church', false);
         $response->assertSee('Lakshminarayan Temple');
         $response->assertSee('Golden Temple, Amritsar');

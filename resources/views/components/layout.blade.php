@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Explore Trekora – Your Journey to Peace Begins Here</title>
-    <meta name="description" content="Explore Trekora – Plan your perfect escape with handpicked trips in 40+ countries, local guides, seamless booking, and complete visa support.">
+    <meta name="description" content="Explore Trekora – Plan your perfect escape with handpicked journeys across India, sacred Himalayan pilgrimages, scenic nature treks, and seamless booking.">
     <link rel="icon" href="{{ asset('favicon.ico') }}?v=2" sizes="48x48">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/explore-trekora-favicon-32.png') }}?v=2">
     <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('images/explore-trekora-favicon-192.png') }}?v=2">
@@ -30,14 +30,14 @@
             {
                 quote: "Standing in front of the sacred Om Parvat gave us goosebumps. Trekora handled all the inner line permits and high-altitude logistics seamlessly.",
                 author: "Rajesh Patel",
-                trip: "Adikailash & Om Parvat Yatra",
-                tag: "Adikailash & Om Parvat",
+                trip: "Adi Kailash & Om Parvat Yatra",
+                tag: "Adi Kailash & Om Parvat",
                 image: "{{ asset('images/story-1.jpg') }}"
             },
             {
                 quote: "Waking up to the 360-degree panoramic view of Panchachuli peaks from Khaliya Top was the highlight of our trek. Superbly organized camp!",
                 author: "Aarav Sharma",
-                trip: "Khaliya Top, Munsyari",
+                trip: "Khaliya Top, Munsiyari",
                 tag: "Khaliya Top Trek",
                 image: "{{ asset('images/story-2.jpg') }}"
             },

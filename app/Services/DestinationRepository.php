@@ -441,7 +441,7 @@ class DestinationRepository
                         'heading' => 'Permits & Logistics',
                         'items' => [
                             'Forest Entry Fee: Around ₹20 to ₹50 per person (plus vehicle parking fees of ₹50–₹100).',
-                            'Stays: GVMN/KMVN rest houses, local homestays in Munsiyari, or tents at the Bhujani/Khaliya base camps.',
+                            'Stays: GMVN/KMVN rest houses, local homestays in Munsiyari, or tents at the Bhujani/Khaliya base camps.',
                             'Gear: Walking sticks, boots, and warm layers can be rented or arranged locally in Munsiyari. Local guides are recommended.',
                         ],
                     ],
@@ -640,7 +640,7 @@ class DestinationRepository
                             'Breakfast.',
                             'Visit Bhagsunag Temple.',
                             'Visit Bhagsunag Waterfall.',
-                            'Visit St. Johan Church, as named in the source itinerary.',
+                            'Visit St. John in the Wilderness Church.',
                             'Visit Dalai Lama Temple.',
                             'Visit Norbulingka Institute.',
                             'Visit HPCA Stadium.',
@@ -678,7 +678,7 @@ class DestinationRepository
                         'points' => [
                             'Breakfast.',
                             'Paragliding.',
-                            'Visit War Memorial Sanctuary, as named in the source itinerary.',
+                            'Visit Dharamshala War Memorial.',
                             'Visit a tea garden.',
                             'Depart for Dalhousie.',
                             'Dinner and night stay in Dalhousie.',
@@ -692,7 +692,7 @@ class DestinationRepository
                             'Breakfast.',
                             'Visit St. Francis Church.',
                             'Visit St. Patrick\'s Church.',
-                            'Visit Panchachuli Waterfall, as named in the source itinerary.',
+                            'Visit Panchpula Waterfall.',
                             'Visit Kalatop Wildlife Sanctuary.',
                             'Visit Chamera Lake.',
                             'Return to the hotel in Dalhousie.',
@@ -705,7 +705,7 @@ class DestinationRepository
                         'title' => 'Khajjiar Excursion',
                         'points' => [
                             'Breakfast.',
-                            'Visit Khajjiar, described in the source itinerary as the “Mini Switzerland of India.”',
+                            'Visit Khajjiar, celebrated as the “Mini Switzerland of India.”',
                             'Activities listed in the source itinerary include horse riding and zipline.',
                             'Visit Lakshminarayan Temple if time permits.',
                             'Return to the hotel.',
@@ -747,7 +747,7 @@ class DestinationRepository
                         'items' => [
                             'St. Francis Church',
                             'St. Patrick\'s Church',
-                            'Panchachuli Waterfall',
+                            'Panchpula Waterfall',
                             'Kalatop Wildlife Sanctuary',
                             'Chamera Lake',
                             'Khajjiar',
@@ -1298,12 +1298,12 @@ class DestinationRepository
                 'highlights' => [],
                 'itinerary_heading' => '6-Day Route',
                 'itinerary' => [
-                    ['day' => 'Day 1', 'title' => 'Pickup Kathgodam, en route to Ranikhet', 'desc' => 'Kaichi Dham, Bhimtal, Jhula Devi Temple, Chopatiya Garden, War Museum, Golf Ground, Kalika Temple, and Heda Khan Temple. Stay at Dhudholi.'],
+                    ['day' => 'Day 1', 'title' => 'Pickup Kathgodam, en route to Ranikhet', 'desc' => 'Kainchi Dham, Bhimtal, Jhula Devi Temple, Chaubatia Gardens, War Museum, Golf Ground, Kalika Temple, and Haidakhan Temple. Stay at Dhudholi.'],
                     ['day' => 'Day 2', 'title' => 'Trek to Pandavkholi', 'desc' => 'Night stay at the mountain.'],
                     ['day' => 'Day 3', 'title' => 'Someshwar', 'desc' => 'Someshwar check-in and freshen up. Hidden waterfall.'],
                     ['day' => 'Day 4', 'title' => 'Rudradhari Waterfall, tea garden, and shawl factory', 'desc' => 'Stay at Kausani.'],
-                    ['day' => 'Day 5', 'title' => 'En route to Mukteshwar', 'desc' => 'Chitay Golu Temple, Kasar Devi, and Katarmal Sun Temple. Stay at Mukteshwar.'],
-                    ['day' => 'Day 6', 'title' => 'Mukteshwar', 'desc' => 'Mukteshwar Mahadev Temple, Choli ki Jaali, and Mukteshwar zero point.'],
+                    ['day' => 'Day 5', 'title' => 'En route to Mukteshwar', 'desc' => 'Chitai Golu Devta Temple, Kasar Devi, and Katarmal Sun Temple. Stay at Mukteshwar.'],
+                    ['day' => 'Day 6', 'title' => 'Mukteshwar', 'desc' => 'Mukteshwar Mahadev Temple, Chauli Ki Jali, and Mukteshwar Zero Point.'],
                 ],
                 'inclusions' => [],
                 'exclusions' => [],
@@ -1533,7 +1533,7 @@ class DestinationRepository
                     [
                         'src' => 'images/trips/Sembalpani/1.jpg',
                         'title' => "Digmarathi (Lion's rock)",
-                        'caption' => "Majestic natural rock formation resembling a resting lion amidst the scenic Aravalli foothills.",
+                        'caption' => 'Majestic natural rock formation resembling a resting lion amidst the scenic Aravalli foothills.',
                     ],
                     [
                         'src' => 'images/trips/Sembalpani/2.jpg',
@@ -1542,7 +1542,7 @@ class DestinationRepository
                     ],
                     [
                         'src' => 'images/trips/Sembalpani/3.jpg',
-                        'title' => 'Chamunda tekari Viewpoint',
+                        'title' => 'Chamunda Tekari Viewpoint',
                         'caption' => 'Sacred hilltop shrine offering 360-degree sunset and valley perspectives.',
                     ],
                     [
@@ -1558,34 +1558,34 @@ class DestinationRepository
                 ],
                 'price_label' => 'PACKAGE PRICE',
                 'price_value' => 'Get a Quote',
-                'tagline' => 'A captivating 2 to 3-day eco-adventure in Banaskantha exploring Digmarathi (Lion\'s rock), Kanjero Dungar, and Chamunda tekari.',
-                'card_desc' => 'Explore Digmarathi (Lion\'s rock), Kanjero Dungar, and Chamunda tekari over a refreshing 2 to 3-day nature weekend getaway.',
+                'tagline' => 'A captivating 2 to 3-day eco-adventure in Banaskantha exploring Digmarathi (Lion\'s rock), Kanjero Dungar, and Chamunda Tekari.',
+                'card_desc' => 'Explore Digmarathi (Lion\'s rock), Kanjero Dungar, and Chamunda Tekari over a refreshing 2 to 3-day nature weekend getaway.',
                 'perks' => [
                     'Digmarathi (Lion\'s rock) Exploration',
                     'Kanjero Dungar Scenic Summit Trek',
-                    'Chamunda tekari Viewpoint & Shrine',
+                    'Chamunda Tekari Viewpoint & Shrine',
                     '2–3 Days Relaxed Nature & Camp Stay',
                 ],
                 'overview_paragraphs' => [
                     'Sembalpani is a pristine nature getaway tucked away in the Aravalli hills of Banaskantha, North Gujarat, offering rich landscapes, boulder-strewn ridges, and fresh outdoor atmosphere.',
-                    'This 2 to 3-day experience brings together thrilling natural wonders—from the iconic Digmarathi (Lion\'s rock) formation to the sweeping heights of Kanjero Dungar and the tranquil spiritual vibe of Chamunda tekari.',
+                    'This 2 to 3-day experience brings together thrilling natural wonders—from the iconic Digmarathi (Lion\'s rock) formation to the sweeping heights of Kanjero Dungar and the tranquil spiritual vibe of Chamunda Tekari.',
                     'Whether you are visiting with friends, family, or solo, it provides an authentic offbeat weekend escape with guided trails, campfire nights, and memorable viewpoints.',
                 ],
                 'highlights' => [
                     ['icon' => '🦁', 'title' => "Digmarathi (Lion's rock)", 'desc' => 'Marvel at the striking Lion\'s Rock formation with expansive views of the wilderness.'],
                     ['icon' => '⛰️', 'title' => 'Kanjero Dungar Trek', 'desc' => 'Hike along scenic hill trails to reach breezy viewpoints overlooking Banaskantha.'],
-                    ['icon' => '🛕', 'title' => 'Chamunda tekari', 'desc' => 'Visit the hilltop Chamunda tekari shrine for serene sunset views and cultural heritage.'],
+                    ['icon' => '🛕', 'title' => 'Chamunda Tekari', 'desc' => 'Visit the hilltop Chamunda Tekari shrine for serene sunset views and cultural heritage.'],
                     ['icon' => '🏕️', 'title' => '2–3 Days Nature Stay', 'desc' => 'Comfortable eco-camping, stargazing, local Gujarati cuisine, and warm bonfire gatherings.'],
                 ],
                 'itinerary' => [
                     ['day' => 'Day 1', 'title' => 'Arrival, Campsite Check-in & Digmarathi (Lion\'s rock) Exploration', 'desc' => 'Depart from base city and arrive at Sembalpani. Check in to the nature campsite/resort and freshen up. Post lunch, begin the guided nature trail to the renowned Digmarathi (Lion\'s rock) landmark. Capture photos and witness panoramic valley vistas. Evening campfire, stargazing, and delicious local dinner.'],
-                    ['day' => 'Day 2', 'title' => 'Kanjero Dungar Summit Trek & Sunset at Chamunda tekari', 'desc' => 'Early morning sunrise call and breakfast. Embark on the trek up Kanjero Dungar, enjoying rocky terrains, birdwatching, and mountain breeze. Rest post-trek. In the late afternoon, proceed towards Chamunda tekari for a peaceful sunset viewpoint and sacred darshan. Evening group activities and overnight camp stay.'],
+                    ['day' => 'Day 2', 'title' => 'Kanjero Dungar Summit Trek & Sunset at Chamunda Tekari', 'desc' => 'Early morning sunrise call and breakfast. Embark on the trek up Kanjero Dungar, enjoying rocky terrains, birdwatching, and mountain breeze. Rest post-trek. In the late afternoon, proceed towards Chamunda Tekari for a peaceful sunset viewpoint and sacred darshan. Evening group activities and overnight camp stay.'],
                     ['day' => 'Day 3', 'title' => 'Morning Nature Walk & Return Journey', 'desc' => 'Enjoy morning tea and an optional village nature walk. Savor breakfast, pack fond memories of the rugged hills, and begin the comfortable return journey.'],
                 ],
                 'inclusions' => [
                     'Accommodation in eco-camp / resort (2–3 Days)',
                     'Nutritious meals (Breakfast, Lunch & Dinner as per plan)',
-                    'Guided visits to Digmarathi (Lion\'s rock), Kanjero Dungar & Chamunda tekari',
+                    'Guided visits to Digmarathi (Lion\'s rock), Kanjero Dungar & Chamunda Tekari',
                     'Trek coordinator & local guide assistance',
                     'Evening campfire & group activities',
                 ],
@@ -1664,7 +1664,7 @@ class DestinationRepository
                         'enquiry' => null,
                     ],
                     [
-                        'title' => 'Girnar Hill Trek',
+                        'title' => 'Girnar Hill Trek & Junagadh Exploration',
                         'description' => 'Ascend roughly 10,000 stone steps to sacred Guru Dattatreya Peak, explore ancient Uparkot Fort, Bhavnath Mahadev Temple, and Willingdon Dam.',
                         'image' => 'images/trips/girnar-pilgrimage-trek/1.jpg',
                         'alt' => 'Girnar mountain in Junagadh',
@@ -1934,11 +1934,11 @@ class DestinationRepository
     {
         return [
             'adi-kailash-om-parvat' => [
-                'label' => 'Adikailash & Om Parvat Yatra',
+                'label' => 'Adi Kailash & Om Parvat Yatra',
                 'fits' => ['2 adults', '4 adults group', 'Family (2 adults + 2 kids)'],
             ],
             'char-dham-yatra' => [
-                'label' => 'Chardham Yatra',
+                'label' => 'Char Dham Yatra',
                 'fits' => ['2 adults', '4 adults group', 'Family (2 adults + 2 kids)'],
             ],
             'munsyari-kausani' => [
@@ -1962,7 +1962,7 @@ class DestinationRepository
                 'fits' => ['2 adults', '1 solo adventurer', '4 adults group'],
             ],
             'harihar-fort-trek' => [
-                'label' => 'Hariharfort & Harishchandragadh',
+                'label' => 'Harihar Fort & Harishchandragad',
                 'fits' => ['2 adults', '1 solo adventurer', '4 adults group'],
             ],
             'girnar-pilgrimage-trek' => [

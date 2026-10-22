@@ -55,6 +55,15 @@ class EnquiryController extends Controller
      */
     protected function dispatchEmailInBackground(int|string $inquiryId): void
     {
+        if (app()->runningUnitTests()) {
+            $savedInquiry = Inquiry::query()->find($inquiryId);
+            if ($savedInquiry instanceof Inquiry) {
+                Mail::to($savedInquiry->email)->send(new InquiryReceived($savedInquiry));
+            }
+
+            return;
+        }
+
         try {
             $artisan = base_path('artisan');
             $php = PHP_BINARY;

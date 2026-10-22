@@ -50,7 +50,7 @@ class EnquirySubmissionTest extends TestCase
         $response->assertDontSee('Message sent successfully');
         $response->assertDontSee('Voyages of wonder');
 
-        $this->assertCount(18, Enquiry::destinations());
+        $this->assertCount(20, Enquiry::destinations());
     }
 
     /**

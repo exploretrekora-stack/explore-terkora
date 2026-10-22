@@ -47,6 +47,7 @@ class Enquiry extends Model
             'Dang',
             'Dediapada',
             'Malvan',
+            'Sembalpani',
             'Not Sure Yet',
         ];
     }

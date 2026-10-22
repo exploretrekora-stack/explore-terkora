@@ -156,7 +156,7 @@
                         <h2>About Our Tour Guides</h2>
 
                         <p class="guide-story-lead">
-                            Our tour guides are here to make every trip more enjoyable, comfortable, and memorable. From exploring beautiful natural landscapes and historical landmarks to visiting religious destinations and discovering international cultures, we help travelers make the most of their journey.
+                            Our tour guides are here to make every trip more enjoyable, comfortable, and memorable. From exploring beautiful natural landscapes and historical landmarks to visiting sacred pilgrimage destinations and discovering rich regional heritage across India, we help travelers make the most of their journey.
                         </p>
 
                         <p class="guide-story-body">
@@ -171,7 +171,7 @@
                             <li><span class="chk">✓</span> Adventure &amp; Nature Trails</li>
                             <li><span class="chk">✓</span> Religious &amp; Pilgrimage Support</li>
                             <li><span class="chk">✓</span> Historical &amp; City Landmarks</li>
-                            <li><span class="chk">✓</span> Domestic &amp; International Coordination</li>
+                            <li><span class="chk">✓</span> Regional &amp; Group Tour Coordination</li>
                         </ul>
 
                         <div class="guide-story-actions">
@@ -238,7 +238,7 @@
                         <div class="guide-cat-body">
                             <h3>Adventure &amp; Nature Guides</h3>
                             <p class="guide-cat-desc">
-                                Mountain trails, nature exploration, sightseeing aur outdoor experiences ke liye.
+                                For mountain trails, nature exploration, scenic sightseeing, and outdoor experiences.
                             </p>
                             <ul class="guide-cat-points">
                                 <li><span>✓</span> Trail navigation, route safety, and terrain guidance</li>
@@ -268,7 +268,7 @@
                         <div class="guide-cat-body">
                             <h3>Religious Tour Guides</h3>
                             <p class="guide-cat-desc">
-                                Temples, pilgrimage destinations aur local traditions ki information ke liye.
+                                For temple histories, sacred pilgrimage destinations, rituals, and local traditions.
                             </p>
                             <ul class="guide-cat-points">
                                 <li><span>✓</span> Temple history, rituals, and darshan timings coordination</li>
@@ -298,7 +298,7 @@
                         <div class="guide-cat-body">
                             <h3>Historical &amp; City Guides</h3>
                             <p class="guide-cat-desc">
-                                Famous landmarks, museums, local history aur city sightseeing ke liye.
+                                For famous landmarks, historic museums, architectural heritage, and city sightseeing.
                             </p>
                             <ul class="guide-cat-points">
                                 <li><span>✓</span> In-depth stories of famous landmarks, forts &amp; palaces</li>
@@ -314,21 +314,21 @@
                         </div>
                     </article>
 
-                    <!-- Category 4: Domestic & International Guides -->
+                    <!-- Category 4: Destination & Group Tour Coordinators -->
                     <article class="guide-cat-card" id="guide-cat-domestic-intl">
                         <div class="guide-cat-media">
                             <img 
                                 src="{{ asset('images/dest-dalhousie.jpg') }}" 
-                                alt="Domestic &amp; International Guides" 
+                                alt="Destination &amp; Group Tour Coordinators" 
                                 loading="lazy"
                             />
                             <div class="guide-cat-badge-top">Travel Coordination</div>
                             <div class="guide-cat-icon-float" aria-hidden="true">✈️</div>
                         </div>
                         <div class="guide-cat-body">
-                            <h3>Domestic &amp; International Guides</h3>
+                            <h3>Destination &amp; Group Tour Coordinators</h3>
                             <p class="guide-cat-desc">
-                                Different destinations par local sightseeing aur travel coordination ke liye.
+                                For comprehensive local sightseeing, logistics, and smooth travel coordination across destinations.
                             </p>
                             <ul class="guide-cat-points">
                                 <li><span>✓</span> Seamless local travel logistics &amp; day-wise itinerary control</li>
