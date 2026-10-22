@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\AdminInquiryController;
 use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\EnquiryController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -54,7 +55,22 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
         Route::get('/inquiries', [AdminInquiryController::class, 'index'])->name('inquiries');
         Route::get('/inquiries/{inquiry}', [AdminInquiryController::class, 'show'])->name('inquiries.show');
+        Route::get('/clear-cache', function () {
+            Artisan::call('optimize:clear');
+
+            return back()->with('success', 'All caches cleared successfully!');
+        })->name('clear-cache');
     });
 });
 
+// Secure web cache clear (for shared hosting without SSH/terminal)
+Route::get('/maintenance/clear-cache/{key}', function (string $key) {
+    if ($key !== 'trekora-clear-2026' && $key !== config('app.key')) {
+        abort(403, 'Unauthorized access.');
+    }
 
+    Artisan::call('optimize:clear');
+
+    return response("Explore Trekora: All caches (config, routes, views, and app cache) cleared successfully!\n", 200)
+        ->header('Content-Type', 'text/plain');
+})->name('maintenance.clear-cache');
